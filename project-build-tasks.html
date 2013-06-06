@@ -125,79 +125,73 @@
         								<ul class="dropdown-menu pull-right">
         									<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" />
+                        							<input type="checkbox" value="cpu_usage" />
                         							CPU usage
                         						</label>
                         					</li>
         									<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" />
+                        							<input type="checkbox" value="disk_io" />
                         							Disk I/O
                         						</label>
                         					</li>                        					
-                        					<!--li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
-                        							Project name
-                        						</label>
-                        					</li-->
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="errors"/>
                         							Errors
                         						</label>
                         					</li>
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="log" />
                         							Log
                         						</label>
                         					</li>
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" />
+                        							<input type="checkbox" value="order" />
                         							Order
                         						</label>
                         					</li>
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="outcome" />
                         							Outcome
                         						</label>
                         					</li>
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="recipe"  disabled />
                         							Recipe
                         						</label>
                         					</li>  
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="task"  disabled />
                         							Task
                         						</label>
                         					</li>   
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="task_type" />
                         							Task type
                         						</label>
                         					</li>   
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" />
+                        							<input type="checkbox" value="time" />
                         							Time
                         						</label>
                         					</li> 
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" />
+                        							<input type="checkbox" checked="checked" value="warnings" />
                         							Warnings
                         						</label>
                         					</li>  
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" />
+                        							<input type="checkbox" value="work_directory" />
                         							Work directory
                         						</label>
                         					</li>                        					                      					                       					   
@@ -297,7 +291,15 @@
                         		</td>
                         	</tr-->
                         	<tr>
-                        		<th>
+                        		<th class="order" style="display:none">
+                        			<a href="#" style="font-weight:normal;">Order</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-caret-down"></i>
+                        				</a>
+                        			</div>
+                        		</th>                        	
+                        		<th class="task">
                         			<a href="#" style="font-weight:normal;">Task</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -305,7 +307,7 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th>
+                        		<th class="recipe">
                         			Recipe
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -314,7 +316,7 @@
                         			</div>
                         			<i class="icon-caret-down"></i>
                         		</th>
-                        		<th>
+                        		<th class="task_type">
                         			<a href="#" style="font-weight:normal;">Task type</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -322,7 +324,7 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th>
+                        		<th class="outcome">
                         			<a href="#" style="font-weight:normal;">Outcome</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -330,7 +332,7 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th>
+                        		<th class="errors">
                         			<a href="#" style="font-weight:normal;">Errors</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -338,7 +340,7 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th>
+                        		<th class="warnings">
                         			<a href="#" style="font-weight:normal;">Warnings</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -346,241 +348,398 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th>
+                        		<th class="time" style="display:none">
+                        			<a href="#" style="font-weight:normal;">Time (secs)</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-caret-down"></i>
+                        				</a>
+                        			</div>
+                        		</th>                        		
+                        		<th class="log">
                         			<a href="#" style="font-weight:normal;">Log</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
                         					<i class="icon-caret-down"></i>
                         				</a>
                         			</div>
-                        		</th>                        		                       		
+                        		</th> 
+                        		<th class="work_directory" style="display:none">
+                        			<a href="#" style="font-weight:normal;">Work directory</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-caret-down"></i>
+                        				</a>
+                        			</div>
+                        		</th> 
+                        		<th class="cpu_usage" style="display:none">
+                        			<a href="#" style="font-weight:normal;">CPU usage</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-caret-down"></i>
+                        				</a>
+                        			</div>
+                        		</th> 
+                        		<th class="disk_io" style="display:none">
+                        			<a href="#" style="font-weight:normal;">Disk I/O (ms)</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-caret-down"></i>
+                        				</a>
+                        			</div>
+                        		</th>                        		                       		                       		                       		                       		
                         	</tr>
                         </thead>
                         <tbody>
                         	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_fetch</td>
-                        		<td>acl</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                        		<td class="order" style="display:none">266</td>
+                        		<td class="task">do_fetch</td>
+                        		<td class="recipe">acl</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.82</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">1.6%</td>
+                            	<td class="disk_io" style="display:none">520</td>
                            </tr>
                            <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_unpack</td>
-                        		<td>acl</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td></td>
-                            	<td></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">268</td>
+                        		<td class="task">do_unpack</td>
+                        		<td class="recipe">acl</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="errors"></td>
+                            	<td class="warnings"></td>
+                            	<td class="time" style="display:none">0.99</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">21.1%</td>
+                            	<td class="disk_io" style="display:none">54</td>
                             </tr>
                             <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_patch</td>
-                        		<td>acl</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td></td>
-                            	<td></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="order" style="display:none">269</td>
+                        		<td class="task">do_patch</td>
+                        		<td class="recipe">acl</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="errors"></td>
+                            	<td class="warnings"></td>
+                            	<td class="time" style="display:none">0.16</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">9.2%</td>
+                            	<td class="disk_io" style="display:none">0</td>                            	
                            </tr>
                            <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_configure</td>
-                        		<td>acl</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning">12 warnings</td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">270</td>
+                        		<td class="task">do_configure</td>
+                        		<td class="recipe">acl</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings">12 warnings</td>
+                            	<td class="time" style="display:none">61.45</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">19.8%</td>
+                            	<td class="disk_io" style="display:none">6739</td>                             	
                            </tr>
                            <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task.html'">
-                        		<td>do_compile</td>
-                        		<td>acl</td>
-                        		<td>Executed</td>
-                        		<td class="error">Failed</td>
-                            	<td class="error">2 errors</td>
-                            	<td class="warning">1 warning</td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">272</td>
+                        		<td class="task">do_compile</td>
+                        		<td class="recipe">acl</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="error outcome">Failed</td>
+                            	<td class="error errors">2 errors</td>
+                            	<td class="warning warnings">1 warning</td>
+                            	<td class="time" style="display:none">29.66</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">53.2%</td>
+                            	<td class="disk_io" style="display:none">2432</td>                                	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_fetch</td>
-                        		<td>attr</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Skipped</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">266</td>
+                        		<td class="task">do_fetch</td>
+                        		<td class="recipe">attr</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Skipped</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">6.48</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">1.3%</td>
+                            	<td class="disk_io" style="display:none">474</td>                               	
+                            </tr>
+                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           		<td class="order" style="display:none">268</td>
+                        		<td class="task">do_unpack</td>
+                        		<td class="recipe">attr</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Skipped</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">1.06</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">6.4%</td>
+                            	<td class="disk_io" style="display:none">18</td>                              	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_unpack</td>
-                        		<td>attr</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Skipped</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">269</td>
+                        		<td class="task">do_patch</td>
+                        		<td class="recipe">attr</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="outcome">Sstate</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings">2 warnings</td>
+                            	<td class="time" style="display:none">1.40</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">2.3%</td>
+                            	<td class="disk_io" style="display:none">0</td>                                	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_patch</td>
-                        		<td>attr</td>
-                        		<td>Prebuilt</td>
-                        		<td>Sstate</td>
-                            	<td class="error"></td>
-                            	<td class="warning">2 warnings</td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_unpack</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td>                                	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_unpack</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_patch</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td> 
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_patch</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_configure</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td>                             	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_configure</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_compile</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td>                             	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_compile</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_install</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td>                               	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_install</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_package</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td>                               	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_package</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
-                           	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_packagedata</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td class="muted">Previously built</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td class="muted"></td>
+                           		<td class="order" style="display:none">n/a</td>
+                        		<td class="task">do_packagedata</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="muted outcome">Existing</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0</td>
+                            	<td class="muted log"></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">0</td>
+                            	<td class="disk_io" style="display:none">0</td>                              	
                            	</tr>
                            	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_package_write_rpm</td>
-                        		<td>base-files</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning">2 warnings</td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">1147</td>
+                        		<td class="task">do_package_write_rpm</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings">2 warnings</td>
+                            	<td class="time" style="display:none">2.21</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">11.9%</td>
+                            	<td class="disk_io" style="display:none">585</td> 
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_package_write</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td>Sstate</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">1152</td>
+                        		<td class="task">do_package_write</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="outcome">Sstate</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">2.79</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">12.7%</td>
+                            	<td class="disk_io" style="display:none">1887</td>                            	
+                            </tr>
+                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           		<td class="order" style="display:none">1234</td>
+                        		<td class="task">do_populate_lic</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.49</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">12.3%</td>
+                            	<td class="disk_io" style="display:none">42</td>                             	
                            	</tr>
                            	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_populate_lic</td>
-                        		<td>base-files</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
-                           	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_populate_sysroot</td>
-                        		<td>base-files</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">1236</td>
+                        		<td class="task">do_populate_sysroot</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.85</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">10.3%</td>
+                            	<td class="disk_io" style="display:none">314</td>                              	
                            	</tr>
                            	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_build</td>
-                        		<td>base-files</td>
-                        		<td>Prebuilt</td>
-                        		<td>Sstate</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">1240</td>
+                        		<td class="task">do_build</td>
+                        		<td class="recipe">base-files</td>
+                        		<td class="task_type">Prebuilt</td>
+                        		<td class="outcome">Sstate</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.49</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">12.7%</td>
+                            	<td class="disk_io" style="display:none">1887</td>                                	
                            	</tr>
                            	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_fetch</td>
-                        		<td>base-passwd</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning">1 warning</td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">886</td>
+                        		<td class="task">do_fetch</td>
+                        		<td class="recipe">base-passwd</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings">1 warning</td>
+                            	<td class="time" style="display:none">0.75</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">1.0%</td>
+                            	<td class="disk_io" style="display:none">753</td>                                	
                            	</tr>
                            	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_unpack</td>
-                        		<td>base-passwd</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">887</td>
+                        		<td class="task">do_unpack</td>
+                        		<td class="recipe">base-passwd</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.13</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">9.8%</td>
+                            	<td class="disk_io" style="display:none">127</td>                             	
+                            </tr>
+                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           		<td class="order" style="display:none">888</td>
+                        		<td class="task">do_patch</td>
+                        		<td class="recipe">base-passwd</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.38</td>                            	
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">4.7%</td>
+                            	<td class="disk_io" style="display:none">375</td> 
                            	</tr>
                            	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_patch</td>
-                        		<td>base-passwd</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">910</td>
+                        		<td class="task">do_configure</td>
+                        		<td class="recipe">base-passwd</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">11.40</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">7.8%</td>
+                            	<td class="disk_io" style="display:none">1952</td>                             	
                            	</tr>
                            	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_configure</td>
-                        		<td>base-passwd</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
-                           	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
-                        		<td>do_compile</td>
-                        		<td>base-passwd</td>
-                        		<td>Executed</td>
-                        		<td class="success">Succeeded</td>
-                            	<td class="error"></td>
-                            	<td class="warning"></td>
-                            	<td><a href="#">/home/user/poky/path/to/file.log</a></td>
+                           		<td class="order" style="display:none">911</td>
+                        		<td class="task">do_compile</td>
+                        		<td class="recipe">base-passwd</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="success outcome">Succeeded</td>
+                            	<td class="error errors"></td>
+                            	<td class="warning warnings"></td>
+                            	<td class="time" style="display:none">0.95</td>
+                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
+                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="cpu_usage" style="display:none">18.8%</td>
+                            	<td class="disk_io" style="display:none">200</td>                              	
                            	</tr>
                         </tbody>
                     </table>
@@ -766,6 +925,20 @@
         <script src="assets/js/prettify.js" type='text/javascript'></script>
         <script src="assets/js/jit.js" type='text/javascript'></script>
         <script src="assets/js/main.js" type='text/javascript'></script>
+        <script>
+        	 $(document).ready(function() {
+        	 	$("input:checkbox").change();
+        	 		$("input:checkbox").change(function(){
+        	 			var selectedType = $(this).val();
+        	 				if($(this).is(":checked")){
+        	 					$("."+selectedType).show();
+        	 				}
+        	 				else{
+        	 					$("."+selectedType).hide();
+        	 				}
+        	 		});
+        	 	});
+        </script>
         
 
     </body>
