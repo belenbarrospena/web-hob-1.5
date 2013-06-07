@@ -249,15 +249,15 @@ $(document).ready(function() {
     });
 
     $('a.error, a.warning').each(function() {
-        this.href = 'project-build-tasks.html?filter=' + this.className;
+        this.href = 'all-tasks.html?filter=' + this.className;
     });
 
     $('.icon-minus-sign.warning').each(function() {
-        jQuery(this).next('a').attr('href', 'project-build-tasks.html?filter=warning');
+        jQuery(this).next('a').attr('href', 'all-tasks.html?filter=warning');
     });
 
     $('.icon-minus-sign.error').each(function() {
-        jQuery(this).next('a').attr('href', 'project-build-tasks.html?filter=error');
+        jQuery(this).next('a').attr('href', 'all-tasks.html?filter=error');
     });
     
 	$('#failedbuild').each(function() {
