@@ -166,6 +166,12 @@
                         					</li>  
                         					<li>
                         						<label class="checkbox">
+                        							<input type="checkbox" value="recipe_version" />
+                        							Recipe version
+                        						</label>
+                        					</li>                                             
+                        					<li>
+                        						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="task"  disabled />
                         							Task
                         						</label>
@@ -315,6 +321,14 @@
                         			</div>
                         			<i class="icon-caret-down"></i>
                         		</th>
+                        		<th class="recipe_version" style="display:none">
+                        			<a href="#" style="font-weight:normal;">Recipe version</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-caret-down"></i>
+                        				</a>
+                        			</div>
+                        		</th>                                  
                         		<th class="task_type">
                         			<a href="#" style="font-weight:normal;">Task type</a>
                         			<div class="btn-group pull-right">
@@ -394,6 +408,7 @@
                         		<td class="order" style="display:none">266</td>
                         		<td class="task">do_fetch</td>
                         		<td class="recipe">acl</td>
+                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="errors"></td>
@@ -408,6 +423,7 @@
                            		<td class="order" style="display:none">268</td>
                         		<td class="task">do_unpack</td>
                         		<td class="recipe">acl</td>
+                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="errors"></td>
@@ -422,6 +438,7 @@
                             	<td class="order" style="display:none">269</td>
                         		<td class="task">do_patch</td>
                         		<td class="recipe">acl</td>
+                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="errors"></td>
@@ -436,6 +453,7 @@
                            		<td class="order" style="display:none">270</td>
                         		<td class="task">do_configure</td>
                         		<td class="recipe">acl</td>
+                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -450,6 +468,7 @@
                            		<td class="order" style="display:none">272</td>
                         		<td class="task">do_compile</td>
                         		<td class="recipe">acl</td>
+                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="error outcome">Failed</td>
                             	<td class="error errors">2 errors</td>
@@ -464,6 +483,7 @@
                            		<td class="order" style="display:none">266</td>
                         		<td class="task">do_fetch</td>
                         		<td class="recipe">attr</td>
+                                <td class="recipe_version" style="display:none">2.4.46-r4</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Covered</td>
                             	<td class="error errors"></td>
@@ -478,6 +498,7 @@
                            		<td class="order" style="display:none">268</td>
                         		<td class="task">do_unpack</td>
                         		<td class="recipe">attr</td>
+                                <td class="recipe_version" style="display:none">2.4.46-r4</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Covered</td>
                             	<td class="error errors"></td>
@@ -492,6 +513,7 @@
                            		<td class="order" style="display:none">269</td>
                         		<td class="task">do_patch</td>
                         		<td class="recipe">attr</td>
+                                <td class="recipe_version" style="display:none">2.4.46-r4</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="outcome">Sstate</td>
                             	<td class="error errors"></td>
@@ -506,6 +528,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_unpack</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -520,6 +543,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_patch</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -534,6 +558,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_configure</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -548,6 +573,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_compile</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -562,6 +588,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_install</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -576,6 +603,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_package</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -590,6 +618,7 @@
                            		<td class="order" style="display:none">n/a</td>
                         		<td class="task">do_packagedata</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
                             	<td class="error errors"></td>
@@ -604,6 +633,7 @@
                            		<td class="order" style="display:none">1147</td>
                         		<td class="task">do_package_write_rpm</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -618,6 +648,7 @@
                            		<td class="order" style="display:none">1152</td>
                         		<td class="task">do_package_write</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="outcome">Sstate</td>
                             	<td class="error errors"></td>
@@ -632,6 +663,7 @@
                            		<td class="order" style="display:none">1234</td>
                         		<td class="task">do_populate_lic</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -646,6 +678,7 @@
                            		<td class="order" style="display:none">1236</td>
                         		<td class="task">do_populate_sysroot</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -660,6 +693,7 @@
                            		<td class="order" style="display:none">1240</td>
                         		<td class="task">do_build</td>
                         		<td class="recipe">base-files</td>
+                                <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="outcome">Sstate</td>
                             	<td class="error errors"></td>
@@ -674,6 +708,7 @@
                            		<td class="order" style="display:none">886</td>
                         		<td class="task">do_fetch</td>
                         		<td class="recipe">base-passwd</td>
+                                <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -688,6 +723,7 @@
                            		<td class="order" style="display:none">887</td>
                         		<td class="task">do_unpack</td>
                         		<td class="recipe">base-passwd</td>
+                                <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -702,6 +738,7 @@
                            		<td class="order" style="display:none">888</td>
                         		<td class="task">do_patch</td>
                         		<td class="recipe">base-passwd</td>
+                                <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -716,6 +753,7 @@
                            		<td class="order" style="display:none">910</td>
                         		<td class="task">do_configure</td>
                         		<td class="recipe">base-passwd</td>
+                                <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
@@ -730,6 +768,7 @@
                            		<td class="order" style="display:none">911</td>
                         		<td class="task">do_compile</td>
                         		<td class="recipe">base-passwd</td>
+                                <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
