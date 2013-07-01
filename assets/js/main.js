@@ -164,7 +164,7 @@ $(document).ready(function() {
     //$('.tablesorter').tablesorter();
 
     // Append sort icon to each table header
-    $('.tablesorter th').append('&nbsp;<i class="sort icon-sort"></i>');
+    //$('.tablesorter th').append('&nbsp;<i class="sort icon-sort"></i>');
 
     // Update/change sort icon (up or down) when sort happens
     $('.tablesorter').on('sortEnd', function() {
