@@ -71,30 +71,43 @@
                 <div class="alert alert-error">
                     <div class="row-fluid">
                         <div class="span4">
-                            <i class="icon-minus-sign error"></i> <a href="#" id="failedbuild">core-image-sato (qemux86) </a>
+                            <i class="icon-minus-sign error"></i> <a href="#" id="failedbuild">core-image-x11 qemux86 (11/06/13 at 10:01)</a>
                         </div>
                         <div class="span2">
-                            <i class="icon-minus-sign error"></i> <a href="#" class="alert-error">5 errors</a>
+                            <i class="icon-minus-sign error"></i> <a href="#" class="alert-error">4 errors</a>
                         </div>
                         <div class="span2">
-                            <i class="icon-warning-sign warning"></i> <a class="warning" href="#">11 warnings</a>
+                            <i class="icon-warning-sign warning"></i> <a class="warning" href="#">10 warnings</a>
                         </div>
                         <div class="span2 pull-right text-right">
-                            Elapsed time: <a href="#">00:05:11</a>
+                            Time: <a href="#">00:27:45</a>
                         </div>
                     </div>
                     <br/>
                     <ul class="unstyled">
                         <li>
                             <strong><a href="project-build-tasks-task.html" class="alert-error">$RECIPE_NAME $TASK_NAME</a></strong>
-                            <p>This is the error message provided by BitBake. They might be sort of lengthy, so we might want to set a limit to the amount of characters we display to keep  recent activity compact.</p>
-                            <p><span>Log: <a href="#" class="muted">path/to/log.file</a></span></p><br/>
+                            <p>This is the error message provided by BitBake.</p>
+                            <p><span>Log: <a href="#" class="muted">path/to/task/log.file</a></span></p>
+                            <br/>
                         </li>
                         <li>
                             <strong><a href="project-build-tasks-task.html" class="alert-error">$RECIPE_NAME $TASK_NAME</a></strong>
-                            <p>This is the error message provided by BitBake. They might be sort of lengthy, so we might want to set a limit to the amount of characters we display to keep  recent activity compact.</p>
-                            <span>Log: <a href="#" class="muted">path/to/log.file</a></span>
+                            <p>This is the error message provided by BitBake.</p>
+                            <span>Log: <a href="#" class="muted">path/to/task/log.file</a></span></p>
+                            <br/>
                         </li>
+                        <li>
+                            <strong><a href="project-build-tasks-task.html" class="alert-error">$RECIPE_NAME $TASK_NAME</a></strong>
+                            <p>This is the error message provided by BitBake.</p>
+                            <span>Log: <a href="#" class="muted">path/to/task/log.file</a></span></p>
+                            <br/>
+                        </li>
+                        <li>
+                            <strong><a href="project-build-tasks-task.html" class="alert-error">$RECIPE_NAME $TASK_NAME</a></strong>
+                            <p>This is the error message provided by BitBake.</p>
+                            <span>Log: <a href="#" class="muted">path/to/task/log.file</a></span></p>
+                        </li>                        
                     </ul>
                 </div>
 		
@@ -102,13 +115,13 @@
                     <div class="row-fluid">
                         <div class="span4">
                             <i class="icon-ok-sign success"></i> 
-                            <a href="project-build.html" style="margin-left:1em;">core-image-sato  (qemux86)</a>
+                            <a href="project-build.html" style="margin-left:1em;">core-image-sato atom-pc (11/06/13 at 15:22)</a>
                         </div>
                         <div class="span6">
-                            <i class="icon-warning-sign warning"></i> <a class="warning" href="#">11 warnings</a>
+                            <i class="icon-warning-sign warning"></i> <a class="warning" href="#">4 warnings</a>
                         </div>
                         <div class="span2 text-right">
-                            Build time: <a href="#">00:45:19</a>
+                            Time: <a href="#">00:36:55</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +130,7 @@
                     <div class="row-fluid">
                         <div class="span4">
                             <!--i class="icon-ok-sign success"></i--> 
-                            <span>core-image-sato  (qemux86)</span>
+                            <span>core-image-sato qemux86 (in progress)</span>
                         </div>
                         <div class="span4">
                             <div class="progress progress-striped">
@@ -136,8 +149,7 @@
 			
 			<div class="page-header">
             	<h1>All builds</h1>
-            </div>
-            
+            </div>  
             <div class="navbar">
             	<div class="navbar-inner">
             		<form class="navbar-search pull-left">
@@ -145,22 +157,84 @@
     				</form>
     				<div class="pull-right">
     					<div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Edit columns
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
-                                    </li>
-                                    <li>
-                                        <a class="file-type" href="#import-project">Import project</a>
-                                        <form id="import-project" class="hidden" action="">
-                                            <input type="file" />
-                                            <input type="submit" />
-                                        </form>
-                                    </li>
-                                </ul>
+                            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                Edit columns
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+        						<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="completed_on" checked="checked" disabled />
+                        				Completed on
+                        			</label>
+                        		</li>
+        						<!--li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="cpu_usage" />
+                        				CPU usage
+                        			</label>
+                        		</li>                        					
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="disk_io"/>
+                        				Disk I/O (ms)
+                        			</label>
+                        		</li-->
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" checked="checked" value="errors" />
+                        				Errors
+                        			</label>
+                        		</li>
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="log" checked="checked" />
+                        				Log
+                        			</label>
+                        		</li>
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" checked="checked" value="machine" disabled />
+                        				Machine
+                        			</label>
+                        		</li>
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" checked="checked" value="outcome" disabled />
+                        				Outcome
+                        			</label>
+                        		</li>  
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="output" checked="checked" />
+                        				Output
+                        			</label>
+                        		</li>                                             
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="started_on" />
+                        				Started on
+                        			</label>
+                        		</li>   
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" checked="checked" value="target" disabled/>
+                        				Target
+                        			</label>
+                        		</li>   
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="time" />
+                        				Time
+                        			</label>
+                        		</li> 
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" checked="checked" value="warnings" />
+                        				Warnings
+                        			</label>
+                        		</li>  
+                            </ul>
                         </div>
                         <span class="divider-vertical"></span>
     					<span class="help-inline" style="padding-top:5px;">Show rows:</span>
@@ -312,228 +386,426 @@
                 			</div>
                 		</td>
                 	</tr-->
-                	<tr>
-                		<th>Status
-                   			<div class="btn-group pull-right">
-                        		<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-                            		<i class="icon-caret-down"></i>
+					<tr>
+                        <th class="outcome span2">
+                        	<a href="#" style="font-weight:normal;">Outcome</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
+                        		</a>
+                        	</div>
+                        </th>                        	
+                        <th class="target">
+                        	<a href="#" style="font-weight:normal;">Target</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
                         		</a>
                         	</div>
                         </th>
-                        <!--th>Project name
-                    		<div class="btn-group pull-right">
-                        		<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-                            		<i class="icon-caret-down"></i>
+                        <th class="machine">
+                        	<a href="#" style="font-weight:normal;">Machine</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
                         		</a>
                         	</div>
-                        </th-->
-                        <th>Completed on
-                    		<div class="btn-group pull-right">
-                        		<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-                            		<i class="icon-caret-down"></i>
+                        </th>  
+                        <th class="started_one" style="display:none;">
+                        	<a href="#" style="font-weight:normal;">Started on</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
+                        		</a>
+                        	</div>
+                        </th>  
+                        <th class="completed_on">
+                        	Completed on
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
+                        		</a>
+                        	</div>
+                        	<i class="icon-caret-down"></i>
+                        </th>                                
+                        <th class="errors">
+                        	<a href="#" style="font-weight:normal;">Errors</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
                         		</a>
                         	</div>
                         </th>
-                        <th>Issues
-                    		<div class="btn-group pull-right">
-                        		<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-                            		<i class="icon-caret-down"></i>
+                        <th class="warnings">
+                        	<a href="#" style="font-weight:normal;">Warnings</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
                         		</a>
                         	</div>
                         </th>
-                        <th>Image recipe
-                    		<div class="btn-group pull-right">
-                        		<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-                            		<i class="icon-caret-down"></i>
+                        <th class="time" style="display:none;">
+                        	<a href="#" style="font-weight:normal;">Time</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
                         		</a>
                         	</div>
                         </th>
-                        <th>Machine
-                    		<div class="btn-group pull-right">
-                        		<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-                            		<i class="icon-caret-down"></i>
+                        <!--th class="cpu_usage" style="display:none">
+                        	<a href="#" style="font-weight:normal;">CPU usage</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
                         		</a>
                         	</div>
-                        </th>
-                    </tr>
+                        </th>  
+                        <th class="disk_io" style="display:none">
+                        	<a href="#" style="font-weight:normal;">Disk I/O (ms)</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
+                        		</a>
+                        	</div>
+                        </th--> 
+                        <th class="log">
+                        	<a href="#" style="font-weight:normal;">Log</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
+                        		</a>
+                        	</div>
+                        </th>  
+                        <th class="output">
+                        	<a href="#" style="font-weight:normal;">Output</a>
+                        	<div class="btn-group pull-right">
+                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        			<i class="icon-caret-down"></i>
+                        		</a>
+                        	</div>
+                        </th> 
                 </thead>
                 <tbody>
                 	<tr onclick="document.location = 'project-build.html';">
-                		<td data-filter="status">
-                			<a href="project-build.html">
+                		<td data-filter="status" class="outcome">
+                			<a href="#">
                 				<i class="icon-ok-sign success"></i>
                             </a> 
                         </td>
+                        <td class="target">
+                        	core-image-sato
+                        </td>
+                        <td class="machine">
+                        	atom-pc
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	11/06/13 at 14:46
+                        </td>
+                        <td class="completed_on">
+                        	11/06/13 at 15:22
+                        </td>
+                        <td class="errors"
+                        </td>
+                        <td class="warnings warning">
+                        	4 warnings
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:36:55
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, hddimg, iso</a>
+                        </td>                        
                         <!--td data-filter="name">
                         	<a href="project.html">Web Kiosk</a>
-                        </td-->
+                        </td>
                         <td data-filter="build">25/04/13 at 14:12:45</td>
                         <td data-filter="messages"></td>
                         <td data-filter="image">core-image-sato</td>
-                        <td data-filter="arch">qemux86</td>
+                        <td data-filter="arch">qemux86</td-->
                     </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-warning-sign warning"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">25/04/13 at 14:12:45</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="warning" href="#">8 warnings</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-sato-sdk</td>
-                            <td data-filter="arch">qemux86</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-warning-sign warning"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">25/04/13 at 09:36:13</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="warning" href="#">8 warnings</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-clutter</td>
-                            <td data-filter="arch">atom-pc</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-ok-sign success"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">Web Kiosk</a></td-->
-                            <td data-filter="build">24/04/13 at 21:42:11</td>
-                            <td data-filter="messages">
-                                
-                            </td>
-                            <td data-filter="image">core-image-sato</td>
-                            <td data-filter="arch">qemux86</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-minus-sign error"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">24/04/13 at 17:18:34</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="error" href="#">3 errors</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-clutter</td>
-                            <td data-filter="arch">atom-pc</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-warning-sign warning"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">24/04/13 at 12:56:22</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="warning" href="#">8 warnings</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-sato</td>
-                            <td data-filter="arch">qemux86</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-ok-sign success"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">Web Kiosk</a></td-->
-                            <td data-filter="build">24/04/13 at 12:56:22</td>
-                            <td data-filter="messages">
-                                
-                            </td>
-                            <td data-filter="image">core-image-sato-sdk</td>
-                            <td data-filter="arch">qemux86</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-warning-sign warning"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">24/04/13 at 09:12:55</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="warning" href="#">8 warnings</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-sato</td>
-                            <td data-filter="arch">qemux86</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-minus-sign error"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">24/04/13 at 09:12:55</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="error" href="#">3 errors</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-sato-sdk</td>
-                            <td data-filter="arch">qemux86</td>
-                        </tr>
-                    
-                        
-                        <tr>
-                            <td data-filter="status">
-                                
-                                    <i class="icon-warning-sign warning"></i>
-                                
-                            </td>
-                            <!--td data-filter="name"><a href="project.html">$PROJECT_NAME</a></td-->
-                            <td data-filter="build">23/04/13 at 14:34:46</td>
-                            <td data-filter="messages">
-                                
-                                    <a class="warning" href="#">8 warnings</a>
-                                
-                            </td>
-                            <td data-filter="image">core-image-clutter</td>
-                            <td data-filter="arch">atom-pc</td>
-                        </tr>
-                    
-                        
-
-                    
+                    <tr>  
+                     	<td data-filter="status">
+                     		<!--i class="icon-warning-sign warning"></i-->
+                     		<i class="icon-minus-sign error"></i>
+                     	</td>
+                        <td class="target">
+                        	core-image-x11
+                        </td>
+                        <td class="machine">
+                        	qemux86
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	11/06/13 at 09:34
+                        </td>
+                        <td class="completed_on">
+                        	11/06/13 at 10:01
+                        </td>
+                        <td class="errors error">
+                        	4 errors
+                        </td>
+                        <td class="warnings warning">
+                        	10 warnings
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:27:45
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        </td>                          
+                     </tr>
+                     <tr>
+                    	<td data-filter="status">
+                    		<!--i class="icon-warning-sign warning"></i-->
+                    		<i class="icon-ok-sign success"></i>
+                    	</td>
+                        <td class="target">
+                        	core-image-sato
+                        </td>
+                        <td class="machine">
+                        	atom-pc
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	11/06/13 at 11:12
+                        </td>
+                        <td class="completed_on">
+                        	11/06/13 at 11:54
+                        </td>
+                        <td class="errors">
+                        </td>
+                        <td class="warnings warning">
+                        	4 warnings
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:42:07
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, hddimg, iso</a>
+                        </td> 
+                    </tr>
+                    <tr>
+                    	<td data-filter="status">
+                    		<i class="icon-ok-sign success"></i>
+                    	</td>
+                        <td class="target">
+                        	core-image-minimal
+                        </td>
+                        <td class="machine">
+                        	qemux86
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	10/06/13 at 17:02
+                        </td>
+                        <td class="completed_on">
+                        	10/06/13 at 17:16
+                        </td>
+                        <td class="errors error">
+                        </td>
+                        <td class="warnings warning">
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:14:04
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, tar.bz2</a>
+                        </td>  
+                    </tr>
+                    <tr>
+                    	<td data-filter="status">
+                    		<!--i class="icon-minus-sign error"></i-->
+                    		<i class="icon-ok-sign success"></i>
+                    	</td>
+                        <td class="target">
+                        	core-image-realtime-sdk
+                        </td>
+                        <td class="machine">
+                        	fri2
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	10/06/13 at 16:21
+                        </td>
+                        <td class="completed_on">
+                        	10/06/13 at 17:34
+                        </td>
+                        <td class="errors error">
+                        </td>
+                        <td class="warnings warning">
+                        </td>
+                        <td class="time" style="display:none;">
+                        	01:13:22
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, tar.bz2</a>
+                        </td> 
+                    </tr>
+                    <tr>
+                    	<td data-filter="status">
+                    		<!--i class="icon-warning-sign warning"></i-->
+                    		<i class="icon-ok-sign success"></i>
+                    	</td>
+                        <td class="target">
+                        	core-image-minimal
+                        </td>
+                        <td class="machine">
+                        	qemuarm
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	10/06/13 at 13:49
+                        </td>
+                        <td class="completed_on">
+                        	10/06/13 at 14:02
+                        </td>
+                        <td class="errors error">
+                        </td>
+                        <td class="warnings warning">
+                        	5 warnings
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:13:05
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, tar.bz2</a>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td data-filter="status">
+                        	<i class="icon-ok-sign success"></i>
+                        </td>
+                        <td class="target">
+                        	core-image-minimal
+                        </td>
+                        <td class="machine">
+                        	qemumips
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	10/06/13 at 11:12
+                        </td>
+                        <td class="completed_on">
+                        	10/06/13 at 11:31
+                        </td>
+                        <td class="errors error">
+                        </td>
+                        <td class="warnings warning">
+                        	2 warnings
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:19:49
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, tar.bz2</a>
+                        </td> 
+                    </tr>
+                	<tr>
+                		<td data-filter="status">
+                			<!--i class="icon-warning-sign warning"></i-->
+                			<i class="icon-minus-sign error"></i>
+                		</td>
+                        <td class="target">
+                        	core-image-minimal
+                        </td>
+                        <td class="machine">
+                        	qemumips64
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	10/06/13 at 09:45
+                        </td>
+                        <td class="completed_on">
+                        	10/06/13 at 09:47
+                        </td>
+                        <td class="errors error">
+                        	1 error
+                        </td>
+                        <td class="warnings warning">
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:02:07
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td data-filter="status">
+                        	<i class="icon-ok-sign success"></i>
+                        </td>
+                        <td class="target">
+                        	core-image-minimal
+                        </td>
+                        <td class="machine">
+                        	qemuppc
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	09/06/13 at 18:14
+                        </td>
+                        <td class="completed_on">
+                        	09/06/13 at 18:25
+                        </td>
+                        <td class="errors error">
+                        </td>
+                        <td class="warnings warning">
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:11:28
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, tar.bz2</a>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td data-filter="status">
+                        	<i class="icon-ok-sign success"></i>
+                        </td>
+                        <td class="target">
+                        	core-image-minimal
+                        </td>
+                        <td class="machine">
+                        	qemux86-64
+                        </td>
+                        <td class="started_on" style="display:none;">
+                        	08/06/13 at 12:56
+                        </td>
+                        <td class="completed_on">
+                        	08/06/13 at 13:17
+                        </td>
+                        <td class="errors error">
+                        </td>
+                        <td class="warnings warning">
+                        	2 warnings
+                        </td>
+                        <td class="time" style="display:none;">
+                        	00:21:48
+                        </td>
+                        <td class="log">
+                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        </td>
+                        <td class="output">
+                        	<a href="#">ext3, tar.bz2</a>
+                        </td> 
+                    </tr>
                 </tbody>
             </table>
             
