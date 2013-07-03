@@ -404,10 +404,10 @@
                         	</tr>
                         </thead>
                         <tbody>
-                        	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                        	<tr>
                         		<td class="order" style="display:none">266</td>
-                        		<td class="task">do_fetch</td>
-                        		<td class="recipe">acl</td>
+                        		<td class="task cell_links"><a href="#">do_fetch</a></td>
+                        		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -416,13 +416,13 @@
                             	<td class="time" style="display:none">0.82</td>
                             	<td class="cpu_usage" style="display:none">1.6%</td>
                             	<td class="disk_io" style="display:none">520</td>                            	
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                            </tr>
-                           <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           <tr>
                            		<td class="order" style="display:none">268</td>
-                        		<td class="task">do_unpack</td>
-                        		<td class="recipe">acl</td>
+                        		<td class="task"><a href="#">do_unpack</a></td>
+                        		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -431,13 +431,13 @@
                             	<td class="time" style="display:none">0.99</td>
                             	<td class="cpu_usage" style="display:none">21.1%</td>
                             	<td class="disk_io" style="display:none">54</td>                            	
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                             </tr>
-                            <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                            <tr>
                             	<td class="order" style="display:none">269</td>
-                        		<td class="task">do_patch</td>
-                        		<td class="recipe">acl</td>
+                        		<td class="task"><a href="#">do_patch</a></td>
+                        		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -446,43 +446,48 @@
                             	<td class="time" style="display:none">0.16</td>
                             	<td class="cpu_usage" style="display:none">9.2%</td>
                             	<td class="disk_io" style="display:none">0</td>    
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                        	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                        	
                            </tr>
-                           <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           <tr>
                            		<td class="order" style="display:none">270</td>
-                        		<td class="task">do_configure</td>
-                        		<td class="recipe">acl</td>
-                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
-                        		<td class="task_type">Executed</td>
-                        		<td class="success outcome">Succeeded</td>
-                            	<td class="error errors"></td>
-                            	<td class="warning warnings">12 warnings</td>
-                            	<td class="time" style="display:none">61.45</td>
-                            	<td class="cpu_usage" style="display:none">19.8%</td>
-                            	<td class="disk_io" style="display:none">6739</td>   
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                          	
-                           </tr>
-                           <tr class="clickable_row" onclick="document.location = 'project-build-tasks-task.html'">
-                           		<td class="order" style="display:none">272</td>
-                        		<td class="task">do_compile</td>
-                        		<td class="recipe">acl</td>
+                        		<td class="task"><a href="#">do_configure</a></td>
+                        		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
                         		<td class="task_type">Executed</td>
                         		<td class="error outcome">Failed</td>
-                            	<td class="error errors">2 errors</td>
-                            	<td class="warning warnings">1 warning</td>
+                            	<td class="errors"><a class="error alert-error" href="#">1 error</a></td>
+                            	<td class="warning warnings"><a class="warning" href="#">12 warnings</a></td>
+                            	<td class="time" style="display:none">61.45</td>
+                            	<td class="cpu_usage" style="display:none">19.8%</td>
+                            	<td class="disk_io" style="display:none">6739</td>   
+                            	<td class="log">
+                            		<ul style="list-style:none;margin:0;padding:0;">
+                            			<li>/home/user/poky/path/to/file.log</li>
+                            			<li>/home/user/poky/path/to/config.log</li>
+                            		</ul>
+                            	</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                          	
+                           </tr>
+                           <tr>
+                           		<td class="order" style="display:none">272</td>
+                        		<td class="task"><a href="#">do_compile</a></td>
+                        		<td class="recipe"><a href="#">acl</a></td>
+                                <td class="recipe_version" style="display:none">2.2.51-r3</td>
+                        		<td class="task_type">Executed</td>
+                        		<td class="error outcome">Failed</td>
+                            	<td class="error errors"><a class="alert-error" href="#">2 errors</a></td>
+                            	<td class="warning warnings"><a class="warning" href="#">1 warning</a></td>
                             	<td class="time" style="display:none">29.66</td>
                             	<td class="cpu_usage" style="display:none">53.2%</td>
                             	<td class="disk_io" style="display:none">2432</td>  
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                              	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                              	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">266</td>
-                        		<td class="task">do_fetch</td>
-                        		<td class="recipe">attr</td>
+                        		<td class="task"><a class="muted" href="#">do_fetch</a></td>
+                        		<td class="recipe"><a class="muted" href="#">attr</a></td>
                                 <td class="recipe_version" style="display:none">2.4.46-r4</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Covered</td>
@@ -491,13 +496,13 @@
                             	<td class="time" style="display:none">6.48</td>
                             	<td class="cpu_usage" style="display:none">1.3%</td>
                             	<td class="disk_io" style="display:none">474</td>    
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                           	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                           	
                             </tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">268</td>
-                        		<td class="task">do_unpack</td>
-                        		<td class="recipe">attr</td>
+                        		<td class="task"><a class="muted" href="#">do_unpack</a></td>
+                        		<td class="recipe"><a class="muted" href="#">attr</a></td>
                                 <td class="recipe_version" style="display:none">2.4.46-r4</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Covered</td>
@@ -506,28 +511,28 @@
                             	<td class="time" style="display:none">1.06</td>
                             	<td class="cpu_usage" style="display:none">6.4%</td>
                             	<td class="disk_io" style="display:none">18</td>    
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                          	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                          	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">269</td>
-                        		<td class="task">do_patch</td>
-                        		<td class="recipe">attr</td>
+                        		<td class="task"><a class="muted" href="#">do_patch</a></td>
+                        		<td class="recipe"><a class="muted" href="#">attr</a></td>
                                 <td class="recipe_version" style="display:none">2.4.46-r4</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="outcome">Sstate</td>
                             	<td class="error errors"></td>
-                            	<td class="warning warnings">2 warnings</td>
+                            	<td class="warning warnings"><a class="warning" href="#">2 warnings</a></td>
                             	<td class="time" style="display:none">1.40</td>
                             	<td class="cpu_usage" style="display:none">2.3%</td>
                             	<td class="disk_io" style="display:none">0</td>   
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                             	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                             	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_unpack</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_unpack</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -537,12 +542,12 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td>  
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                              	
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                              	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_patch</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_patch</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -552,12 +557,12 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td> 
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_configure</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_configure</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -567,12 +572,12 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td>       
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                      	
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                      	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_compile</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_compile</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -582,12 +587,12 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td>  
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                           	
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                           	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_install</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_install</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -597,12 +602,12 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td>       
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                        	
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                        	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_package</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_package</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -612,12 +617,12 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td>   
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                            	
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                            	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">n/a</td>
-                        		<td class="task">do_packagedata</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_packagedata</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="muted outcome">Existing</td>
@@ -627,27 +632,27 @@
                             	<td class="cpu_usage" style="display:none">0</td>
                             	<td class="disk_io" style="display:none">0</td>   
                             	<td class="muted log"></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                           	
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                           	
                            	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">1147</td>
-                        		<td class="task">do_package_write_rpm</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a href="#">do_package_write_rpm</a></td>
+                        		<td class="recipe"><a href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
-                            	<td class="warning warnings">2 warnings</td>
+                            	<td class="warning warnings"><a class="warning" href="#">2 warnings</a></td>
                             	<td class="time" style="display:none">2.21</td>
                             	<td class="cpu_usage" style="display:none">11.9%</td>
                             	<td class="disk_io" style="display:none">585</td> 
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">1152</td>
-                        		<td class="task">do_package_write</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_package_write</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="outcome">Sstate</td>
@@ -656,13 +661,13 @@
                             	<td class="time" style="display:none">2.79</td>
                             	<td class="cpu_usage" style="display:none">12.7%</td>
                             	<td class="disk_io" style="display:none">1887</td>     
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                       	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                       	
                             </tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">1234</td>
-                        		<td class="task">do_populate_lic</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a href="#">do_populate_lic</a></td>
+                        		<td class="recipe"><a href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -671,13 +676,13 @@
                             	<td class="time" style="display:none">0.49</td>
                             	<td class="cpu_usage" style="display:none">12.3%</td>
                             	<td class="disk_io" style="display:none">42</td>   
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                          	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                          	
                            	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">1236</td>
-                        		<td class="task">do_populate_sysroot</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a href="#">do_populate_sysroot</a></td>
+                        		<td class="recipe"><a href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -686,13 +691,13 @@
                             	<td class="time" style="display:none">0.85</td>
                             	<td class="cpu_usage" style="display:none">10.3%</td>
                             	<td class="disk_io" style="display:none">314</td>  
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                            	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                            	
                            	</tr>
-                           	<tr class="clickable_row muted" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr class="muted">
                            		<td class="order" style="display:none">1240</td>
-                        		<td class="task">do_build</td>
-                        		<td class="recipe">base-files</td>
+                        		<td class="task"><a class="muted" href="#">do_build</a></td>
+                        		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="task_type">Prebuilt</td>
                         		<td class="outcome">Sstate</td>
@@ -701,28 +706,28 @@
                             	<td class="time" style="display:none">0.49</td>
                             	<td class="cpu_usage" style="display:none">12.7%</td>
                             	<td class="disk_io" style="display:none">1887</td>   
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                             	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                             	
                            	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">886</td>
-                        		<td class="task">do_fetch</td>
-                        		<td class="recipe">base-passwd</td>
+                        		<td class="task"><a href="#">do_fetch</a></td>
+                        		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
                             	<td class="error errors"></td>
-                            	<td class="warning warnings">1 warning</td>
+                            	<td class="warning warnings"><a class="warning" href="#">1 warning</a></td>
                             	<td class="time" style="display:none">0.75</td>
                             	<td class="cpu_usage" style="display:none">1.0%</td>
                             	<td class="disk_io" style="display:none">753</td>  
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                              	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                              	
                            	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">887</td>
-                        		<td class="task">do_unpack</td>
-                        		<td class="recipe">base-passwd</td>
+                        		<td class="task"><a href="#">do_unpack</a></td>
+                        		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -731,13 +736,13 @@
                             	<td class="time" style="display:none">0.13</td>
                             	<td class="cpu_usage" style="display:none">9.8%</td>
                             	<td class="disk_io" style="display:none">127</td>    
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                         	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                         	
                             </tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">888</td>
-                        		<td class="task">do_patch</td>
-                        		<td class="recipe">base-passwd</td>
+                        		<td class="task"><a href="#">do_patch</a></td>
+                        		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -746,13 +751,13 @@
                             	<td class="time" style="display:none">0.38</td>     
                             	<td class="cpu_usage" style="display:none">4.7%</td>
                             	<td class="disk_io" style="display:none">375</td>                        	
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                            	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">910</td>
-                        		<td class="task">do_configure</td>
-                        		<td class="recipe">base-passwd</td>
+                        		<td class="task"><a href="#">do_configure</a></td>
+                        		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -761,13 +766,13 @@
                             	<td class="time" style="display:none">11.40</td>
                             	<td class="cpu_usage" style="display:none">7.8%</td>
                             	<td class="disk_io" style="display:none">1952</td> 
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                            	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                            	
                            	</tr>
-                           	<tr class="clickable_row" onclick="document.location = 'project-build-tasks-task-success.html'">
+                           	<tr>
                            		<td class="order" style="display:none">911</td>
-                        		<td class="task">do_compile</td>
-                        		<td class="recipe">base-passwd</td>
+                        		<td class="task"><a href="#">do_compile</a></td>
+                        		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="task_type">Executed</td>
                         		<td class="success outcome">Succeeded</td>
@@ -776,8 +781,8 @@
                             	<td class="time" style="display:none">0.95</td>
                             	<td class="cpu_usage" style="display:none">18.8%</td>
                             	<td class="disk_io" style="display:none">200</td>      
-                            	<td class="log"><a href="#">/home/user/poky/path/to/file.log</a></td>
-                            	<td class="work_directory" style="display:none"><a href="#">/home/user/poky/path/to/workdir/</a></td>                        	
+                            	<td class="log">/home/user/poky/path/to/file.log</td>
+                            	<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>                        	
                            	</tr>
                         </tbody>
                     </table>
