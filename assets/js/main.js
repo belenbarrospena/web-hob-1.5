@@ -212,13 +212,13 @@ $(document).ready(function() {
         return false;
 
     // Show tooltip for disabled links
-    }).tooltip({
-        title: 'Link is not functional in this demo.',
-        delay: {
-            show: 400,
-            hide: 0
-        }
-    });
+    //}).tooltip({
+        //title: 'Link is not functional in this demo.',
+        //delay: {
+            //show: 400,
+            //hide: 0
+        //}
+    //});
 
     $('table').tooltip({
         title: 'Sorting disabled',
