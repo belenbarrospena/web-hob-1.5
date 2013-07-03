@@ -5,6 +5,7 @@
 .error, .red {
     color: #b94a48;
 }
+
 .success, .green {
     color: #4EAC4B;
 }
@@ -314,8 +315,21 @@ tr.selected {
     float: left;
 }
 
+a.alert-error {
+	background-color: transparent;
+}
+
 a.alert-error:hover {
 	color:#943A38;
+	text-decoration:underline;
+}
+
+a.warning {
+	background-color: transparent;
+}
+
+a.warning:hover {
+	color:#B38942;
 	text-decoration:underline;
 }
 
@@ -324,3 +338,21 @@ a.alert-error:hover {
 	cursor: pointer;
 }
 
+td a {
+	color: #333333;
+}
+
+td a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+ 0 down vote
+	
+/*.cell_links:link { 
+	display: block; 
+}
+	
+.cell_links:hover { 
+	background: #F5F5F5 
+}*/
