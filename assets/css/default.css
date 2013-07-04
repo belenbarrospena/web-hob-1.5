@@ -6,8 +6,18 @@
     color: #b94a48;
 }
 
+.error:hover {
+	color:#943A38;
+	text-decoration:none;
+}
+
 .success, .green {
     color: #4EAC4B;
+}
+
+.success:hover {
+	color:#347132;
+	text-decoration: none;
 }
 .warning, .yellow {
     color: #c09853;
@@ -175,9 +185,9 @@ a.icon-button:after {
     min-width: 150px;
 }
 
-a.muted:hover {
+/*a.muted:hover {
     cursor: default;
-}
+}*/
 
 #infovis {
     position:relative;
@@ -315,11 +325,7 @@ tr.selected {
     float: left;
 }
 
-a.alert-error {
-	background-color: transparent;
-}
-
-a.alert-error:hover {
+a.error:hover {
 	color:#943A38;
 	text-decoration:underline;
 }
