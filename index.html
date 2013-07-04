@@ -74,7 +74,7 @@
                             <i class="icon-minus-sign error"></i> <a href="#" id="failedbuild">core-image-x11 qemux86 (11/06/13 at 10:01)</a>
                         </div>
                         <div class="span2">
-                            <i class="icon-minus-sign error"></i> <a href="#" class="alert-error">4 errors</a>
+                            <i class="icon-minus-sign error"></i> <a href="#" class="error">4 errors</a>
                         </div>
                         <div class="span2">
                             <i class="icon-warning-sign warning"></i> <a class="warning" href="#">10 warnings</a>
@@ -115,7 +115,7 @@
                     <div class="row-fluid">
                         <div class="span4">
                             <i class="icon-ok-sign success"></i> 
-                            <a href="project-build.html" style="margin-left:1em;">core-image-sato atom-pc (11/06/13 at 15:22)</a>
+                            <a href="build-dashboard.html" style="margin-left:1em;">core-image-sato atom-pc (11/06/13 at 15:22)</a>
                         </div>
                         <div class="span6">
                             <i class="icon-warning-sign warning"></i> <a class="warning" href="#">4 warnings</a>
@@ -411,7 +411,7 @@
                         		</a>
                         	</div>
                         </th>  
-                        <th class="started_one" style="display:none;">
+                        <th class="started_on" style="display:none;">
                         	<a href="#" style="font-weight:normal;">Started on</a>
                         	<div class="btn-group pull-right">
                         		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -486,34 +486,34 @@
                         </th> 
                 </thead>
                 <tbody>
-                	<tr onclick="document.location = 'project-build.html';">
+                	<tr>
                 		<td data-filter="status" class="outcome">
-                			<a href="#">
+                			<a class="success" href="build-dashboard.html">
                 				<i class="icon-ok-sign success"></i>
                             </a> 
                         </td>
                         <td class="target">
-                        	core-image-sato
+                        	<a href="build-dashboard.html">core-image-sato</a>
                         </td>
                         <td class="machine">
-                        	atom-pc
+                        	<a href="build-dashboard.html">atom-pc</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	11/06/13 at 14:46
                         </td>
                         <td class="completed_on">
-                        	11/06/13 at 15:22
+                        	<a href="build-dashboard.html">11/06/13 at 15:22</a>
                         </td>
-                        <td class="errors"
+                        <td class="errors">
                         </td>
                         <td class="warnings warning">
-                        	4 warnings
+                        	<a class="warning" href="all-tasks.html?filter=warning">5 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:36:55
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/atom-pc/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, hddimg, iso
@@ -527,280 +527,298 @@
                         <td data-filter="arch">qemux86</td-->
                     </tr>
                     <tr>  
-                     	<td data-filter="status">
-                     		<!--i class="icon-warning-sign warning"></i-->
-                     		<i class="icon-minus-sign error"></i>
+                     	<td data-filter="status" class="outcome">
+                     		<a class="error" href="#">
+                     			<!--i class="icon-warning-sign warning"></i-->
+                     			<i class="icon-minus-sign error"></i>
+                     		</a>
                      	</td>
                         <td class="target">
-                        	core-image-x11
+                        	<a href="#">core-image-x11</a>
                         </td>
                         <td class="machine">
-                        	qemux86
+                        	<a href="#">qemux86</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	11/06/13 at 09:34
                         </td>
                         <td class="completed_on">
-                        	11/06/13 at 10:01
+                        	<a href="#">11/06/13 at 10:01</a>
                         </td>
                         <td class="errors error">
-                        	4 errors
+                        	<a href="all-tasks.html?filter=error" class="error">3 errors</a>
                         </td>
                         <td class="warnings warning">
-                        	10 warnings
+                        	<a href="all-tasks.html?filter=warning" class="warning">10 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:27:45
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemux86/20130703083625.log
                         </td>
                         <td class="output">
                         </td>                          
                      </tr>
                      <tr>
-                    	<td data-filter="status">
-                    		<!--i class="icon-warning-sign warning"></i-->
-                    		<i class="icon-ok-sign success"></i>
+                    	<td data-filter="status" class="outcome">
+                    		<a class="success" href="#">
+                    			<!--i class="icon-warning-sign warning"></i-->
+                    			<i class="icon-ok-sign success"></i>
+                    		</a>
                     	</td>
                         <td class="target">
-                        	core-image-sato
+                        	<a href="#">core-image-sato</a>
                         </td>
                         <td class="machine">
-                        	atom-pc
+                        	<a href="#">atom-pc</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	11/06/13 at 11:12
                         </td>
                         <td class="completed_on">
-                        	11/06/13 at 11:54
+                        	<a href="#">11/06/13 at 11:54</a>
                         </td>
                         <td class="errors">
                         </td>
                         <td class="warnings warning">
-                        	4 warnings
+                        	<a href="all-tasks.html?filter=warning" class="warning">4 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:42:07
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/atom-pc/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, hddimg, iso
                         </td> 
                     </tr>
                     <tr>
-                    	<td data-filter="status">
-                    		<i class="icon-ok-sign success"></i>
+                    	<td data-filter="status" class="outcome">
+                    		<a class="success" href="#">
+                    			<i class="icon-ok-sign success"></i>
+                    		</a>
                     	</td>
                         <td class="target">
-                        	core-image-minimal
+                        	<a href="#">core-image-minimal</a>
                         </td>
                         <td class="machine">
-                        	qemux86
+                        	<a href="#">qemux86</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	10/06/13 at 17:02
                         </td>
                         <td class="completed_on">
-                        	10/06/13 at 17:16
+                        	<a href="#">10/06/13 at 17:16</a>
                         </td>
-                        <td class="errors error">
+                        <td class="errors">
                         </td>
-                        <td class="warnings warning">
+                        <td class="warnings">
                         </td>
                         <td class="time" style="display:none;">
                         	00:14:04
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemux86/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, tar.bz2
                         </td>  
                     </tr>
                     <tr>
-                    	<td data-filter="status">
-                    		<!--i class="icon-minus-sign error"></i-->
-                    		<i class="icon-ok-sign success"></i>
+                    	<td data-filter="status" class="outcome">
+                    		<a class="success" href="#">
+                    			<!--i class="icon-minus-sign error"></i-->
+                    			<i class="icon-ok-sign success"></i>
+                    		</a>
                     	</td>
                         <td class="target">
-                        	core-image-realtime-sdk
+                        	<a href="#">core-image-realtime-sdk</a>
                         </td>
                         <td class="machine">
-                        	fri2
+                        	<a href="#">fri2</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	10/06/13 at 16:21
                         </td>
                         <td class="completed_on">
-                        	10/06/13 at 17:34
+                        	<a href="#">10/06/13 at 17:34</a>
                         </td>
-                        <td class="errors error">
+                        <td class="errors">
                         </td>
-                        <td class="warnings warning">
+                        <td class="warnings">
                         </td>
                         <td class="time" style="display:none;">
                         	01:13:22
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/fri2/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, tar.bz2
                         </td> 
                     </tr>
                     <tr>
-                    	<td data-filter="status">
-                    		<!--i class="icon-warning-sign warning"></i-->
-                    		<i class="icon-ok-sign success"></i>
+                    	<td data-filter="status" class="outcome">
+                    		<a class="success" href="#">
+                    			<!--i class="icon-warning-sign warning"></i-->
+                    			<i class="icon-ok-sign success"></i>
+                    		</a>
                     	</td>
                         <td class="target">
-                        	core-image-minimal
+                        	<a href="#">core-image-minimal</a>
                         </td>
                         <td class="machine">
-                        	qemuarm
+                        	<a href="#">qemuarm</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	10/06/13 at 13:49
                         </td>
                         <td class="completed_on">
-                        	10/06/13 at 14:02
+                        	<a href="#">10/06/13 at 14:02</a>
                         </td>
-                        <td class="errors error">
+                        <td class="errors">
                         </td>
-                        <td class="warnings warning">
-                        	5 warnings
+                        <td class="warnings">
+                        	<a href="all-tasks.html?filter=warning" class="warning">5 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:13:05
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemuarm/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, tar.bz2
                         </td> 
                     </tr>
                     <tr>
-                        <td data-filter="status">
-                        	<i class="icon-ok-sign success"></i>
+                        <td data-filter="status" class="outcome">
+                        	<a class="success" href="#">
+                        		<i class="icon-ok-sign success"></i>
+                        	</a>
                         </td>
                         <td class="target">
-                        	core-image-minimal
+                        	<a href="#">core-image-minimal</a>
                         </td>
                         <td class="machine">
-                        	qemumips
+                        	<a href="#">qemumips</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	10/06/13 at 11:12
                         </td>
                         <td class="completed_on">
-                        	10/06/13 at 11:31
+                        	<a href="#">10/06/13 at 11:31</a>
                         </td>
-                        <td class="errors error">
+                        <td class="errors">
                         </td>
-                        <td class="warnings warning">
-                        	2 warnings
+                        <td class="warnings">
+                        	<a href="all-tasks.html?filter=warning" class="warning">2 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:19:49
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemumips/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, tar.bz2
                         </td> 
                     </tr>
                 	<tr>
-                		<td data-filter="status">
-                			<!--i class="icon-warning-sign warning"></i-->
-                			<i class="icon-minus-sign error"></i>
+                		<td data-filter="status" class="outcome">
+                			<a class="success" href="#">
+                				<!--i class="icon-warning-sign warning"></i-->
+                				<i class="icon-minus-sign error"></i>
+                			</a>
                 		</td>
                         <td class="target">
-                        	core-image-minimal
+                        	<a href="#">core-image-minimal</a>
                         </td>
                         <td class="machine">
-                        	qemumips64
+                        	<a href="#">qemumips64</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	10/06/13 at 09:45
                         </td>
                         <td class="completed_on">
-                        	10/06/13 at 09:47
+                        	<a href="#">10/06/13 at 09:47</a>
                         </td>
-                        <td class="errors error">
-                        	1 error
+                        <td class="errors">
+                        	<a href="all-tasks.html?filter=error" class="error">1 error</a>
                         </td>
-                        <td class="warnings warning">
+                        <td class="warnings">
                         </td>
                         <td class="time" style="display:none;">
                         	00:02:07
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemumips64/20130703083625.log
                         </td>
                         <td class="output">
                         </td> 
                     </tr>
                     <tr>
-                        <td data-filter="status">
-                        	<i class="icon-ok-sign success"></i>
+                        <td data-filter="status" class="outcome">
+                        	<a class="success" href="#">
+                        		<i class="icon-ok-sign success"></i>
+                        	</a>
                         </td>
                         <td class="target">
-                        	core-image-minimal
+                        	<a href="#">core-image-minimal</a>
                         </td>
                         <td class="machine">
-                        	qemuppc
+                        	<a href="#">qemuppc</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	09/06/13 at 18:14
                         </td>
                         <td class="completed_on">
-                        	09/06/13 at 18:25
+                        	<a href="#">09/06/13 at 18:25</a>
                         </td>
-                        <td class="errors error">
+                        <td class="errors">
                         </td>
-                        <td class="warnings warning">
+                        <td class="warnings">
                         </td>
                         <td class="time" style="display:none;">
                         	00:11:28
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemuppc/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, tar.bz2
                         </td> 
                     </tr>
                     <tr>
-                        <td data-filter="status">
-                        	<i class="icon-ok-sign success"></i>
+                        <td data-filter="status" class="outcome">
+                        	<a class="success" href="#">
+                        		<i class="icon-ok-sign success"></i>
+                        	</a>
                         </td>
                         <td class="target">
-                        	core-image-minimal
+                        	<a href="#">core-image-minimal</a>
                         </td>
                         <td class="machine">
-                        	qemux86-64
+                        	<a href="#">qemux86-64</a>
                         </td>
                         <td class="started_on" style="display:none;">
                         	08/06/13 at 12:56
                         </td>
                         <td class="completed_on">
-                        	08/06/13 at 13:17
+                        	<a href="#">08/06/13 at 13:17</a>
                         </td>
-                        <td class="errors error">
+                        <td class="errors">
                         </td>
-                        <td class="warnings warning">
-                        	2 warnings
+                        <td class="warnings">
+                        	<a href="all-tasks.html?filter=warning" class="warning">2 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:21:48
                         </td>
                         <td class="log">
-                        	<a href="#">/home/user/poky/path/to/main_cooker.log</a>
+                        	/home/user/poky/build/tmp/log/cooker/qemux86-64/20130703083625.log
                         </td>
                         <td class="output">
                         	ext3, tar.bz2
@@ -1008,6 +1026,25 @@
         <script src="assets/js/prettify.js" type='text/javascript'></script>
         <script src="assets/js/jit.js" type='text/javascript'></script>
         <script src="assets/js/main.js" type='text/javascript'></script>
+            <script>
+        	 $(document).ready(function() {	
+        	 	//edit columns functionality (show / hide table columns)
+        	 	$("input:checkbox").change();
+        	 		$("input:checkbox").change(function(){
+        	 			var selectedType = $(this).val();
+        	 				if($(this).is(":checked")){
+        	 					$("."+selectedType).show();
+        	 				}
+        	 				else{
+        	 					$("."+selectedType).hide();
+        	 				}
+        	 		});  	
+        	 	//turn edit columns dropdown into a multi-select menu
+        	 	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+    				e.stopPropagation();
+				});         			
+        	 });
+        </script>
         
 
     </body>
