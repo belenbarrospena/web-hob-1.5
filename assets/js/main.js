@@ -208,25 +208,25 @@ $(document).ready(function() {
      *
      */
     // Prevent clicking on muted (disabled) link
-    $('a.muted, div.muted').click(function() {
+    /* $('a.muted, div.muted').click(function() {
         return false;
 
     // Show tooltip for disabled links
-    //}).tooltip({
-        //title: 'Link is not functional in this demo.',
-        //delay: {
-            //show: 400,
-            //hide: 0
-        //}
-    //});
+    }).tooltip({
+        title: 'Link is not functional in this demo.',
+        delay: {
+            show: 400,
+            hide: 0
+        }
+    });*/
 
-    $('table').tooltip({
+    /*$('table').tooltip({
         title: 'Sorting disabled',
         delay: {
             show: 400,
             hide: 0
         }
-    });
+    });*/
 
     $('.info').tooltip();
 
@@ -248,7 +248,7 @@ $(document).ready(function() {
         }
     });
 
-    $('a.error, a.warning').each(function() {
+    /*$('a.error, a.warning').each(function() {
         this.href = 'all-tasks.html?filter=' + this.className;
     });
 
@@ -261,17 +261,20 @@ $(document).ready(function() {
     });
     
 	$('#failedbuild').each(function() {
-    this.href = 'project-build.html';
+    	this.href = '#';
     });
 
     if (location.href.search('filter=') > -1) {
         var filter = location.href.split('filter=')[1];
         var cells = jQuery('.' + filter);
-        jQuery('tr').hide();
+        //jQuery('tr').hide();
+        $("tbody > tr").hide();
         cells.each(function() {
-            jQuery(this).parents('tr').show();
+        	if($(this).is('a')) {
+            	jQuery(this).parents('tr').show();
+            }
         });
-    }
+    }*/
 
     // Prevent invalid links from jumping page scroll
     $('a[href=#]').click(function() {
