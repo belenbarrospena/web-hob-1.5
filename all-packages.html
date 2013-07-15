@@ -85,7 +85,7 @@
         			<li><a href="all-recipes.html">Recipes</a></li>
         			<li class="active"><a href="all-packages.html">Packages</a></li>
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
-        			<li><a href="project-build-time.html">Time</a></li>
+        			<li><a href="build-time.html">Time</a></li>
         			<li><a href="project-build-cpu-usage.html">CPU usage</a></li>
         			<li><a href="#" class="muted">Disk I/O</a></li>
         		</ul>
@@ -171,13 +171,25 @@
                         							<input type="checkbox" value="layer_directory" />
                         							Layer directory
                         						</label>
-                        					</li>                          					                     					
+                        					</li>   
+                        					<li>
+                        						<label class="checkbox">
+                        							<input type="checkbox" value="license" />
+                        							License
+                        						</label>
+                        					</li>                         					                     					
         									<li>
                         						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="package_name" disabled />
                         							Package
                         						</label>
-                        					</li>                        					
+                        					</li>    
+                        					<li>
+                        						<label class="checkbox">
+                        							<input type="checkbox" value="package_files" />
+                        							Package files
+                        						</label>
+                        					</li>                    					
                         					<li>
                         						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="package_version" disabled />
@@ -311,6 +323,7 @@
                         	</tr-->
                         	<tr>
                         		<th class="included">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Included</a>
                         			<div id="filtered" class="btn-group pull-right" title="<p>Showing included packages</p><p><a class='btn btn-mini btn-info' href='#'>Show all</a></p>">
                         				<a class="btn btn-mini btn-info">
@@ -320,6 +333,7 @@
                         			<!--a href="#" class="pull-right" style="margin-right:.5em;"><span class="label label-info">Clear filter</span></a-->                        			
                         		</th>  
                         		<th class="package_name">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			Package
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -329,6 +343,7 @@
                         			<i class="icon-caret-down"></i>
                         		</th>                        	
                         		<th class="package_version">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Package version</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -336,7 +351,17 @@
                         				</a>
                         			</div>
                         		</th>
+                        		<th class="package_files" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
+                        			<a href="#" style="font-weight:normal;">Package files</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-filter"></i>
+                        				</a>
+                        			</div>
+                        		</th>
                         		<th class="package_size">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Size</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -345,6 +370,7 @@
                         			</div>
                         		</th>
                         		<th class="size_over_total" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Size over total (%)</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -352,7 +378,17 @@
                         				</a>
                         			</div>
                         		</th>  
+                        		<th class="license" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
+                        			<a href="#" style="font-weight:normal;">License</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-filter"></i>
+                        				</a>
+                        			</div>
+                        		</th> 
                         		<th class="depends" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Depends</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -361,6 +397,7 @@
                         			</div>
                         		</th> 
                         		<th class="recommends" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Recommends</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -369,6 +406,7 @@
                         			</div>
                         		</th> 
                         		<th class="brought_in_by">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Brought in by</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -377,6 +415,7 @@
                         			</div>
                         		</th>                                 
                         		<th class="recipe_name">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Recipe</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -385,6 +424,7 @@
                         			</div>
                         		</th>
                         		<th class="recipe_version" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Recipe version</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -393,6 +433,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_name" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -401,6 +442,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_branch" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer branch</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -409,6 +451,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_commit" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer commit</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -417,6 +460,7 @@
                         			</div>
                         		</th>  
                         		<th class="layer_directory" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer directory</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -431,8 +475,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">base-files</a></td>
                         		<td class="package_version">3.0.14-r73</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/base-files/3.0.14-r73/</td>
                                 <td class="package_size">228 KB</td>
                         		<td class="size_over_total" style="display:none;">4%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -440,7 +486,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">base-files</td>
+                            	<td class="recipe_name"><a href="#">base-files</a></td>
                             	<td class="recipe_version" style="display:none">3.0.14-r73</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -455,8 +501,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">base-passwd</a></td>
                         		<td class="package_version">3.5.26-r2</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/base-passwd/3.5.26-r2/</td>
                                 <td class="package_size">0 KB</td>
                         		<td class="size_over_total" style="display:none;">0%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -464,7 +512,7 @@
                             			1
                             		</a>
                             	</td>
-                            	<td class="recipe_name">base-passwd</td>
+                            	<td class="recipe_name"><a href="#">base-passwd</a></td>
                             	<td class="recipe_version" style="display:none">3.5.26-r2</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -479,8 +527,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox</a></td>
                         		<td class="package_version">1.20.2-r7</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">568 KB</td>
                         		<td class="size_over_total" style="display:none;">2%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>update-alternatives-cworth</a>">
                         				2
@@ -496,7 +546,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">busybox</td>
+                            	<td class="recipe_name"><a href="#">busybox</a></td>
                             	<td class="recipe_version" style="display:none">1.20.2-r7</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -511,8 +561,10 @@
                          		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox-hwclock</a></td>
                         		<td class="package_version">1.20.2-r7</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">16 KB</td>
                         		<td class="size_over_total" style="display:none;">0.9%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -520,7 +572,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">busybox</td>
+                            	<td class="recipe_name"><a href="#">busybox</a></td>
                             	<td class="recipe_version" style="display:none">1.20.2-r7</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -535,8 +587,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox-syslog</a></td>
                         		<td class="package_version">1.20.2-r7</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">20 KB</td>
                         		<td class="size_over_total" style="display:none;">0.4%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>update-alternatives-cworth</a>">
                         				1
@@ -548,7 +602,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">busybox</td>
+                            	<td class="recipe_name"><a href="#">busybox</a></td>
                             	<td class="recipe_version" style="display:none">1.20.2-r7</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -563,8 +617,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox-udhcpc</a></td>
                         		<td class="package_version">1.20.2-r7</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">32 KB</td>
                         		<td class="size_over_total" style="display:none;">0.6%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -572,7 +628,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">busybox</td>
+                            	<td class="recipe_name"><a href="#">busybox</a></td>
                             	<td class="recipe_version" style="display:none">1.20.2-r7</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -587,8 +643,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">eglibc</a></td>
                         		<td class="package_version">2.17-r3</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/eglibc/2.17-r3/</td>
                                 <td class="package_size">3.1 MB</td>
                         		<td class="size_over_total" style="display:none;">42%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -596,7 +654,7 @@
                             			10
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">eglibc</td>
+                            	<td class="recipe_name"><a href="#">eglibc</a></td>
                             	<td class="recipe_version" style="display:none">2.17-r3</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -611,8 +669,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">init-ifupdown</a></td>
                         		<td class="package_version">1.0-r0</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/1.0-r0/</td>
                                 <td class="package_size">44 KB</td>
                         		<td class="size_over_total" style="display:none;">3%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>netbase</a>">
                         				1
@@ -628,7 +688,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">init-ifupdown</td>
+                            	<td class="recipe_name"><a href="#">init-ifupdown</a></td>
                             	<td class="recipe_version" style="display:none">1.0-r0</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -637,16 +697,16 @@
                             			3e1dbabbf3...
                             		</a>
                             	</td>
-                            	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>      
-                            	</td>
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                         	
                            	</tr>
                            	<tr>
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">initscripts</a></td>
                         		<td class="package_version">1.0-r140</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/initscripts/1.0-r140/</td>
                                 <td class="package_size">164 KB</td>
                         		<td class="size_over_total" style="display:none;">5%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>update-alternatives-cworth</a>">
                         				1
@@ -658,7 +718,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">initscripts</td>
+                            	<td class="recipe_name"><a href="#">initscripts</a></td>
                             	<td class="recipe_version" style="display:none">1.0-r140</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -673,8 +733,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-base</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">32 KB</td>
                         		<td class="size_over_total" style="display:none;">3%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -682,7 +744,7 @@
                             			4
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">linux-yocto</td>
+                            	<td class="recipe_name"><a href="#">linux-yocto</a></td>
                             	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
                         		<td class="layer_name" style="display:none">meta-yocto</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -697,8 +759,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-cfbcopyarea</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">36 KB</td>
                         		<td class="size_over_total" style="display:none;">3%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a>">
                         				1
@@ -710,7 +774,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">linux-yocto</td>
+                            	<td class="recipe_name"><a href="#">linux-yocto</a></td>
                             	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
                         		<td class="layer_name" style="display:none">meta-yocto-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -725,8 +789,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-cfbfillrect</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">36 KB</td>
                         		<td class="size_over_total" style="display:none;">2%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a>">
                         				1
@@ -734,11 +800,11 @@
                         		</td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>kernel-module-uvesafb<a/>">
+                            		<a class="btn" href="#" data-content="<a href='#'>kernel-module-uvesafb</a>">
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">linux-yocto</td>
+                            	<td class="recipe_name"><a href="#">linux-yocto</a></td>
                             	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
                         		<td class="layer_name" style="display:none">meta-yocto</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -753,8 +819,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-cfbimgblt</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">32 KB</td>
                         		<td class="size_over_total" style="display:none;">2%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a>">
                         				1
@@ -766,7 +834,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">linux-yocto</td>
+                            	<td class="recipe_name"><a href="#">linux-yocto</a></td>
                             	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
                         		<td class="layer_name" style="display:none">meta-yocto</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -781,8 +849,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-uvesafb</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">64 KB</td>
                         		<td class="size_over_total" style="display:none;">5%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a> | <a href='#'>kernel-module-cfbcopyarea</a> | <a href='#'>kernel-module-cfbfillrect</a> | <a href='#'>kernel-module-cfbimgblt</a>">
                         				4
@@ -794,7 +864,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">linux-yocto</td>
+                            	<td class="recipe_name"><a href="#">linux-yocto</a></td>
                             	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
                         		<td class="layer_name" style="display:none">meta-yocto</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -809,8 +879,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">libkmod</a></td>
                         		<td class="package_version">9-r0.0</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/kmod/9-r0.0/</td>
                                 <td class="package_size">104 KB</td>
                         		<td class="size_over_total" style="display:none;">6.4%</td>
+                        		<td class="license" style="display:none;">LGPL_v2.1+</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a>">
                         				1
@@ -822,7 +894,7 @@
                             			2
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">kmod</td>
+                            	<td class="recipe_name"><a href="#">kmod</a></td>
                             	<td class="recipe_version" style="display:none">9-r0.0</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -837,8 +909,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">modutils-iniscripts</a></td>
                         		<td class="package_version">1.0-r6</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/modutils-initscripts/1.0-r6/</td>
                                 <td class="package_size">16 KB</td>
                         		<td class="size_over_total" style="display:none;">1.7%</td>
+                        		<td class="license" style="display:none;">PD</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;">
                             		<a class="btn" href="#" data-content="<a href='#'>update-rc.d</a>">
@@ -850,7 +924,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">modutils-iniscripts</td>
+                            	<td class="recipe_name"><a href="#">modutils-iniscripts</a></td>
                             	<td class="recipe_version" style="display:none">1.0-r6</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -865,8 +939,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">netbase</a></td>
                         		<td class="package_version">5.1-r0</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/netbase/1_5.1-r0/</td>
                                 <td class="package_size">40 KB</td>
                         		<td class="size_over_total" style="display:none;">3%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -874,7 +950,7 @@
                             			2
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">netbase</td>
+                            	<td class="recipe_name"><a href="#">netbase</a></td>
                             	<td class="recipe_version" style="display:none">5.1-r0</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -889,8 +965,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name">packagegroup-core-boot</td>
                         		<td class="package_version">1.0-r11</td>
+                                <td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/packagegroup-core-boot/1.0-r11/</td>
                                 <td class="package_size">0 B</td>
                         		<td class="size_over_total" style="display:none;">0%</td>
+                        		<td class="license" style="display:none;">MIT</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>base-files</a> | <a href='#'>base-passwd</a> | <a href='#'>busybox</a> | <a href='#'>busybox-hwclock</a> | <a href='#'>init-ifupdown</a> | <a href='#'>initscripts</a> | <a href='#'>modutils-initscripts</a> | <a href='#'>netbase</a> | <a href='#'>sysvinit</a> | <a href='#'>tinylogin</a> | <a href='#'>udev</a> | <a href='#'>update-alternatives-cworth</a> | <a href='#'>v86d</a>">
                         				13
@@ -898,7 +976,7 @@
                         		</td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by"></td>
-                            	<td class="recipe_name">packagegroup-core-boot</td>
+                            	<td class="recipe_name"><a href="#">packagegroup-core-boot</a></td>
                             	<td class="recipe_version" style="display:none">1.0-r11</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -913,8 +991,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">pciutils-ids</a></td>
                         		<td class="package_version">3.2.0-r0</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/pciutils/3.2.0-r0/</td>
                                 <td class="package_size">212 KB</td>
                         		<td class="size_over_total" style="display:none;">4%</td>
+                        		<td class="license" style="display:none;">GPLv2+</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -922,7 +1002,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">pciutils</td>
+                            	<td class="recipe_name"><a href="#">pciutils</a></td>
                             	<td class="recipe_version" style="display:none">3.2.0-r0</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -937,12 +1017,14 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">rpm-postinsts</a></td>
                         		<td class="package_version">1.0-r0</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/all-poky-linux/rpm-postinsts/1.0-r0/</td>
                                 <td class="package_size">0 B</td>
                         		<td class="size_over_total" style="display:none;">0%</td>
+                        		<td class="license" style="display:none;">LGPLv2.1</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by"></td>
-                            	<td class="recipe_name">rpm-postinsts</td>
+                            	<td class="recipe_name"><a href="#">rpm-postinsts</a></td>
                             	<td class="recipe_version" style="display:none">1.0-r0</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -957,8 +1039,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">sysvinit</a></td>
                         		<td class="package_version">2.88dsf-r11</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/sysvinit/2.88dsf-r11/</td>
                                 <td class="package_size">220 KB</td>
                         		<td class="size_over_total" style="display:none;">4%</td>
+                        		<td class="license" style="display:none;">GPLv2+</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>sysvinit-inittab</a> | <a href'#'>sysvinit-pidof</a> | <a href='#'>update-alternatives-cworth</a>">
                         				4
@@ -969,7 +1053,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">sysvinit</td>
+                            	<td class="recipe_name"><a href="#">sysvinit</a></td>
                             	<td class="recipe_version" style="display:none">2.88dsf-r11</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -984,8 +1068,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">sysvinit-inittab</a></td>
                         		<td class="package_version">2.88dsf-r9</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/sysvinit-inittab/2.88dsf-r9/</td>
                                 <td class="package_size">12 KB</td>
                         		<td class="size_over_total" style="display:none;">0.7%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
@@ -993,7 +1079,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">sysvinit-inittab</td>
+                            	<td class="recipe_name"><a href="#">sysvinit-inittab</a></td>
                             	<td class="recipe_version" style="display:none">2.88dsf-r9</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -1008,8 +1094,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">sysvinit-pidof</a></td>
                         		<td class="package_version">2.88dsf-r11</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/sysvinit/2.88dsf-r11/</td>
                                 <td class="package_size">28 KB</td>
                         		<td class="size_over_total" style="display:none;">1.3%</td>
+                        		<td class="license" style="display:none;">GPLv2+</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>update-alternatives-cworth</a>">
                         				2
@@ -1021,7 +1109,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">sysvinit</td>
+                            	<td class="recipe_name"><a href="#">sysvinit</a></td>
                             	<td class="recipe_version" style="display:none">2.88dsf-r11</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -1036,8 +1124,10 @@
                            	 	<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">tinylogin</a></td>
                         		<td class="package_version">1.4-r9</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/tinylogin/1.4-r9/</td>
                                 <td class="package_size">64 KB</td>
                         		<td class="size_over_total" style="display:none;">3%</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
                         			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>update-alternatives-cworth</a>">
                         				2
@@ -1049,7 +1139,7 @@
                             			1
                             		</a>	
                             	</td>
-                            	<td class="recipe_name">tinylogin</td>
+                            	<td class="recipe_name"><a href="#">tinylogin</a></td>
                             	<td class="recipe_version" style="display:none">1.4-r9</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
@@ -1064,8 +1154,10 @@
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">udev</a></td>
                         		<td class="package_version">182-r7</td>
+                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/udev/182-r7/</td>
                                 <td class="package_size">744 KB</td>
                         		<td class="size_over_total" style="display:none;">7%</td>
+                        		<td class="license" style="display:none;">GPLv2.0+</td>
                         		<td class="depends" style="display:none;">
                             		<a class="btn" href="#" data-content="<a href='#'>eglib</a> <span class='muted'>(2.17 or higher)</span> | <a href='#'>libkmod</a> <span class='muted'>(9 or higher)</span> | <a href='#'>util-linux-libblkid</a> <span class='muted'>(2.23 or higher)</span>">
                             			3
@@ -1081,7 +1173,7 @@
                             			1
                             		</a>
                             	</td>
-                            	<td class="recipe_name">udev</td>
+                            	<td class="recipe_name"><a href="#">udev</a></td>
                             	<td class="recipe_version" style="display:none">182-r7</td>
                         		<td class="layer_name" style="display:none">openembedded-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
