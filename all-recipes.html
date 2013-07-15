@@ -85,7 +85,7 @@
         			<li><a href="all-recipes.html">Recipes</a></li>
         			<li><a href="all-packages.html">Packages</a></li>
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
-        			<li><a href="project-build-time.html">Time</a></li>
+        			<li><a href="build-time.html">Time</a></li>
         			<li><a href="project-build-cpu-usage.html">CPU usage</a></li>
         			<li><a href="#" class="muted">Disk I/O</a></li>
         		</ul>
@@ -122,12 +122,6 @@
             								<i class="icon-caret-down"></i>
         								</a>
         								<ul class="dropdown-menu pull-right">
-        									<li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" value="recipe_file"/>
-                        							File
-                        						</label>
-                        					</li>
                         					<li>
                         						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="layer_name" />
@@ -166,6 +160,12 @@
                         					</li>
         									<li>
                         						<label class="checkbox">
+                        							<input type="checkbox" checked="checked" value="recipe_file"/>
+                        							Recipe file
+                        						</label>
+                        					</li>                        					
+        									<li>
+                        						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="recipe_version" disabled />
                         							Recipe version
                         						</label>
@@ -175,7 +175,13 @@
                         							<input type="checkbox" checked="checked" value="section" />
                         							Section
                         						</label>
-                        					</li>                       					
+                        					</li>    
+                        					<li>
+                        						<label class="checkbox">
+                        							<input type="checkbox" value="work_directory" />
+                        							Work directory
+                        						</label>
+                        					</li>                         					                   					
 										</ul>
                         			</div> <!-- end of btn-group -->
                         			<span class="divider-vertical"></span>
@@ -273,6 +279,7 @@
                         	</tr-->
                         	<tr>
                         		<th class="recipe_name">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			Recipe
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -282,6 +289,7 @@
                         			<i class="icon-caret-down"></i>
                         		</th>                        	
                         		<th class="recipe_version">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Recipe version</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -290,14 +298,25 @@
                         			</div>
                         		</th>
                         		<th class="recipe_file">
-                        			<a href="#" style="font-weight:normal;">File</a>
+                        			<i class="icon-question-sign icon-white get-help"></i>
+                        			<a href="#" style="font-weight:normal;">Recipe file</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
                         					<i class="icon-filter"></i>
                         				</a>
                         			</div>
                         		</th>
+                        		<th class="work_directory" style="display:none">
+                        			<i class="icon-question-sign icon-white get-help"></i>
+                        			<a href="#" style="font-weight:normal;">Work directory</a>
+                        			<div class="btn-group pull-right">
+                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        					<i class="icon-filter"></i>
+                        				</a>
+                        			</div>
+                        		</th>                         		
                         		<th class="section">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Section</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -306,6 +325,7 @@
                         			</div>
                         		</th>                                  
                         		<th class="license">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">License</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -314,6 +334,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_name">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -322,6 +343,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_branch" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer branch</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -330,6 +352,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_commit" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer commit</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -338,6 +361,7 @@
                         			</div>
                         		</th>
                         		<th class="layer_dir" style="display:none;">
+                        			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Layer directory</a>
                         			<div class="btn-group pull-right">
                         				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
@@ -352,6 +376,7 @@
                         		<td class="recipe_name"><a href="#"><a href="#">acl</a></td>
                         		<td class="recipe_version">2.2.51-r3</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/attr/acl_2.2.51.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">LGPLv2.1+ & GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -367,6 +392,7 @@
                         		<td class="recipe_name"><a href="#">acl-native</a></td>
                         		<td class="recipe_version">2.2.51-r3</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/attr/acl_2.2.51.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">LGPLv2.1+ & GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -382,6 +408,7 @@
                         		<td class="recipe_name"><a href="#">alsa-lib-native</a></td>
                         		<td class="recipe_version">1.0.26</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-multimedia/alsa/alsa-lib_1.0.26.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs/multimedia</td>
                         		<td class="license">LGPLv2.1 & GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -397,6 +424,7 @@
                         		<td class="recipe_name"><a href="#">apr-native</a></td>
                         		<td class="recipe_version">1.4.6</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/apr/apr_1.4.6.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">Apache-2.0</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -412,6 +440,7 @@
                         		<td class="recipe_name"><a href="#">apr-util-native</a></td>
                         		<td class="recipe_version">1.5.1</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/apr/apr-util_1.5.1.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">Apache-2.0</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -427,6 +456,7 @@
                         		<td class="recipe_name"><a href="#">attr</a></td>
                         		<td class="recipe_version">2.4.46</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/attr/attr_2.4.46.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">LGPLv2.1+ & GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -442,6 +472,7 @@
                         		<td class="recipe_name"><a href="#">attr-native</a></td>
                         		<td class="recipe_version">2.4.46</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/attr/attr_2.4.46.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">LGPLv2.1+ & GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -457,6 +488,7 @@
                         		<td class="recipe_name"><a href="#">autoconf-native</a></td>
                         		<td class="recipe_version">2.69</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/autoconf/autoconf_2.69.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">devel</td>
                         		<td class="license">GPLv2 & GPLv3</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -472,6 +504,7 @@
                         		<td class="recipe_name"><a href="#">automake-native</a></td>
                         		<td class="recipe_version">1.12.6</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/automake/automake_1.12.6.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">devel</td>
                         		<td class="license">GPLv2</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -487,6 +520,7 @@
                         		<td class="recipe_name"><a href="#">base-files</a></td>
                         		<td class="recipe_version">3.0.14</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-core/base-files/base-files_3.0.14.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">GPLv2</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -502,6 +536,7 @@
                         		<td class="recipe_name"><a href="#">base-passwd</a></td>
                         		<td class="recipe_version">3.5.26</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-core/base-passwd/base-passwd_3.5.26.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -517,6 +552,7 @@
                         		<td class="recipe_name"><a href="#">beecrypt-native</a></td>
                         		<td class="recipe_version">4.2.1</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/beecrypt/beecrypt_4.2.1.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">GPLv2 & LGPLv2.1</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -532,6 +568,7 @@
                         		<td class="recipe_name"><a href="#">binutils-cross</a></td>
                         		<td class="recipe_version">2.23.2</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/binutils/binutils-cross_2.23.2.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">devel</td>
                         		<td class="license">GPLv3</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -547,6 +584,7 @@
                         		<td class="recipe_name"><a href="#">binutils-native</a></td>
                         		<td class="recipe_version">2.23.2</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/binutils/binutils_2.23.2.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">devel</td>
                         		<td class="license">GPLv3</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -562,6 +600,7 @@
                         		<td class="recipe_name"><a href="#">bison-native</a></td>
                         		<td class="recipe_version">2.7.1</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/bison_2.7.1.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">devel</td>
                         		<td class="license">GPLv3</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -577,6 +616,7 @@
                         		<td class="recipe_name"><a href="#">busybox</a></td>
                         		<td class="recipe_version">1.21.1</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-core/busybox/busybox_1.21.1.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">GPLv2 & bzip2</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -592,6 +632,7 @@
                         		<td class="recipe_name"><a href="#">bzip2-native</a></td>
                         		<td class="recipe_version">1.0.6</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-extended/bzip2/bzip2_1.0.6.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">console/utils</td>
                         		<td class="license">bzip2</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -607,6 +648,7 @@
                         		<td class="recipe_name"><a href="#">core-image-minimal</a></td>
                         		<td class="recipe_version">1.0</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-core/images/core-image-minimal.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">MIT</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -622,6 +664,7 @@
                         		<td class="recipe_name"><a href="#">createrepo-native</a></td>
                         		<td class="recipe_version">0.4.11</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/createrepo/createrepo_0.4.11.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">GPLv2+</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -637,6 +680,7 @@
                         		<td class="recipe_name"><a href="#">db-native</a></td>
                         		<td class="recipe_version">5.3.21</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-support/db/db_5.3.21.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">Sleepycat</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -652,6 +696,7 @@
                         		<td class="recipe_name"><a href="#">dtc-native</a></td>
                         		<td class="recipe_version">1.4.0+gitX</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-kernel/dtc/dtc_git.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">bootloader</td>
                         		<td class="license">GPLv2 | BSD</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -667,6 +712,7 @@
                         		<td class="recipe_name"><a href="#">e2fsprogs-native</a></td>
                         		<td class="recipe_version">1.42.7</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/e2fsprogs_1.42.7.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">GPLv2 & LGPLv2 & BSD & MIT</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -682,6 +728,7 @@
                         		<td class="recipe_name"><a href="#">eglibc</a></td>
                         		<td class="recipe_version">2.17</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-core/eglibc/eglibc_2.17.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">GPLv2 & LGPLv2.1</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -697,6 +744,7 @@
                         		<td class="recipe_name"><a href="#">eglibc-initial</a></td>
                         		<td class="recipe_version">2.17</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-core/eglibc/eglibc-initial_2.17.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">libs</td>
                         		<td class="license">GPLv2 & LGPLv2.1</td>
                         		<td class="layer_name">openembedded-core</td>
@@ -712,6 +760,7 @@
                         		<td class="recipe_name"><a href="#">elfutils-native</a></td>
                         		<td class="recipe_version">0.148</td>
                         		<td class="recipe_file">home/user/poky/meta/recipes-devtools/elfutils/elfutils_0.148.bb</td>
+                        		<td class="work_directory" style="display:none">/home/user/poky/path/to/workdir/</td>
                                 <td class="section">base</td>
                         		<td class="license">(GPL-2+ & Elfutils-Exception)</td>
                         		<td class="layer_name">openembedded-core</td>
