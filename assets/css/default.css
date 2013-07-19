@@ -370,14 +370,6 @@ dd ul {
 	margin-left:0px;
 }
 
-/*.task_history dt {
-	width: 250px;
-}
-
-.task_history dd {
-	margin-left:270px;
-}*/
-
 .alert-warning code {
 	background-color: transparent;
 	border: none;
@@ -401,8 +393,8 @@ dd ul {
 }
 
 .accordion-heading a:hover {
-	color: #0088CC;
-	text-decoration: none;
+	color: #000000;
+	text-decoration: underline;
 }
 
 dt, dd {
@@ -414,5 +406,20 @@ dd li {
 	line-height:25px;
 }
 
+.taskchanges dt {
+	width: 300px;
+}
+
+.taskchanges dd {
+	margin-left: 320px;
+}
+
+.diffsigs dt {
+	width: 200px;
+}
+
+.diffsigs dd {
+	margin-left: 220px;
+}
 
 	

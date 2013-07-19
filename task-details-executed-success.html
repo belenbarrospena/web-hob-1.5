@@ -99,39 +99,6 @@
                 <div class="page-header">
 					<h1>do_patch acl_2.2.51-r3</h1>
 				</div>
-				<div class="accordion" id="task-type">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-type" href="#task-type-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task type: Executed
-								</h4>
-							</a>
-						</div>
-						<div id="task-type-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Task order</dt>
-									<dd><a href="#">269</a></dd>								
-									<dt>Script type</dt>
-									<dd>python</dd>
-									<dt>Script file</dt>
-									<dd>/path/to/script/file/</dd>
-									<dt>Task starts at line</dt>
-									<dd>250</dd>
-									<dt>Task depends on</dt>
-									<dd>
-										<ul>
-											<li><a href="#">do_fetch acl_2.2.51-r3</a></li>
-											<li><a href="#">do_unpack acl_2.2.51-r3</a></li>
-										</ul>
-									</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="accordion" id="task-outcome">
 					<div class="accordion-group">
 						<div class="accordion-heading" style="background-color:#F5F5F5;">
@@ -159,7 +126,7 @@ DEBUG: Searching for install.patch in paths:
 	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86
 	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemuall:
 	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/poky <a class="btn-link" data-toggle="collapse" data-target="#fullerror" id="full-error-show">...</a><div id="fullerror" class="collapse" style="margin-top:-20px;">
+	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/poky <a class="btn btn-mini" data-toggle="collapse" data-target="#fullerror" id="full-error-show">...</a><div id="fullerror" class="collapse" style="margin-top:-20px;">
 	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/
 	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86-64
 	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86
@@ -316,7 +283,7 @@ ERROR: Fetcher failure: Unable to find file file://doesnotexist anywhere. The pa
 DEBUG: Python function base_do_fetch finished
 DEBUG: Python function do_fetch finished
 ERROR: Function failed: Fetcher failure for URL: 'file://doesnotexist'. Unable to fetch URL from any source.</code><br />
-<a class="btn-link" data-toggle="collapse" data-target="#fullerror" id="full-error-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">collapse error <i class="icon-caret-up	"></i></a></div></pre></div>
+<a class="btn btn-mini" data-toggle="collapse" data-target="#fullerror" id="full-error-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">Collapse error <i class="icon-caret-up	"></i></a></div></pre></div>
 								<dl class="dl-horizontal">
 									<dt>Warnings</dt>
 									<dd>2</dd>
@@ -330,6 +297,41 @@ ERROR: Function failed: Fetcher failure for URL: 'file://doesnotexist'. Unable t
 							</div>
 						</div>
 					</div>	
+				</div>
+				<div class="accordion" id="task-type">
+					<div class="accordion-group">
+						<div class="accordion-heading" style="background-color:#F5F5F5;">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-type" href="#task-type-body">
+								<h4>
+									<i class="icon-caret-down"></i>
+									Task type: Executed
+								</h4>
+							</a>
+						</div>
+						<div id="task-type-body" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<dl class="dl-horizontal taskchanges">
+									<dt>Task changed since <a href=#">last execution</a></dt>
+									<dd><a href="task-changes.html">View changes</a></dd>
+									<dt>Task order</dt>
+									<dd><a href="#">269</a></dd>								
+									<dt>Script type</dt>
+									<dd>python</dd>
+									<dt>Script file</dt>
+									<dd>/path/to/script/file/</dd>
+									<dt>Task starts at line</dt>
+									<dd>250</dd>
+									<dt>Task depends on</dt>
+									<dd>
+										<ul>
+											<li><a href="#">do_fetch acl_2.2.51-r3</a></li>
+											<li><a href="#">do_unpack acl_2.2.51-r3</a></li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="accordion" id="task-performance">
 					<div class="accordion-group">
@@ -355,36 +357,6 @@ ERROR: Function failed: Fetcher failure for URL: 'file://doesnotexist'. Unable t
 						</div>
 					</div>
 				</div>
-				<div class="accordion" id="task-history">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-history" href="#task-history-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task history
-								</h4>
-							</a>
-						</div>
-						<div id="task-history-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal task_history">
-									<dt>Is this an existing task?</dt>
-									<dd>No</dd>								
-									<dt>Task signature</dt>
-									<dd>6ef1b44fb0d9c59b6e7ec342199d3d10</dd>
-									<dt>Did signature change?</dt>
-									<dd>Yes
-										<small><a style="margin-left:4px;" href="task-changes.html">View changes</a></small>
-									</dd>
-									<dt>Execute task?</dt>
-									<dd>Yes</dd>	
-									<dt>Task outcome</dt>
-									<dd>Task <span class="text-success">succeeded</span> with <span class="text-warning">2 warnings</span></dd>																
-								</dl>
-							</div>
-						</div>
-					</div>				
-				</div>     
             </div><!-- end right container -->
 
         </div>
