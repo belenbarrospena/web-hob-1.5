@@ -76,7 +76,7 @@
                     	<li><a href="all-tasks.html">Tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li class="active">do_patch acl_2.2.51-r3</li>
+                    	<li class="active">do_package_write base-files_3.0.14-r73</li>
                 	</ul>
             	</div>
 			<div class="row-fluid">
@@ -97,7 +97,7 @@
 			<!-- Begin right container -->
             <div class="span10">
                 <div class="page-header">
-					<h1>do_patch <a href="#">acl_2.2.51-r3</a></h1>
+					<h1>do_package_write <a href="#">base-files_3.0.14-r73</a></h1>
 				</div>
 				<div class="accordion" id="task-outcome">
 					<div class="accordion-group">
@@ -105,7 +105,7 @@
 							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-outcome" href="#task-outcome-body">
 								<h4>
 									<i class="icon-caret-down"></i>
-									Outcome: </span><span class="success">Succeeded</span>
+									Outcome: Sstate
 								</h4>
 							</a>
 						</div>
@@ -113,16 +113,17 @@
 							<div class="accordion-inner">
 								<dl class="dl-horizontal">							
 									<dt>Log file</dt>
-									<dd>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_patch</dd>
-									<dt>Warnings</dt>
-									<dd>2</dd>
-								</dl>
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL http://www.zlib.net/zlib-1.2.7.tar.bz2, attempting MIRRORS if available</code>
-								</div>
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>						
+									<dd>/home/user/poky/build/tmp/work/path/to/log/file/log.do_package_write</dd>
+									<dt>Sstate source URI</dt>
+									<dd>/path/where/the/sstate/object/was/found/</dd>									
+									<dt>Other URI(s) searched</dt>
+									<dd>
+										<ul>
+											<li>/path/search/to/sstate/object/one/</li>
+											<li>/path/search/to/sstate/object/two/</li>
+										</ul>
+									</dd>
+								</dl>					
 							</div>
 						</div>
 					</div>	
@@ -133,25 +134,17 @@
 							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-type" href="#task-type-body">
 								<h4>
 									<i class="icon-caret-down"></i>
-									Task type: Executed
+									Task type: <span class="muted">Prebuilt</span>
 								</h4>
 							</a>
 						</div>
 						<div id="task-type-body" class="accordion-body collapse in">
 							<div class="accordion-inner">
-								<dl class="dl-horizontal taskchanges">
+								<dl class="dl-horizontal">
 									<dt>Task order</dt>
 									<dd><a href="#">269</a></dd>	
 									<dt>Task depends on</dt>
-									<dd><a href="#">do_unpack acl_2.2.51-r3</a></dd>	
-									<dt>Task changed since <a href=#">last execution</a></dt>
-									<dd><a href="task-changes.html">View changes</a></dd>						
-									<dt>Script type</dt>
-									<dd>python</dd>
-									<dt>Script file</dt>
-									<dd>/path/to/script/file/</dd>
-									<dt>Task starts at line</dt>
-									<dd>250</dd>
+									<dd><a href="#">do_package base-files_3.0.14-r73</a></dd>						
 								</dl>
 							</div>
 						</div>
@@ -171,11 +164,11 @@
 							<div class="accordion-inner">
 								<dl class="dl-horizontal">
 									<dt>Time (secs)</dt>
-									<dd>0.16</dd>								
+									<dd>2.79</dd>								
 									<dt>CPU usage</dt>
-									<dd>9.2%</dd>
+									<dd>12.7%</dd>
 									<dt>Disk I/O (ms)</dt>
-									<dd>0</dd>
+									<dd>1887</dd>
 								</dl>
 							</div>
 						</div>
