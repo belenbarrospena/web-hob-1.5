@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/prettify.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/default.css" type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <!-- Be sure to leave the brand out there if you want it shown -->
+                    <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+                    <!-- Everything you want hidden at 940px or less, place within here -->
+                    <div class="nav-collapse collapse">
+                        <!--div class="pull-right">                           
+                            <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Start a project
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
+                                    </li>
+                                    <li>
+                                        <a class="file-type" href="#import-project">Import project</a>
+                                        <form id="import-project" class="hidden" action="">
+                                            <input type="file" />
+                                            <input type="submit" />
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Username
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="muted" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            
+    	<!-- begin content -->
+    	<div class="row-fluid">
+        	<div class="span12">
+				<!-- Breadcrumbs -->
+            	<div class="section">
+                	<ul class="breadcrumb">
+                    	<li><a href="index.html">All builds</a> 
+                    		<span class="divider">&rarr;</span></li>
+                    	<!--li><a href="project.html">An Arbitrary Project Name</a> 
+                    		<span class="divider">&rarr;</span></li-->
+                    	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
+                    		<span class="divider">&rarr;</span>
+                    	</li>
+                    	<li><a href="all-tasks.html">Tasks</a> 
+                    		<span class="divider">&rarr;</span>
+                    	</li>
+                    	<li class="active">do_unpack base-files_3.0.14-r73</li>
+                	</ul>
+            	</div>
+			<div class="row-fluid">
+				<!-- begin left sidebar container -->
+				<div id="nav" class="span2">
+    			<ul class="nav nav-tabs nav-stacked">
+        			<li><a href="project-build-configuration.html">Configuration</a></li>
+        			<li><a href="all-tasks.html">Tasks</a></li>
+        			<li><a href="all-recipes.html">Recipes</a></li>
+        			<li><a href="all-packages.html">Packages</a></li>
+        			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
+        			<li><a href="build-time.html">Time</a></li>
+        			<li><a href="project-build-cpu-usage.html">CPU usage</a></li>
+        			<li><a href="#" class="muted">Disk I/O</a></li>
+        		</ul>
+        	</div>
+			<!-- end left sidebar container -->
+			<!-- Begin right container -->
+            <div class="span10">
+                <div class="page-header">
+					<h1>do_unpack <a href="#">base-files_3.0.14-r73</a></h1>
+				</div>
+				<div class="accordion" id="task-outcome">
+					<div class="accordion-group">
+						<div class="accordion-heading" style="background-color:#F5F5F5;">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-outcome" href="#task-outcome-body">
+								<h4>
+									<i class="icon-caret-down"></i>
+									Outcome: Existing
+								</h4>
+							</a>
+						</div>
+						<div id="task-outcome-body" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<dl class="dl-horizontal">							
+									<dt>Log file</dt>
+									<dd>/home/user/poky/build/tmp/work/path/to/log/file/log.unpack</dd>
+									<dt>Task executed on</dt>
+									<dd><a href="#">core-image-sato atom-pc (10/06/13 at 10:34)</a></dd>									
+								</dl>					
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="well">
+					<h4>Task type: <span class="muted">Prebuilt</span></h4>
+				</div>
+				<div class="accordion" id="task-performance">
+					<div class="accordion-group">
+						<div class="accordion-heading" style="background-color:#F5F5F5;">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-performance" href="#task-performance-body">
+								<h4>
+									<i class="icon-caret-down"></i>
+									Task performance information
+								</h4>
+							</a>
+						</div>
+						<div id="task-performance-body" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<dl class="dl-horizontal">
+									<dt>Time (secs)</dt>
+									<dd>1.06</dd>								
+									<dt>CPU usage</dt>
+									<dd>6.4%</dd>
+									<dt>Disk I/O (ms)</dt>
+									<dd>18</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div><!-- end right container -->
+
+        </div>
+    </div><!-- end content -->
+
+        </div>
+
+        <script src="assets/js/jquery-1.9.1.min.js" type='text/javascript'></script>
+        <script src="assets/js/jquery.tablesorter.min.js" type='text/javascript'></script>
+        <script src="assets/js/bootstrap.min.js" type='text/javascript'></script>
+        <script src="assets/js/prettify.js" type='text/javascript'></script>
+        <script src="assets/js/jit.js" type='text/javascript'></script>
+        <script src="assets/js/main.js" type='text/javascript'></script>
+        <script>
+        	 $(document).ready(function() {	
+        	 	//edit columns functionality (show / hide table columns)
+        	 	$("input:checkbox").change();
+        	 		$("input:checkbox").change(function(){
+        	 			var selectedType = $(this).val();
+        	 				if($(this).is(":checked")){
+        	 					$("."+selectedType).show();
+        	 				}
+        	 				else{
+        	 					$("."+selectedType).hide();
+        	 				}
+        	 		});  	
+        	 	//turn edit columns dropdown into a multi-select menu
+        	 	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+    				e.stopPropagation();
+				});   
+				// hide full-error-show on click
+				$('#full-error-show').click(function(){
+					$(this).hide();
+				});
+				// show full-error-show when clicking 'collapse error'
+				$('#full-error-hide').click(function(){
+					$('#full-error-show').show();
+				});
+				//filter warnings and errors when requested by the URL
+				if (location.href.search('filter=') > -1) {
+        			var filter = location.href.split('filter=')[1];
+        			var cells = jQuery('.' + filter);
+        			$("tbody > tr").hide();
+        			cells.each(function() {
+        				if($(this).is('a')) {
+            				jQuery(this).parents('tr').show();
+            			}
+        			});
+    			}  	 	
+        	 });
+        </script>
+        
+
+    </body>
+</html>
