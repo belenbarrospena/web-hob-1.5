@@ -4,6 +4,7 @@
         <title></title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" type='text/css'>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <link rel="stylesheet" href="assets/css/font-awesome.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/prettify.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/default.css" type='text/css'>
@@ -150,6 +151,12 @@
 			<div class="page-header">
             	<h1>All builds</h1>
             </div>  
+            <div class="row-fluid">
+            	<div class="alert span6">
+    				<button type="button" class="close" data-dismiss="alert">&times;</button>
+    				There are no builds matching your selected filter. 
+    			</div>
+    		</div>
             <div class="navbar">
             	<div class="navbar-inner">
             		<form class="navbar-search pull-left">
@@ -346,7 +353,7 @@
             </div-->
             
             <div class="row-fluid" style="margin-top:1em;">
-				<table class="table table-tablesorter bordered table-hover custom-column">
+				<table class="table table-tablesorter table-bordered table-hover custom-column">
                 <thead> <!-- Table header -->
                     <!--tr>
                     	<td>
@@ -391,7 +398,7 @@
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Outcome</a>
                         	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        		<a href="#outcome" role="button" class="btn btn-mini" data-toggle="modal">
                         			<i class="icon-filter"></i>
                         		</a>
                         	</div>
@@ -399,26 +406,16 @@
                         <th class="target">
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Target</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-filter"></i>
-                        		</a>
-                        	</div>
                         </th>
                         <th class="machine span3">
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Machine</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-filter"></i>
-                        		</a>
-                        	</div>
                         </th>  
                         <th class="started_on" style="display:none;">
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Started on</a>
                         	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        		<a href="#started-on" role="button" class="btn btn-mini" data-toggle="modal">
                         			<i class="icon-filter"></i>
                         		</a>
                         	</div>
@@ -427,7 +424,7 @@
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	Completed on
                         	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        		<a href="#completed-on" role="button" class="btn btn-mini" data-toggle="modal">
                         			<i class="icon-filter"></i>
                         		</a>
                         	</div>
@@ -437,7 +434,7 @@
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Errors</a>
                         	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        		<a href="#errors" role="button" class="btn btn-mini" data-toggle="modal">
                         			<i class="icon-filter"></i>
                         		</a>
                         	</div>
@@ -446,53 +443,27 @@
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Warnings</a>
                         	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+                        		<a href="#warnings" role="button" class="btn btn-mini" data-toggle="modal">
                         			<i class="icon-filter"></i>
                         		</a>
                         	</div>
+                        	<!--div id="filtered" class="btn-group pull-right" title="<p>Showing only builds without warnings</p><p><a class='btn btn-mini btn-primary' href='#'>Show all builds</a></p>">
+                    			<a class="btn btn-mini btn-primary">
+                        			<i class="icon-filter"></i>
+                        		</a>
+                        	</div-->
                         </th>
                         <th class="time" style="display:none;">
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Time</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-filter"></i>
-                        		</a>
-                        	</div>
                         </th>
-                        <!--th class="cpu_usage" style="display:none">
-                        	<a href="#" style="font-weight:normal;">CPU usage</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-caret-down"></i>
-                        		</a>
-                        	</div>
-                        </th>  
-                        <th class="disk_io" style="display:none">
-                        	<a href="#" style="font-weight:normal;">Disk I/O (ms)</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-caret-down"></i>
-                        		</a>
-                        	</div>
-                        </th--> 
                         <th class="log">	
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Log</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-filter"></i>
-                        		</a>
-                        	</div>
                         </th>  
                         <th class="output">
                         	<i class="icon-question-sign icon-white get-help"></i>
                         	<a href="#" style="font-weight:normal;">Output</a>
-                        	<div class="btn-group pull-right">
-                        		<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        			<i class="icon-filter"></i>
-                        		</a>
-                        	</div>
                         </th> 
                 </thead>
                 <tbody>
@@ -884,154 +855,111 @@
         
 
 
-        <!-- Modals -->
-        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <form action="project-configuration-1.html">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Start a new project</h3>
-                </div>
-                <div class="modal-body">
-                    <label>Project name</label>
-                    <input type="text" />
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Create a project</button>
-                </div>
-            </form>
+	<!-- Modals -->
+	<!-- 'Outcome filter' -->
+    <div id="outcome" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Filter builds by 'Outcome'</h3>
         </div>
+        <div class="modal-body">
+        	<label>Show only</label>
+            <select>
+                <option selected="selected">-- select --</option>
+                <option>Successful builds</option>
+                <option>Failed builds</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary disabled">Apply filter</button>
+        </div>
+    </div>
+    
+    <!-- 'Started on' filter -->
+    <div id="started-on" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Filter builds by 'Started on'</h3>
+        </div>
+        <div class="modal-body">
+        	<label>Show only builds started</label>
+            <select>
+                <option selected="selected">-- select --</option>
+                <option>Today</option>
+                <option>Yesterday</option>
+                <option>Within one week</option>
+                <option>From ... to</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary disabled">Apply filter</button>
+        </div>
+    </div>
+    
+    <!-- 'Completed on' filter -->
+    <div id="completed-on" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Filter builds by 'Completed on'</h3>
+        </div>
+        <div class="modal-body">
+        	<label>Show only builds completed</label>
+            <select>
+                <option>-- select --</option>
+                <option>Today</option>
+                <option>Yesterday</option>
+                <option>Within one week</option>
+                <option>From ... to</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary disabled">Apply filter</button>
+        </div>
+    </div>
+    
+    <!-- 'Errors' filter -->
+    <div id="errors" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Filter builds by 'Errors'</h3>
+        </div>
+        <div class="modal-body">
+        	<label>Show only</label>
+            <select>
+                <option selected="selected">-- select --</option>
+                <option>Builds with errors</option>
+                <option>Builds without errors</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary disabled">Apply filter</button>
+        </div>
+    </div>
+    
+    <!-- 'Warnings' filter -->
+    <div id="warnings" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Filter builds by 'Warnings'</h3>
+        </div>
+        <div class="modal-body">
+        	<label>Show only</label>
+            <select>
+                <option selected="selected">-- select --</option>
+                <option>Builds with warnings</option>
+                <option>Builds without warnings</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary disabled">Apply filter</button>
+        </div>
+    </div>
 
-        <div id="layerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <form action="">
-                <div class="modal-header overflow-hidden">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <!--h3 id="myModalLabel">Image types</h3-->
-                </div>
-                <div class="modal-body">
-                    <p><strong>About meta-android</strong></p>
-                    <p>The OpenEmbedded layer for android specific software.</p>
-                    <p><a href="#">README file</a> | <a href="#">Usage information</a></p>
-                    <p><strong>Repository:</strong><br>
-                    git://github.com/shr-distribution/meta-smartphone.git</p>
-                    <p><strong>Web:</strong><br>
-                    http://github.com/shr-distribution/meta-smartphone</p>
-                    <p><strong>Subdirectory:</strong><br/>
-                    meta-android</p>
-                </div>
-                <!--div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Done</button>
-                </div-->
-            </form>
-        </div>
 
-        <div id="runModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <form action="project-building.html">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Run build</h3>
-                </div>
-                <div class="modal-body">
-                    <label>Build name</label>
-                    <input type="text" value="Release candiate v1.4" />
-                    <p>Select the image recipes you wish to build:</p>
-                    <ul class="unstyled">
-                        <li>
-                            <label class="checkbox">
-                                <input type="checkbox"> My own version of core-image-base <a href="#"><i class="icon-pencil"></i> Edit</a>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox">
-                                <input type="checkbox"> cohrhe:-mimage-l2sbb <a href="#"><i class="icon-pencil"></i> Customise</a>
-                            </label>
-                            <ul class="unstyled" style="margin-left: 20px">
-                                <li><p>My customised image recipe while editing recipes <a href="#"><i class="icon-pencil"></i> Edit recipes</a></p></li>
-                                <li><p>My customised image recipe while editing packages <a href="#"><i class="icon-pencil"></i> Edit packages</a></p></li>
-                                <li style="margin-bottom: 10px" class="alert alert-error">My customised image recipe when building failed <i class="icon-minus-sign error"></i> package build failed <strong>2 errors</strong></li>
-                                <li>
-                                    <p class="pull-left">My customised image recipe is building packages&nbsp;</p>
-                                    <div style="width: 300px" class="pull-left progress progress-striped">
-                                        <div class="bar" style="width: 20%;"></div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Build</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="customiseModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <form action="project-configuration-images-1.html">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Customise core-image-base</h3>
-                </div>
-                <div class="modal-body">
-                    <label>Name your customised image recipe</label>
-                    <input type="text" />
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Create</button>
-                </div>
-            </form>
-        </div>
-
-        <div id="busyboxModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <form action="">
-                <div class="modal-header overflow-hidden">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel" class="pull-left">About Busybox</h3>
-                    <span style="margin: 2.5px 5px" class="pull-right">
-                        <a class="muted" href="#"><i class="icon-folder-close"></i> View package tasks</a>
-                        <a class="muted" href="#"><i class="icon-tasks"></i> View package sources</a>
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Tiny versions of many common UNIX utilities in a single small executable</strong></p><br>
-                    <p><strong>Recipe:</strong> <a href="#">busybox-1.20.2-r4</a></p>
-                    <p><strong>Brought in by:</strong> <a href="#">packagegroup-core-boot</a></p>
-                    <p><strong>Depends on:</strong> <a href="#">update-rc.d</a> | <a href="#">eglibc</a></p>
-                    <p><strong>Recommends:</strong> <a href="#">busybox-syslog</a> | <a href="#">busybox-udhcpd</a></p><br>
-                    <p><strong>Description:</strong><br>
-                    BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in GNU filNeaumtiels,BusyBox generally have fewer options than their full-featured bin 569.3 KB GNU cousins; however, the options that are included provide the expected functionality and behave very much like their GNU counter parts. BusyBox provides a fairly complete POSIX 8.2KB environment for any small or embedded system.</p>
-                    <p><a href="#">Busybox homepage</a> | <a href="#">Busybox bug tracker</a></p>
-                </div>
-                <!--div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Done</button>
-                </div-->
-            </form>
-        </div>
-
-        <div id="recipeModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <form action="">
-                <div class="modal-header overflow-hidden">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">busybox</h3>
-                </div>
-                <div class="modal-body">
-                    <p>A deamon for delivering ACPI events</p>
-                    <p><a href="#">View recipe file</a></p>
-                    <p><strong>Version:</strong> 1.0.10</p>
-                    <p><strong>Revision:</strong> r0</p>
-                    <p><strong>Section:</strong> base</p>
-                    <p><strong>License:</strong> GPLv2+</p>
-                    <p><strong>Layer:</strong> <a href="#">openembedded-core</a></p>
-                    <p><strong>Homepage:</strong> <a href="#">http://sourceforge.net/projects/acpid/</a></p>
-                    <p><strong>Bugtracker:</strong> <a href="#">http://sourceforge.net/tracker/?group_id=33140&amp;atid=407341</a></p>
-                </div>
-                <!--div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Done</button>
-                </div-->
-            </form>
-        </div>
 
         <script src="assets/js/jquery-1.9.1.min.js" type='text/javascript'></script>
         <script src="assets/js/jquery.tablesorter.min.js" type='text/javascript'></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script src="assets/js/bootstrap.min.js" type='text/javascript'></script>
         <script src="assets/js/prettify.js" type='text/javascript'></script>
         <script src="assets/js/jit.js" type='text/javascript'></script>
@@ -1052,7 +980,14 @@
         	 	//turn edit columns dropdown into a multi-select menu
         	 	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
     				e.stopPropagation();
-				});         			
+				});    
+    			//show tooltip with applied filter
+    			$('#filtered').tooltip({container:'table', placement:'bottom', delay:{hide:1500}, html:true});	 
+    			//show date pickers for the Started on and Completed on filters
+    			$(function() {
+					$( "#datepicker-from" ).datepicker();
+					$( "#datepicker-to" ).datepicker();
+				});    			
         	 });
         </script>
         
