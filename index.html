@@ -22,7 +22,8 @@
                         <span class="icon-bar"></span>
                     </a>
                     <!-- Be sure to leave the brand out there if you want it shown -->
-                    <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand logo" href="#"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand" href="#">Toaster</a>
                     <!-- Everything you want hidden at 940px or less, place within here -->
                     <!--div class="nav-collapse collapse">
                         <div class="pull-right">
@@ -60,11 +61,11 @@
             </div>
         </div>
 
-        <div class="container-fluid">
+	<div class="container-fluid">
             
     <div class="row-fluid">
         <div class="span12">
-            <!-- Recent activity -->
+            <!-- Recent activity 
             <div class="recent-activity">
             	<div class="page-header">
             		<h1>Recent builds</h1>
@@ -130,7 +131,7 @@
                 <div class="alert">
                     <div class="row-fluid">
                         <div class="span4">
-                            <!--i class="icon-ok-sign success"></i--> 
+                            <!--i class="icon-ok-sign success"><!--/i> 
                             <span>core-image-sato qemux86 (in progress)</span>
                         </div>
                         <div class="span4">
@@ -145,8 +146,8 @@
             	</div>
             </div>
             
-
-            <!-- End recent activity -->
+				
+            End recent activity -->
 			
 			<div class="page-header">
             	<h1>All builds</h1>
@@ -154,13 +155,14 @@
             <!--div class="row-fluid">
             	<div class="alert span6">
     				<button type="button" class="close" data-dismiss="alert">&times;</button>
-    				There are no builds matching your selected filter. 
+    				There are no builds matching your search.
     			</div>
     		</div-->
             <div class="navbar">
             	<div class="navbar-inner">
-            		<form class="navbar-search pull-left">
-						<input class="search-query input-xxlarge" type="text" placeholder="Find a build">
+            		<form class="navbar-search input-append pull-left">
+						<input class="input-xxlarge" type="text" placeholder="Search builds">
+						<button class="btn" type="button">Search</button>
     				</form>
     				<div class="pull-right">
     					<div class="btn-group">
@@ -255,105 +257,9 @@
     				</div>
     			</div>
             </div>
-
-            <!--div class="row-fluid">
-                <div class="pull-left">
-                
-                	<form class="form-inline">
-    					<fieldset>
-        				<input type="text" />
-        				<select>
-           				 <option>25</option>
-            <option>50</option>
-            <option>100</option>
-        </select>
-        <span>per page</span>
-    </fieldset>
-</form>
-</div>
-                <div class="pull-right">
-                    
-    			<div class="btn-group">
-        <a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-            <i class="icon-columns"></i>
-            <i class="icon-caret-down"></i>
-        </a>
-        <ul class="dropdown-menu pull-right">
             
-                
-                    <li>
-                        <label class="checkbox">
-                            
-                                <input type="checkbox" checked="checked" />
-                            
-                            Status
-                        </label>
-                    </li>
-                
-            
-                
-                    <li>
-                        <label class="checkbox">
-                            
-                                <input type="checkbox" checked="checked" />
-                            
-                            Project name
-                        </label>
-                    </li>
-                
-            
-                
-                    <li>
-                        <label class="checkbox">
-                            
-                                <input type="checkbox" checked="checked" />
-                            
-                            Last build
-                        </label>
-                    </li>
-                
-            
-                
-                    <li>
-                        <label class="checkbox">
-                            
-                                <input type="checkbox" checked="checked" />
-                            
-                            Messages
-                        </label>
-                    </li>
-                
-            
-                
-                    <li>
-                        <label class="checkbox">
-                            
-                                <input type="checkbox" checked="checked" />
-                            
-                            Base image
-                        </label>
-                    </li>
-                
-            
-                
-                    <li>
-                        <label class="checkbox">
-                            
-                                <input type="checkbox" checked="checked" />
-                            
-                            Target architecture
-                        </label>
-                    </li>
-                
-            
-        </ul>
-    </div>
-
-                </div>
-            </div-->
-            
-            <div class="row-fluid" style="margin-top:1em;">
-				<table class="table table-tablesorter table-bordered table-hover custom-column">
+            <div class="row-fluid">
+				<table class="table table-bordered table-hover tablesorter" id="all-builds-table">
                 <thead> <!-- Table header -->
                     <!--tr>
                     	<td>
@@ -422,7 +328,9 @@
                         </th>  
                         <th class="completed_on">
                         	<i class="icon-question-sign icon-white get-help"></i>
-                        	Completed on
+                        	<a href="#" class="sorted">
+                        		Completed on
+                        	</a>
                         	<div class="btn-group pull-right">
                         		<a href="#completed-on" role="button" class="btn btn-mini" data-toggle="modal">
                         			<i class="icon-filter"></i>
@@ -987,7 +895,9 @@
     			$(function() {
 					$( "#datepicker-from" ).datepicker();
 					$( "#datepicker-to" ).datepicker();
-				});    			
+				});    	
+				//sort the table using tablesorter.com
+				//$('#all-builds-table').tablesorter(); 		
         	 });
         </script>
         
