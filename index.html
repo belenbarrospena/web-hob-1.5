@@ -150,7 +150,12 @@
             End recent activity -->
 			
 			<div class="page-header">
-            	<h1>All builds</h1>
+            	<h1>
+            		<span>All</span> 
+            		<!--span>#NUMBER_OF_SEARCH_RESULTS</span-->
+            	 	builds
+            	 	<!--span>found</span-->
+            	 </h1>
             </div>  
             <!--div class="row-fluid">
             	<div class="alert span6">
@@ -301,7 +306,7 @@
                 	</tr-->
 					<tr>
                         <th class="outcome span2">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The outcome tells you if a build completed successfully or failed"></i>
                         	<a href="#" style="font-weight:normal;">Outcome</a>
                         	<div class="btn-group pull-right">
                         		<a href="#outcome" role="button" class="btn btn-mini" data-toggle="modal">
@@ -310,15 +315,15 @@
                         	</div>
                         </th>                        	
                         <th class="target">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="This is the build target(s): one or more recipes or image recipes"></i>
                         	<a href="#" style="font-weight:normal;">Target</a>
                         </th>
                         <th class="machine span3">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The machine is the hardware for which you are building"></i>
                         	<a href="#" style="font-weight:normal;">Machine</a>
                         </th>  
                         <th class="started_on" style="display:none;">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The date and time you started the build"></i>
                         	<a href="#" style="font-weight:normal;">Started on</a>
                         	<div class="btn-group pull-right">
                         		<a href="#started-on" role="button" class="btn btn-mini" data-toggle="modal">
@@ -327,7 +332,7 @@
                         	</div>
                         </th>  
                         <th class="completed_on">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The date and time the build finished"></i>
                         	<a href="#" class="sorted">
                         		Completed on
                         	</a>
@@ -339,7 +344,7 @@
                         	<i class="icon-caret-down"></i>
                         </th>                                
                         <th class="errors">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="How many errors were encountered during the build (if any)"></i>
                         	<a href="#" style="font-weight:normal;">Errors</a>
                         	<div class="btn-group pull-right">
                         		<a href="#errors" role="button" class="btn btn-mini" data-toggle="modal">
@@ -348,7 +353,7 @@
                         	</div>
                         </th>
                         <th class="warnings">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="How many warnigns were encountered during the build (if any)"></i>
                         	<a href="#" style="font-weight:normal;">Warnings</a>
                         	<div class="btn-group pull-right">
                         		<a href="#warnings" role="button" class="btn btn-mini" data-toggle="modal">
@@ -362,15 +367,15 @@
                         	</div-->
                         </th>
                         <th class="time" style="display:none;">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="How long it took the build to finish"></i>
                         	<a href="#" style="font-weight:normal;">Time</a>
                         </th>
                         <th class="log">	
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The location in disk of the build main log file"></i>
                         	<a href="#" style="font-weight:normal;">Log</a>
                         </th>  
                         <th class="output">
-                        	<i class="icon-question-sign icon-white get-help"></i>
+                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The root file system types produced by the build. You can find them in your <code style='background-color:transparent;color:#FFFFFF;font-weight:normal;border:none;'>/build/tmp/deploy/images/</code> directory"></i>
                         	<a href="#" style="font-weight:normal;">Output</a>
                         </th> 
                 </thead>
@@ -891,6 +896,8 @@
 				});    
     			//show tooltip with applied filter
     			$('#filtered').tooltip({container:'table', placement:'bottom', delay:{hide:1500}, html:true});	 
+    			//show help tooltip
+    			$('.get-help').tooltip({placement:'top',html:true, delay:{show:300},});
     			//show date pickers for the Started on and Completed on filters
     			$(function() {
 					$( "#datepicker-from" ).datepicker();
