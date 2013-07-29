@@ -114,6 +114,7 @@ td a:hover {color: #000000;text-decoration: underline;}
 */
 
 .get-help {color:#CCCCCC;}
+.get-help:hover {color:#999999;cursor:pointer;}
 
 dd ul {list-style-type:none;margin-left:0px;}
 
