@@ -138,3 +138,4 @@ dd li {list-style-type:none;line-height:25px;}
 
 .sorted {color: #333333;}
 .sorted:hover {color: #000000;text-decoration: underline;}
+.icon-remove-sign:hover {color: #999999; cursor: pointer;}
