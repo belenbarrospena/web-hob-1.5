@@ -4,7 +4,7 @@
         <title></title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" type='text/css'>
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="assets/css/jquery-ui.css" />
         <link rel="stylesheet" href="assets/css/font-awesome.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/prettify.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/default.css" type='text/css'>
@@ -306,7 +306,7 @@
                 	</tr-->
 					<tr>
                         <th class="outcome span2">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The outcome tells you if a build completed successfully or failed"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The outcome tells you if a build completed successfully or failed"></i>
                         	<a href="#" style="font-weight:normal;">Outcome</a>
                         	<div class="btn-group pull-right">
                         		<a href="#outcome" role="button" class="btn btn-mini" data-toggle="modal">
@@ -315,15 +315,15 @@
                         	</div>
                         </th>                        	
                         <th class="target">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="This is the build target(s): one or more recipes or image recipes"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="This is the build target(s): one or more recipes or image recipes"></i>
                         	<a href="#" style="font-weight:normal;">Target</a>
                         </th>
                         <th class="machine span3">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The machine is the hardware for which you are building"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The machine is the hardware for which you are building"></i>
                         	<a href="#" style="font-weight:normal;">Machine</a>
                         </th>  
                         <th class="started_on" style="display:none;">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The date and time you started the build"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The date and time you started the build"></i>
                         	<a href="#" style="font-weight:normal;">Started on</a>
                         	<div class="btn-group pull-right">
                         		<a href="#started-on" role="button" class="btn btn-mini" data-toggle="modal">
@@ -332,7 +332,7 @@
                         	</div>
                         </th>  
                         <th class="completed_on">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The date and time the build finished"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The date and time the build finished"></i>
                         	<a href="#" class="sorted">
                         		Completed on
                         	</a>
@@ -344,7 +344,7 @@
                         	<i class="icon-caret-down"></i>
                         </th>                                
                         <th class="errors">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="How many errors were encountered during the build (if any)"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="How many errors were encountered during the build (if any)"></i>
                         	<a href="#" style="font-weight:normal;">Errors</a>
                         	<div class="btn-group pull-right">
                         		<a href="#errors" role="button" class="btn btn-mini" data-toggle="modal">
@@ -353,7 +353,7 @@
                         	</div>
                         </th>
                         <th class="warnings">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="How many warnigns were encountered during the build (if any)"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="How many warnigns were encountered during the build (if any)"></i>
                         	<a href="#" style="font-weight:normal;">Warnings</a>
                         	<div class="btn-group pull-right">
                         		<a href="#warnings" role="button" class="btn btn-mini" data-toggle="modal">
@@ -367,15 +367,15 @@
                         	</div-->
                         </th>
                         <th class="time" style="display:none;">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="How long it took the build to finish"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="How long it took the build to finish"></i>
                         	<a href="#" style="font-weight:normal;">Time</a>
                         </th>
                         <th class="log">	
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The location in disk of the build main log file"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The location in disk of the build main log file"></i>
                         	<a href="#" style="font-weight:normal;">Log</a>
                         </th>  
                         <th class="output">
-                        	<i class="icon-question-sign icon-white get-help" data-toggle="tooltip" title="The root file system types produced by the build. You can find them in your <code style='background-color:transparent;color:#FFFFFF;font-weight:normal;border:none;'>/build/tmp/deploy/images/</code> directory"></i>
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The root file system types produced by the build. You can find them in your <code style='background-color:transparent;color:#FFFFFF;font-weight:normal;border:none;'>/build/tmp/deploy/images/</code> directory"></i>
                         	<a href="#" style="font-weight:normal;">Output</a>
                         </th> 
                 </thead>
@@ -393,7 +393,7 @@
                         	<a href="build-dashboard.html">atom-pc</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	11/06/13 at 14:46
+                        	<a href="build-dashboard.html">11/06/13 at 14:46</a>
                         </td>
                         <td class="completed_on">
                         	<a href="build-dashboard.html">11/06/13 at 15:22</a>
@@ -434,7 +434,7 @@
                         	<a href="#">qemux86</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	11/06/13 at 09:34
+                        	<a href="#">11/06/13 at 09:34</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">11/06/13 at 10:01</a>
@@ -468,7 +468,7 @@
                         	<a href="#">atom-pc</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	11/06/13 at 11:12
+                        	<a href="#">11/06/13 at 11:12</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">11/06/13 at 11:54</a>
@@ -501,7 +501,7 @@
                         	<a href="#">qemux86</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	10/06/13 at 17:02
+                        	<a href="#">10/06/13 at 17:02</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 17:16</a>
@@ -534,7 +534,7 @@
                         	<a href="#">fri2</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	10/06/13 at 16:21
+                        	<a href="#">10/06/13 at 16:21</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 17:34</a>
@@ -567,7 +567,7 @@
                         	<a href="#">qemuarm</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	10/06/13 at 13:49
+                        	<a href="#">10/06/13 at 13:49</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 14:02</a>
@@ -600,7 +600,7 @@
                         	<a href="#">qemumips, qemumips64, qemux86, qemux86-64</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	10/06/13 at 11:12
+                        	<a href="#">10/06/13 at 11:12</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 11:31</a>
@@ -634,7 +634,7 @@
                         	<a href="#">qemumips64</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	10/06/13 at 09:45
+                        	<a href="#">10/06/13 at 09:45</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 09:47</a>
@@ -666,7 +666,7 @@
                         	<a href="#">qemuppc</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	09/06/13 at 18:14
+                        	<a href="#">09/06/13 at 18:14</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">09/06/13 at 18:25</a>
@@ -698,7 +698,7 @@
                         	<a href="#">qemux86-64</a>
                         </td>
                         <td class="started_on" style="display:none;">
-                        	08/06/13 at 12:56
+                        	<a href="#">08/06/13 at 12:56</a>
                         </td>
                         <td class="completed_on">
                         	<a href="#">08/06/13 at 13:17</a>
@@ -897,7 +897,7 @@
     			//show tooltip with applied filter
     			$('#filtered').tooltip({container:'table', placement:'bottom', delay:{hide:1500}, html:true});	 
     			//show help tooltip
-    			$('.get-help').tooltip({placement:'top',html:true, delay:{show:300},});
+    			$('.get-help').tooltip({placement:'top',html:true, container:'table', delay:{show:300},});
     			//show date pickers for the Started on and Completed on filters
     			$(function() {
 					$( "#datepicker-from" ).datepicker();
