@@ -73,7 +73,7 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">Tasks</a> 
+                    	<li><a href="all-tasks.html">All tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
                     	<li class="active">do_unpack attr_2.4.46-r4</li>
@@ -89,7 +89,7 @@
         			<li><a href="all-packages.html">Packages</a></li>
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
         			<li><a href="build-time.html">Time</a></li>
-        			<li><a href="project-build-cpu-usage.html">CPU usage</a></li>
+        			<li><a href="build-cpu.html">CPU usage</a></li>
         			<li><a href="#" class="muted">Disk I/O</a></li>
         		</ul>
         	</div>
@@ -135,10 +135,27 @@
 							<div class="accordion-inner">
 								<dl class="dl-horizontal">
 									<dt>Task order</dt>
-									<dd><a href="#">266</a></dd>	
-									<dt>Task depends on</dt>
-									<dd><a href="#">do_fetch attr_2.4.46-r4</a></dd>							
+									<dd><a href="#">266</a></dd>						
 								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion" id="task-performance">
+					<div class="accordion-group">
+						<div class="accordion-heading" style="background-color:#F5F5F5;">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-dependencies" href="#task-dependencies-body">
+								<h4>
+									<i class="icon-caret-down"></i>
+									Task depends on:
+								</h4>
+							</a>
+						</div>
+						<div id="task-dependencies-body" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<ul>
+									<li><a href="#">do_fetch attr_2.4.46-r4</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>

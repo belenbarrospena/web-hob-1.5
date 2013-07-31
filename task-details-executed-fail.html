@@ -73,7 +73,7 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">Tasks</a> 
+                    	<li><a href="all-tasks.html">All tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
                     	<li class="active">do_configure acl_2.2.51-r3</li>
@@ -89,7 +89,7 @@
         			<li><a href="all-packages.html">Packages</a></li>
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
         			<li><a href="build-time.html">Time</a></li>
-        			<li><a href="project-build-cpu-usage.html">CPU usage</a></li>
+        			<li><a href="build-cpu.html">CPU usage</a></li>
         			<li><a href="#" class="muted">Disk I/O</a></li>
         		</ul>
         	</div>
@@ -350,8 +350,6 @@ ERROR: Function failed: Fetcher failure for URL: 'file://doesnotexist'. Unable t
 								<dl class="dl-horizontal taskchanges">
 									<dt>Task order</dt>
 									<dd><a href="#">270</a></dd>	
-									<dt>Task depends on</dt>
-									<dd><a href="task-details-executed-success.html">do_patch acl_2.2.51-r3</a></dd>
 									<dt>Task changed since <a href=#">last execution</a></dt>
 									<dd><a href="#">View changes</a></dd>																
 									<dt>Script type</dt>
@@ -386,6 +384,25 @@ File: '__anon_27__home_yocto_poky_meta_classes_devshell_bbclass', lineno: 7, fun
      0010:
 Exception: IndexError: list index out of range</code><br />
 <a class="btn btn-mini" data-toggle="collapse" data-target="#fulltrace" id="full-trace-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">Collapse stack trace <i class="icon-caret-up"></i></a></div></pre></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion" id="task-dependencies">
+					<div class="accordion-group">
+						<div class="accordion-heading" style="background-color:#F5F5F5;">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-dependencies" href="#task-dependencies-body">
+								<h4>
+									<i class="icon-caret-down"></i>
+									Task depends on:
+								</h4>
+							</a>
+						</div>
+						<div id="task-dependencies-body" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<ul>
+									<li><a href="#">do_patch acl_2.2.51-r3</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
