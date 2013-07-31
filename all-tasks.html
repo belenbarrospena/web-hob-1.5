@@ -167,7 +167,7 @@
                         					</li>
                         					<li>
                         						<label class="checkbox">
-                        							<input type="checkbox" value="order" />
+                        							<input type="checkbox" checked="checked" value="order" />
                         							Order
                         						</label>
                         					</li>
@@ -267,7 +267,7 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                         	<tr>
-                        		<th class="order" style="display:none">
+                        		<th class="order">
                         			<i class="icon-question-sign get-help"></i>
                         			<a href="#" style="font-weight:normal;">Order</a>
                         			<div class="btn-group pull-right">
@@ -292,7 +292,7 @@
                         		</th>
                         		<th class="recipe_version" style="display:none">
                         			<i class="icon-question-sign get-help"></i>
-                        			<a href="#" style="font-weight:normal;">Recipe version</a>
+                        			<span class="muted">Recipe version</span>
                         		</th>                                  
                         		<th class="task_type">
                         			<i class="icon-question-sign get-help"></i>
@@ -370,7 +370,7 @@
                         </thead>
                         <tbody>
                         	<tr>
-                        		<td class="order" style="display:none">266</td>
+                        		<td class="order">266</td>
                         		<td class="task"><a href="#">do_fetch</a></td>
                         		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
@@ -384,7 +384,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                            </tr>
                            <tr>
-                           		<td class="order" style="display:none">268</td>
+                           		<td class="order">268</td>
                         		<td class="task"><a href="#">do_unpack</a></td>
                         		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
@@ -398,7 +398,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                             </tr>
                             <tr>
-                            	<td class="order" style="display:none">269</td>
+                            	<td class="order">269</td>
                         		<td class="task"><a href="task-details-executed-success.html">do_patch</a></td>
                         		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
@@ -412,7 +412,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                            	                        	
                            </tr>
                            <tr>
-                           		<td class="order" style="display:none">270</td>
+                           		<td class="order">270</td>
                         		<td class="task"><a href="task-details-executed-fail.html">do_configure</a></td>
                         		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
@@ -431,7 +431,7 @@
                             	</td>                           	                          	
                            </tr>
                            <tr>
-                           		<td class="order" style="display:none">272</td>
+                           		<td class="order">272</td>
                         		<td class="task"><a href="#">do_compile</a></td>
                         		<td class="recipe"><a href="#">acl</a></td>
                                 <td class="recipe_version" style="display:none">2.2.51-r3</td>
@@ -445,7 +445,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">266</td>
+                           		<td class="order">266</td>
                         		<td class="task"><a class="muted" href="#">do_fetch</a></td>
                         		<td class="recipe"><a class="muted" href="#">attr</a></td>
                                 <td class="recipe_version" style="display:none">2.4.46-r4</td>
@@ -459,7 +459,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                             </tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">268</td>
+                           		<td class="order">268</td>
                         		<td class="task"><a class="muted" href="task-details-prebuilt-covered.html">do_unpack</a></td>
                         		<td class="recipe"><a class="muted" href="#">attr</a></td>
                                 <td class="recipe_version" style="display:none">2.4.46-r4</td>
@@ -473,7 +473,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">269</td>
+                           		<td class="order">269</td>
                         		<td class="task"><a class="muted" href="#">do_patch</a></td>
                         		<td class="recipe"><a class="muted" href="#">attr</a></td>
                                 <td class="recipe_version" style="display:none">2.4.46-r4</td>
@@ -487,7 +487,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="task-details-prebuilt-existing.html">do_unpack</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -501,7 +501,7 @@
                             	<td class="muted log"></td>
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="#">do_patch</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -515,7 +515,7 @@
                             	<td class="muted log"></td>                            	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="#">do_configure</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -529,7 +529,7 @@
                             	<td class="muted log"></td>                            	                      	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="#">do_compile</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -543,7 +543,7 @@
                             	<td class="muted log"></td>                            	                           	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="#">do_install</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -557,7 +557,7 @@
                             	<td class="muted log"></td>                            	                        	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="#">do_package</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -571,7 +571,7 @@
                             	<td class="muted log"></td>                            	                            	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">n/a</td>
+                           		<td class="order">n/a</td>
                         		<td class="task"><a class="muted" href="#">do_packagedata</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -585,7 +585,7 @@
                             	<td class="muted log"></td>                            	                           	
                            	</tr>
                            	<tr>
-                           		<td class="order" style="display:none">1147</td>
+                           		<td class="order">1147</td>
                         		<td class="task"><a href="#">do_package_write_rpm</a></td>
                         		<td class="recipe"><a href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -599,7 +599,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                            	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">1152</td>
+                           		<td class="order">1152</td>
                         		<td class="task"><a class="muted" href="task-details-prebuilt-sstate.html">do_package_write</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -613,7 +613,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                             </tr>
                            	<tr>
-                           		<td class="order" style="display:none">1234</td>
+                           		<td class="order">1234</td>
                         		<td class="task"><a href="#">do_populate_lic</a></td>
                         		<td class="recipe"><a href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -627,7 +627,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                           	                          	
                            	</tr>
                            	<tr>
-                           		<td class="order" style="display:none">1236</td>
+                           		<td class="order">1236</td>
                         		<td class="task"><a href="#">do_populate_sysroot</a></td>
                         		<td class="recipe"><a href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -641,7 +641,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                           	                            	
                            	</tr>
                            	<tr class="muted">
-                           		<td class="order" style="display:none">1240</td>
+                           		<td class="order">1240</td>
                         		<td class="task"><a class="muted" href="#">do_build</a></td>
                         		<td class="recipe"><a class="muted" href="#">base-files</a></td>
                                 <td class="recipe_version" style="display:none">3.0.14-r73</td>
@@ -655,7 +655,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                           	                             	
                            	</tr>
                            	<tr>
-                           		<td class="order" style="display:none">886</td>
+                           		<td class="order">886</td>
                         		<td class="task"><a href="#">do_fetch</a></td>
                         		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
@@ -669,7 +669,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                            	                              	
                            	</tr>
                            	<tr>
-                           		<td class="order" style="display:none">887</td>
+                           		<td class="order">887</td>
                         		<td class="task"><a href="#">do_unpack</a></td>
                         		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
@@ -683,7 +683,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>
                             </tr>
                            	<tr>
-                           		<td class="order" style="display:none">888</td>
+                           		<td class="order">888</td>
                         		<td class="task"><a href="#">do_patch</a></td>
                         		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
@@ -697,7 +697,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                            	
                            	</tr>
                            	<tr>
-                           		<td class="order" style="display:none">910</td>
+                           		<td class="order">910</td>
                         		<td class="task"><a href="task-details-sstate-missed.html">do_configure</a></td>
                         		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
@@ -711,7 +711,7 @@
                             	<td class="log">/home/user/poky/path/to/file.log</td>                           	                            	
                            	</tr>
                            	<tr>
-                           		<td class="order" style="display:none">911</td>
+                           		<td class="order">911</td>
                         		<td class="task"><a href="task-details-sstate-failed.html">do_compile</a></td>
                         		<td class="recipe"><a href="#">base-passwd</a></td>
                                 <td class="recipe_version" style="display:none">3.5.26-r2</td>
