@@ -182,18 +182,6 @@
                         				Completed on
                         			</label>
                         		</li>
-        						<!--li>
-                        			<label class="checkbox">
-                        				<input type="checkbox" value="cpu_usage" />
-                        				CPU usage
-                        			</label>
-                        		</li>                        					
-                        		<li>
-                        			<label class="checkbox">
-                        				<input type="checkbox" value="disk_io"/>
-                        				Disk I/O (ms)
-                        			</label>
-                        		</li-->
                         		<li>
                         			<label class="checkbox">
                         				<input type="checkbox" checked="checked" value="errors" />
@@ -202,7 +190,13 @@
                         		</li>
                         		<li>
                         			<label class="checkbox">
-                        				<input type="checkbox" value="log" checked="checked" />
+                        				<input type="checkbox" checked="checked" value="failed-tasks" />
+                        				Failed tasks
+                        			</label>
+                        		</li>
+                        		<li>
+                        			<label class="checkbox">
+                        				<input type="checkbox" value="log" />
                         				Log
                         			</label>
                         		</li>
@@ -342,7 +336,21 @@
                         		</a>
                         	</div>
                         	<i class="icon-caret-down"></i>
-                        </th>                                
+                        </th>
+                        <th class="failed-tasks">
+                        	<i class="icon-question-sign get-help" data-toggle="tooltip" title="How many tasks failed during the build"></i>
+                        	<a href="#" style="font-weight:normal;">Failed tasks</a>
+                        	<div class="btn-group pull-right">
+                        		<a href="#failed-tasks" role="button" class="btn btn-mini" data-toggle="modal">
+                        			<i class="icon-filter"></i>
+                        		</a>
+                        	</div>
+                        	<!--div id="filtered" class="btn-group pull-right" title="<p>Showing only builds with failed tasks</p><p><a class='btn btn-mini btn-primary' href='#'>Show all builds</a></p>">
+                        		<a class="btn btn-mini btn-primary">
+                        			<i class="icon-filter"></i>
+                        		</a>
+                        	</div-->   
+                        </th>                                  
                         <th class="errors">
                         	<i class="icon-question-sign get-help" data-toggle="tooltip" title="How many errors were encountered during the build (if any)"></i>
                         	<a href="#" style="font-weight:normal;">Errors</a>
@@ -370,7 +378,7 @@
                         	<i class="icon-question-sign get-help" data-toggle="tooltip" title="How long it took the build to finish"></i>
                         	<a href="#" style="font-weight:normal;">Time</a>
                         </th>
-                        <th class="log">	
+                        <th class="log" style="display:none;">	
                         	<i class="icon-question-sign get-help" data-toggle="tooltip" title="The location in disk of the build main log file"></i>
                         	<a href="#" style="font-weight:normal;">Log</a>
                         </th>  
@@ -398,15 +406,18 @@
                         <td class="completed_on">
                         	<a href="build-dashboard.html">11/06/13 at 15:22</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings warning">
-                        	<a class="warning" href="all-tasks.html?filter=warning">5 warnings</a>
+                        	<a class="warning" href="#">5 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:36:55
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/atom-pc/20130703083625.log
                         </td>
                         <td class="output">
@@ -439,16 +450,19 @@
                         <td class="completed_on">
                         	<a href="#">11/06/13 at 10:01</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="all-tasks.html?filter=error" class="error">2 tasks</a>
+                        </td>
                         <td class="errors error">
-                        	<a href="all-tasks.html?filter=error" class="error">3 errors</a>
+                        	<a href="#" class="error">3 errors</a>
                         </td>
                         <td class="warnings warning">
-                        	<a href="all-tasks.html?filter=warning" class="warning">10 warnings</a>
+                        	<a href="#" class="warning">10 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:27:45
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemux86/20130703083625.log
                         </td>
                         <td class="output">
@@ -473,15 +487,18 @@
                         <td class="completed_on">
                         	<a href="#">11/06/13 at 11:54</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings warning">
-                        	<a href="all-tasks.html?filter=warning" class="warning">4 warnings</a>
+                        	<a href="#" class="warning">4 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:42:07
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/atom-pc/20130703083625.log
                         </td>
                         <td class="output">
@@ -506,6 +523,9 @@
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 17:16</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings">
@@ -513,7 +533,7 @@
                         <td class="time" style="display:none;">
                         	00:14:04
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemux86/20130703083625.log
                         </td>
                         <td class="output">
@@ -539,6 +559,9 @@
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 17:34</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings">
@@ -546,7 +569,7 @@
                         <td class="time" style="display:none;">
                         	01:13:22
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/fri2/20130703083625.log
                         </td>
                         <td class="output">
@@ -572,15 +595,18 @@
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 14:02</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings">
-                        	<a href="all-tasks.html?filter=warning" class="warning">5 warnings</a>
+                        	<a href="#" class="warning">5 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:13:05
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemuarm/20130703083625.log
                         </td>
                         <td class="output">
@@ -605,15 +631,18 @@
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 11:31</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings">
-                        	<a href="all-tasks.html?filter=warning" class="warning">2 warnings</a>
+                        	<a href="#" class="warning">2 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:19:49
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemumips/20130703083625.log
                         </td>
                         <td class="output">
@@ -639,15 +668,18 @@
                         <td class="completed_on">
                         	<a href="#">10/06/13 at 09:47</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="all-tasks.html?filter=error" class="error">2 tasks</a>
+                        </td>
                         <td class="errors">
-                        	<a href="all-tasks.html?filter=error" class="error">1 error</a>
+                        	<a href="#" class="error">1 error</a>
                         </td>
                         <td class="warnings">
                         </td>
                         <td class="time" style="display:none;">
                         	00:02:07
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemumips64/20130703083625.log
                         </td>
                         <td class="output">
@@ -671,6 +703,9 @@
                         <td class="completed_on">
                         	<a href="#">09/06/13 at 18:25</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings">
@@ -678,7 +713,7 @@
                         <td class="time" style="display:none;">
                         	00:11:28
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemuppc/20130703083625.log
                         </td>
                         <td class="output">
@@ -703,15 +738,18 @@
                         <td class="completed_on">
                         	<a href="#">08/06/13 at 13:17</a>
                         </td>
+                        <td class="failed-tasks">
+                        	<a href="#"></a>
+                        </td>
                         <td class="errors">
                         </td>
                         <td class="warnings">
-                        	<a href="all-tasks.html?filter=warning" class="warning">2 warnings</a>
+                        	<a href="#" class="warning">2 warnings</a>
                         </td>
                         <td class="time" style="display:none;">
                         	00:21:48
                         </td>
-                        <td class="log">
+                        <td class="log" style="display:none;">
                         	/home/user/poky/build/tmp/log/cooker/qemux86-64/20130703083625.log
                         </td>
                         <td class="output">
@@ -823,6 +861,25 @@
                 <option>Yesterday</option>
                 <option>Within one week</option>
                 <option>From ... to</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary disabled">Apply filter</button>
+        </div>
+    </div>
+    
+    <!-- 'Failed tasks' filter -->
+    <div id="failed-tasks" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Filter builds by 'Failed tasks'</h3>
+        </div>
+        <div class="modal-body">
+        	<label>Show only</label>
+            <select>
+                <option selected="selected">-- select --</option>
+                <option>Builds with failed tasks</option>
+                <option>Builds without failed tasks</option>
             </select>
         </div>
         <div class="modal-footer">
