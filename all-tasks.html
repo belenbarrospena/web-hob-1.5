@@ -766,9 +766,7 @@
         			var cells = jQuery('.' + filter);
         			$("tbody > tr").hide();
         			cells.each(function() {
-        				if($(this).is('a')) {
-            				jQuery(this).parents('tr').show();
-            			}
+            			jQuery(this).parents('tr').show();
         			});
     			} 
     			//show help tooltip
