@@ -22,6 +22,7 @@
                     </a>
                     <!-- Be sure to leave the brand out there if you want it shown -->
                     <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand" href="index.html">Toaster</a>
                     <!-- Everything you want hidden at 940px or less, place within here -->
                     <div class="nav-collapse collapse">
                         <!--div class="pull-right">                           
@@ -73,7 +74,7 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">All tasks</a> 
+                    	<li><a href="all-tasks.html">Tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
                     	<li class="active">do_configure base-passwd_3.5.26-r2</li>
@@ -90,7 +91,7 @@
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
         			<li><a href="build-time.html">Time</a></li>
         			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li><a href="#" class="muted">Disk I/O</a></li>
+        			<li><a href="build-diskio.html">Disk I/O</a></li>
         		</ul>
         	</div>
 			<!-- end left sidebar container -->
@@ -99,114 +100,74 @@
                 <div class="page-header">
 					<h1>do_configure <a href="#">base-passwd_3.5.26-r2</a></h1>
 				</div>
-				<div class="accordion" id="task-outcome">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-outcome" href="#task-outcome-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Outcome: </span><span class="success">Succeeded</span>
-								</h4>
-							</a>
-						</div>
-						<div id="task-outcome-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">							
-									<dt>Log file</dt>
-									<dd>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_patch</dd>
-									<dt>Warnings</dt>
-									<dd>2</dd>
-								</dl>
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL http://www.zlib.net/zlib-1.2.7.tar.bz2, attempting MIRRORS if available</code>
-								</div>
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>						
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="accordion" id="task-type">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-type" href="#task-type-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task type: Executed
-								</h4>
-							</a>
-						</div>
-						<div id="task-type-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Task order</dt>
-									<dd><a href="#">269</a></dd>	
-									<dt>Sstate attempted but</dt>
-									<dd>Missed</dd>
-									<dt>URL(s) searched</dt>
-									<dd>
-										<ul>
-											<li>/path/search/to/sstate/object/one/</li>
-											<li>/path/search/to/sstate/object/two/</li>
-											<li>/path/search/to/sstate/object/three</li>
-										</ul>
-									</dd>						
-									<dt>Script type</dt>
-									<dd>shell</dd>
-									<dt>Script file</dt>
-									<dd>/path/to/shell/script/file/</dd>
-									<dt>Task starts at line</dt>
-									<dd>86</dd>
-									</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion" id="task-dependencies">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-dependencies" href="#task-dependencies-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task depends on:
-								</h4>
-							</a>
-						</div>
-						<div id="task-dependencies-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<ul>
-									<li><a href="#">do_unpack acl_2.2.51-r3</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion" id="task-performance">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-performance" href="#task-performance-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task performance information
-								</h4>
-							</a>
-						</div>
-						<div id="task-performance-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Time (secs)</dt>
-									<dd>0.16</dd>								
-									<dt>CPU usage</dt>
-									<dd>9.2%</dd>
-									<dt>Disk I/O (ms)</dt>
-									<dd>0</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
+				<h2 class="task-details">Outcome: <span class="success">Succeeded</span></h2>
+				<dl class="dl-horizontal">							
+					<dt>Log file</dt>
+					<dd><code>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_configure</code></dd>
+					<dt>Sstate attempt log file</dt>
+					<dd><code>/home/user/poky/build/tmp/work/i586-poky-linux/base-passwd/3.5.26-r2/temp/log.do_configure_setscene</code></dd>
+				</dl>
+				<h2 class="task-details">Task type: Executed</h2>
+				<dl class="dl-horizontal">
+					<dt>Task order</dt>
+					<dd><a href="#">269</a></dd>
+					<dt>
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="In order to support incremental builds, the build system detects changes in the 'inputs' to a given task by creating a 'task signature'. If the signature changes, the system assumes the inputs have changed and the task needs to be rerun."></i>
+						Task signature
+					</dt>
+					<dd>6ef1b44fb0d9c59b6e7ec342199d3d10 <span class="muted"> (signature did not change)</span></dd>
+					<dt>Sstate task attempt</dt>
+					<dd><strong class="error">Failed</strong></dd>
+					<dt>Sstate package files</dt>
+					<dd><strong class="error">Not found</strong></dd>
+					<dt>URI(s) searched</dt>
+					<dd>
+						<ul>
+							<li><code>/path/searched/to/sstate/object/one/</code></li>
+							<li><code>/path/searched/to/sstate/object/two/</code></li>
+						</ul>
+					</dd>		
+					<dt>Script type</dt>
+					<dd>Python</dd>
+					<dt>Script file</dt>
+					<dd><code>/path/to/python/script/file/</code></dd>
+					<dt>Task starts at line</dt>
+					<dd>86</dd>				
+					<dt>Task depends on</dt>
+					<dd>
+						<ul>
+							<li><a href="#">do_populate_sysroot eglibc_2.18-r0</a></li>
+							<li><a href="#">do_populate_sysroot gcc-runtime_4.8.1-r0</a></li>
+							<li><a href="#">do_populate_sysroot libtool-cross_2.4.2-r6.1</a></li>
+							<li><a href="#">do_patch base-passwd_3.5.26-r2</a></li>
+							<li><a href="#">do_populate_sysroot libtool-native_2.4.2-r6.1</a></li>
+							<li><a href="#">do_populate_sysroot autoconf-native_2.69-r11</a></li>
+							<li><a href="#">do_populate_sysroot gcc-cross_4.8.1-r0</a></li>
+							<li><a href="#">do_populate_sysroot gnu-config-native_20120814-r0</a></li>
+							<li><a href="#">do_populate_sysroot automake-native_1.12.6-r0</a></li>
+					</dd>
+				</dl>
+				<h2 class="task-details">Task performance</h2>	
+				<dl class="dl-horizontal">
+				<h3>Execution performance</h3>
+				<dl>
+					<dt>Time (secs)</dt>
+					<dd>0.16</dd>								
+					<dt>CPU usage</dt>
+					<dd>9.2%</dd>
+					<dt>Disk I/O (ms)</dt>
+					<dd>0</dd>
+				</dl>
+				<h3>Sstate attempt performance</h3>
+				<dl>
+					<dt>Time (secs)</dt>
+					<dd>0.10</dd>								
+					<dt>CPU usage</dt>
+					<dd>15.7%</dd>
+					<dt>Disk I/O (ms)</dt>
+					<dd>20</dd>
+				</dl>				
+
             </div><!-- end right container -->
 
         </div>
@@ -255,7 +216,9 @@
             				jQuery(this).parents('tr').show();
             			}
         			});
-    			}  	 	
+    			}  	
+    			//show help tooltip
+    			$('.get-help').tooltip({html:true, delay:{show:300},placement:'top',container: 'body'});	 	
         	 });
         </script>
         

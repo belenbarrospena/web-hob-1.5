@@ -22,6 +22,7 @@
                     </a>
                     <!-- Be sure to leave the brand out there if you want it shown -->
                     <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand" href="index.html">Toaster</a>
                     <!-- Everything you want hidden at 940px or less, place within here -->
                     <div class="nav-collapse collapse">
                         <!--div class="pull-right">                           
@@ -73,7 +74,7 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">All tasks</a> 
+                    	<li><a href="all-tasks.html">Tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
                     	<li class="active">do_unpack base-files_3.0.14-r73</li>
@@ -90,7 +91,7 @@
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
         			<li><a href="build-time.html">Time</a></li>
         			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li><a href="#" class="muted">Disk I/O</a></li>
+        			<li><a href="build-diskio.html">Disk I/O</a></li>
         		</ul>
         	</div>
 			<!-- end left sidebar container -->
@@ -99,55 +100,71 @@
                 <div class="page-header">
 					<h1>do_unpack <a href="#">base-files_3.0.14-r73</a></h1>
 				</div>
-				<div class="accordion" id="task-outcome">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-outcome" href="#task-outcome-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Outcome: Existing
-								</h4>
-							</a>
+				<h2>Outcome: Existing</h2>
+				<h2 class="task-details">Task type: Prebuilt</h2>
+				<dl class="dl-horizontal">
+					<dt>Task order</dt>
+					<dd><a href="#">266</a></dd>						
+					<dt>
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="In order to support incremental builds, the build system detects changes in the 'inputs' to a given task by creating a 'task signature'. If the signature changes, the system assumes the inputs have changed and the task needs to be rerun."></i>
+						Task signature
+					</dt>
+					<dd>
+						6ef1b44fb0d9c59b6e7ec342199d3d10 <span class="muted"> [DO WE SHOW THE TASK SIGNATURE IN EXISTING TASKS?]</span>
+						<br />
+						<a href="#">Match to executed tasks in previous builds</a>
+						<!--span class="muted">Match to executed tasks in previous builds</span-->
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="This will show you a list of tasks from previous builds with the same signature as this existing task. Any of them could be the task that generated the output this existing task is reusing."></i>	
+					</dd>
+					<!--div class="row-fluid offset2">
+            			<div class="alert span7">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							We have found no executed tasks matching this existing task. The task you are looking for could belong to a build for which Toaster has not data.
 						</div>
-						<div id="task-outcome-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">							
-									<dt>Log file</dt>
-									<dd>/home/user/poky/build/tmp/work/path/to/log/file/log.unpack</dd>
-									<dt>Task executed on</dt>
-									<dd><a href="#">core-image-sato atom-pc (10/06/13 at 10:34)</a></dd>									
-								</dl>					
-							</div>
-						</div>
-					</div>	
+					</div-->
+					<div id="based-on-tasks">
+						<h3>Existing task could be based on:</h3>								
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>Task</th>
+									<th>Recipe</th>
+									<th>Recipe version</th>
+									<th>Build completed on</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">do_unpack</a></td>
+									<td><a href="#">base-files</a></td>
+									<td><a href="#">3.0.14-r73</a></td>
+									<td><a href="#">11/06/13 at 15:22</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">do_unpack</a></td>
+									<td><a href="#">base-files</a></td>
+									<td><a href="#">3.0.14-r73</a></td>
+									<td><a href="#">11/06/13 at 13:01</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">do_unpack</a></td>
+									<td><a href="#">base-files</a></td>
+									<td><a href="#">3.0.14-r73</a></td>
+									<td><a href="#">11/06/13 at 11:54</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">do_unpack</a></td>
+									<td><a href="#">base-files</a></td>
+									<td><a href="#">3.0.14-r73</a></td>
+									<td><a href="#">10/06/13 at 17:16</a></td>
+								</tr>
+							</tbody>
+						</table>
 				</div>
-				<div class="well">
-					<h4>Task type: <span class="muted">Prebuilt</span></h4>
-				</div>
-				<div class="accordion" id="task-performance">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-performance" href="#task-performance-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task performance information
-								</h4>
-							</a>
-						</div>
-						<div id="task-performance-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Time (secs)</dt>
-									<dd>1.06</dd>								
-									<dt>CPU usage</dt>
-									<dd>6.4%</dd>
-									<dt>Disk I/O (ms)</dt>
-									<dd>18</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
+					<dt>Task depends on</dt>
+					<dd><a href="#">do_fetch base-files_3.0.14-r73</a></dd>
+				</dl>
+
             </div><!-- end right container -->
 
         </div>
@@ -196,7 +213,14 @@
             				jQuery(this).parents('tr').show();
             			}
         			});
-    			}  	 	
+    			} 
+    			//show help tooltip
+    			$('.get-help').tooltip({html:true, delay:{show:300},placement:'top',container: 'body'});		 	
+    			//hiding and showing based on tasks
+    			$('#based-on-tasks').hide();
+    			$( 'dd > a').click(function(){
+    				$('#based-on-tasks').show();
+    			});
         	 });
         </script>
         

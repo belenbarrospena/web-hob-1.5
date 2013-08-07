@@ -108,10 +108,6 @@ a.warning:hover {color:#B38942;text-decoration:underline;}
 .clickable_row:hover {background-color: #FAFAFA;cursor: pointer;}
 td a {color: #333333;}
 td a:hover {color: #000000;text-decoration: underline;}
-	
-/*.cell_links:link {display: block;}
-.cell_links:hover {background: #F5F5F5;}
-*/
 
 .get-help {color:#CCCCCC;}
 .get-help:hover {color:#999999;cursor:pointer;}
@@ -125,10 +121,12 @@ dd ul {list-style-type:none;margin-left:0px;}
 .accordion-heading a:hover {color: #000000;	text-decoration: underline;}
 dt, dd {line-height:25px;}
 dd li {list-style-type:none;line-height:25px;}
-.taskchanges dt {width: 300px;}
+/*.taskchanges dt {width: 300px;}
 .taskchanges dd {margin-left: 320px;}
 .diffsigs dt {width: 200px;}
 .diffsigs dd {margin-left: 220px;}
+/*.dl-horizontal dt {width: 300px;}
+.dl-horizontal dd {margin-left: 320px;}*/
 
 .orderBy{ cursor:pointer;}
 .orderBy.ordering{font-weight: bold !important;color: #333333; text-decoration: none; }
@@ -139,4 +137,5 @@ dd li {list-style-type:none;line-height:25px;}
 .sorted {color: #333333;}
 .sorted:hover {color: #000000;text-decoration: underline;}
 .icon-remove-sign:hover {color: #999999; cursor: pointer;}
-.accordion-inner > ul > li {line-height:25px;list-style-type:none;}
+.task-details {margin-top:30px;}
+code {background-color:transparent;border:none;color: #333333;}

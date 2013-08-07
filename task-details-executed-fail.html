@@ -22,6 +22,7 @@
                     </a>
                     <!-- Be sure to leave the brand out there if you want it shown -->
                     <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand" href="index.html">Toaster</a>
                     <!-- Everything you want hidden at 940px or less, place within here -->
                     <div class="nav-collapse collapse">
                         <!--div class="pull-right">                           
@@ -73,7 +74,7 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">All tasks</a> 
+                    	<li><a href="all-tasks.html">Tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
                     	<li class="active">do_configure acl_2.2.51-r3</li>
@@ -90,7 +91,7 @@
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
         			<li><a href="build-time.html">Time</a></li>
         			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li><a href="#" class="muted">Disk I/O</a></li>
+        			<li><a href="build-diskio.html">Disk I/O</a></li>
         		</ul>
         	</div>
 			<!-- end left sidebar container -->
@@ -99,269 +100,18 @@
                 <div class="page-header">
 					<h1>do_configure <a href="#">acl_2.2.51-r3</a></h1>
 				</div>
-				<div class="accordion" id="task-outcome">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-outcome" href="#task-outcome-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Outcome: </span><span class="error">Failed</span>
-								</h4>
-							</a>
-						</div>
-						<div id="task-outcome-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">							
-									<dt>Log file</dt>
-									<dd>
-										<ul>
-											<li>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_configure</li>
-											<li>/home/user/poky/path/to/config.log</li>
-										</ul>
-									</dd>
-									<dt>Errors</dt>
-									<dd>2</dd>
-								</dl>
-								<div class="alert alert-error">
-<pre><code>DEBUG: Executing python function do_fetch
-DEBUG: Executing python function base_do_fetch
-DEBUG: Searching for install.patch in paths:
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86-64	
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemuall:
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/poky <a class="btn btn-mini" data-toggle="collapse" data-target="#fullerror" id="full-error-show">...</a><div id="fullerror" class="collapse" style="margin-top:-20px;">
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86-64
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemuall
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/x86-64
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/qemuall
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/
-DEBUG: Searching for doesnotexist in paths:
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86-64	
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemuall:
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86-64
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemuall
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/x86-64
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/qemuall
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/
-DEBUG: Defaulting to /home/yocto/poky/build/downloads/doesnotexist for doesnotexist
-DEBUG: Trying PREMIRRORS
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['bzr', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['cvs', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['git', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['hg', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['osc', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['p4', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['svk', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['svn', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: Trying Upstream
-WARNING: Failed to fetch URL file://doesnotexist, attempting MIRRORS if available
-DEBUG: Fetcher failure: Unable to find file file://doesnotexist anywhere. The paths that were searched were:
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86-64	
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemuall:
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86-64
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemuall
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/quilt/
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/x86-64
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/x86
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/qemuall
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/qemux86
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/poky
-	/home/yocto/poky/meta/recipes-devtools/quilt/files/
-DEBUG: Trying MIRRORS
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['http', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['https', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['http', 'snapshot.debian.org', '/archive/debian-archive/20120328T092752Z/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['http', 'snapshot.debian.org', '/archive/debian-archive/20110127T084257Z/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['http', 'snapshot.debian.org', '/archive/debian-archive/20090802T004153Z/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.de.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.au.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.cl.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.hr.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.fi.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.hk.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.hu.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.ie.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.it.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.jp.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.no.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.pl.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.ro.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.si.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.es.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.se.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.debian.org', '/debian/pool', '', '', {}] to ['ftp', 'ftp.tr.debian.org', '/debian/pool', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnu.org', '/gnu', '', '', {}] to ['ftp', 'mirrors.kernel.org', '/gnu', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['http', 'kernel.org', '/pub', '', '', {}] to ['http', 'www.kernel.org', '/pub', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnupg.org', '/gcrypt/', '', '', {}] to ['ftp', 'ftp.franken.de', '/pub/crypt/mirror/ftp.gnupg.org/gcrypt/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnupg.org', '/gcrypt/', '', '', {}] to ['ftp', 'ftp.surfnet.nl', '/pub/security/gnupg/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnupg.org', '/gcrypt/', '', '', {}] to ['http', 'gulus.USherbrooke.ca', '/pub/appl/GnuPG/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'dante.ctan.org', '/tex-archive', '', '', {}] to ['ftp', 'ftp.fu-berlin.de', '/tex/CTAN', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'dante.ctan.org', '/tex-archive', '', '', {}] to ['http', 'sunsite.sut.ac.jp', '/pub/archives/ctan/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'dante.ctan.org', '/tex-archive', '', '', {}] to ['http', 'ctan.unsw.edu.au', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnutls.org', '/pub/gnutls', '', '', {}] to ['ftp', 'ftp.gnupg.org', '/gcrypt/gnutls/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnutls.org', '/pub/gnutls', '', '', {}] to ['http', 'www.mirrors.wiretapped.net', '/security/network-security/gnutls/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnutls.org', '/pub/gnutls', '', '', {}] to ['ftp', 'ftp.mirrors.wiretapped.net', '/pub/security/network-security/gnutls/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'ftp.gnutls.org', '/pub/gnutls', '', '', {}] to ['http', 'josefsson.org', '/gnutls/releases/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['http', 'ftp.info-zip.org', '/pub/infozip/src/', '', '', {}] to ['http', 'mirror.switch.ch', '/ftp/mirror/infozip/src/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['http', 'ftp.info-zip.org', '/pub/infozip/src/', '', '', {}] to ['ftp', 'sunsite.icm.edu.pl', '/pub/unix/archiving/info-zip/src/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.cerias.purdue.edu', '/pub/tools/unix/sysutils/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.tau.ac.il', '/pub/unix/admin/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.cert.dfn.de', '/pub/tools/admin/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.fu-berlin.de', '/pub/unix/tools/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.kaizo.org', '/pub/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.tu-darmstadt.de', '/pub/sysadmin/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'ftp.tux.org', '/pub/sites/vic.cc.purdue.edu/tools/unix/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'gd.tuwien.ac.at', '/utils/admin-tools/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'sunsite.ualberta.ca', '/pub/Mirror/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', 'lsof.itap.purdue.edu', '/pub/tools/unix/lsof/', '', '', {}] to ['ftp', 'the.wiretapped.net', '/pub/security/host-security/lsof/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['http', 'www.apache.org', '/dist', '', '', {}] to ['http', 'archive.apache.org', '/dist', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['http', 'downloads.sourceforge.net', '/watchdog/', '', '', {}] to ['http', 'fossies.org', '/linux/misc/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['cvs', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['svn', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['git', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['hg', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['bzr', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['svk', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['p4', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['osc', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['https?$', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', '.*', '/.*', '', '', {}] to ['http', 'downloads.yoctoproject.org', '/mirror/sources/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['cvs', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['svn', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['git', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['hg', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['bzr', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['svk', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['p4', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['osc', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['https?$', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-DEBUG: For url ['file', '', 'doesnotexist', '', '', {}] comparing ['ftp', '.*', '/.*', '', '', {}] to ['http', 'sources.openembedded.org', '/', '', '', {}]
-ERROR: Fetcher failure: Unable to find file file://doesnotexist anywhere. The paths that were searched were:
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86-64
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/x86
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemuall
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/qemux86
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/poky
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt-0.60/
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86-64
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt/x86
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemuall
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt/qemux86
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt/poky
-    /home/yocto/poky/meta/recipes-devtools/quilt/quilt/
-    /home/yocto/poky/meta/recipes-devtools/quilt/files/x86-64
-    /home/yocto/poky/meta/recipes-devtools/quilt/files/x86
-    /home/yocto/poky/meta/recipes-devtools/quilt/files/qemuall
-    /home/yocto/poky/meta/recipes-devtools/quilt/files/qemux86
-    /home/yocto/poky/meta/recipes-devtools/quilt/files/poky
-    /home/yocto/poky/meta/recipes-devtools/quilt/files/
-    /home/yocto/poky/build/downloads
-DEBUG: Python function base_do_fetch finished
-DEBUG: Python function do_fetch finished
-ERROR: Function failed: Fetcher failure for URL: 'file://doesnotexist'. Unable to fetch URL from any source.</code><br />
-<a class="btn btn-mini" data-toggle="collapse" data-target="#fullerror" id="full-error-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">Collapse error <i class="icon-caret-up	"></i></a></div></pre></div>
-								<div class="alert alert-error">
-<code style="color:#B94A48;">This is an example of a very short error</code>
-								</div>
-								<dl class="dl-horizontal">
-									<dt>Warnings</dt>
-									<dd>12</dd>
-								</dl>
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL http://www.zlib.net/zlib-1.2.7.tar.bz2, attempting MIRRORS if available</code>
-								</div>
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>	
-								<div class="alert alert-warning">
-									<code>WARNING: Failed to fetch URL ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz, attempting MIRRORS if available</code>
-								</div>														
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="accordion" id="task-type">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-type" href="#task-type-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task type: Executed
-								</h4>
-							</a>
-						</div>
-						<div id="task-type-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal taskchanges">
-									<dt>Task order</dt>
-									<dd><a href="#">270</a></dd>	
-									<dt>Task changed since <a href=#">last execution</a></dt>
-									<dd><a href="#">View changes</a></dd>																
-									<dt>Script type</dt>
-									<dd>python</dd>
-									<dt>Script file</dt>
-									<dd>/path/to/script/file/</dd>
-									<dt>Task starts at line</dt>
-									<dd>666</dd>
-									<dt>Python stack trace</dt>
-									<dd></dd>
-								</dl>
-								<div>
+				<h2 class="task-details">Outcome: <span class="error">Failed</span></h2>
+				<dl class="dl-horizontal">							
+					<dt>Log file</dt>
+					<dd>
+						<ul>
+							<li><code>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_configure</code></li>
+							<li><code>/home/user/poky/path/to/config.log</code></li>
+						</ul>
+					</dd>
+				</dl>
+				<h3>Python stack trace</h3>	
+				<div>
 <pre style="min-height:160px;"><code>File: '&lt;code&gt;' , lineno: 7, function: '&lt;module&gt;'
      0003:__anon_227__home_yocto_poky_meta_classes_package_bbclass(d)
      0004:__anon_1132__home_yocto_poky_meta_classes_package_rpm_bbclass(d)
@@ -383,54 +133,37 @@ File: '__anon_27__home_yocto_poky_meta_classes_devshell_bbclass', lineno: 7, fun
      0009:       d.delVarFlag("do_devshell", "fakeroot")
      0010:
 Exception: IndexError: list index out of range</code><br />
-<a class="btn btn-mini" data-toggle="collapse" data-target="#fulltrace" id="full-trace-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">Collapse stack trace <i class="icon-caret-up"></i></a></div></pre></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion" id="task-dependencies">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-dependencies" href="#task-dependencies-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task depends on:
-								</h4>
-							</a>
-						</div>
-						<div id="task-dependencies-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<ul>
-									<li><a href="#">do_patch acl_2.2.51-r3</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion" id="task-performance">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-performance" href="#task-performance-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task performance information
-								</h4>
-							</a>
-						</div>
-						<div id="task-performance-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Time (secs)</dt>
-									<dd>61.45</dd>								
-									<dt>CPU usage</dt>
-									<dd>19.8%</dd>
-									<dt>Disk I/O (ms)</dt>
-									<dd>6739</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
+<a class="btn btn-mini" data-toggle="collapse" data-target="#fulltrace" id="full-trace-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">Collapse stack trace <i class="icon-caret-up"></i></a></div></pre></div>			
+
+				<h2 class="task-details">Task type: Executed</h2>
+				<dl class="dl-horizontal">
+					<dt>Task order</dt>
+					<dd><a href="#">270</a></dd>
+					<dt>
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="In order to support incremental builds, the build system detects changes in the 'inputs' to a given task by creating a 'task signature'. If the signature changes, the system assumes the inputs have changed and the task needs to be rerun."></i>
+						Task signature</dt>
+					<dd>
+						6ef1b44fb0d9c59b6e7ec342199d3d10 <a href="#">(signature changed)</a>
+					</dd>																
+					<dt>Script type</dt>
+					<dd>Python</dd>
+					<dt>Script file</dt>
+					<dd><code>/path/to/script/file/</code></dd>
+					<dt>Task starts at line</dt>
+					<dd>666</dd>
+					<dt>Task depends on</dt>
+					<dd><a href="#">do_patch acl_2.2.51-r3</a></dd>
+				</dl>
+				<h2 class="task-details">Task performance</h2>
+				<dl class="dl-horizontal">
+					<dt>Time (secs)</dt>
+					<dd>61.45</dd>								
+					<dt>CPU usage</dt>
+					<dd>19.8%</dd>
+					<dt>Disk I/O (ms)</dt>
+					<dd>6739</dd>
+				</dl>
+			
             </div><!-- end right container -->
 
         </div>
@@ -487,7 +220,10 @@ Exception: IndexError: list index out of range</code><br />
             				jQuery(this).parents('tr').show();
             			}
         			});
-    			}  	 	
+    			}  
+    			    			
+    			//show help tooltip
+    			$('.get-help').tooltip({html:true, delay:{show:300},placement:'top',container: 'body'});		 	
         	 });
         </script>
         

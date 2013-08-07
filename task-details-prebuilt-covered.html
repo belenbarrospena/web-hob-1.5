@@ -22,6 +22,7 @@
                     </a>
                     <!-- Be sure to leave the brand out there if you want it shown -->
                     <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand" href="index.html">Toaster</a>
                     <!-- Everything you want hidden at 940px or less, place within here -->
                     <div class="nav-collapse collapse">
                         <!--div class="pull-right">                           
@@ -73,7 +74,7 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">All tasks</a> 
+                    	<li><a href="all-tasks.html">Tasks</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
                     	<li class="active">do_unpack attr_2.4.46-r4</li>
@@ -90,7 +91,7 @@
         			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
         			<li><a href="build-time.html">Time</a></li>
         			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li><a href="#" class="muted">Disk I/O</a></li>
+        			<li><a href="build-diskio.html">Disk I/O</a></li>
         		</ul>
         	</div>
 			<!-- end left sidebar container -->
@@ -99,91 +100,27 @@
                 <div class="page-header">
 					<h1>do_unpack <a href="#">attr_2.4.46-r4</a></h1>
 				</div>
-				<div class="accordion" id="task-outcome">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-outcome" href="#task-outcome-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Outcome: Covered
-								</h4>
-							</a>
-						</div>
-						<div id="task-outcome-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">							
-									<dt>Log file</dt>
-									<dd>/home/user/poky/build/tmp/work/path/to/log/file/log.unpack</dd>
-									<dt>Covered by</dt>
-									<dd><a href="#">do_package attr_2.4.46-r4<a/></dd>									
-								</dl>					
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="accordion" id="task-type">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-type" href="#task-type-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task type: <span class="muted">Prebuilt</span>
-								</h4>
-							</a>
-						</div>
-						<div id="task-type-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Task order</dt>
-									<dd><a href="#">266</a></dd>						
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion" id="task-performance">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-dependencies" href="#task-dependencies-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task depends on:
-								</h4>
-							</a>
-						</div>
-						<div id="task-dependencies-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<ul>
-									<li><a href="#">do_fetch attr_2.4.46-r4</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion" id="task-performance">
-					<div class="accordion-group">
-						<div class="accordion-heading" style="background-color:#F5F5F5;">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#task-performance" href="#task-performance-body">
-								<h4>
-									<i class="icon-caret-down"></i>
-									Task performance information
-								</h4>
-							</a>
-						</div>
-						<div id="task-performance-body" class="accordion-body collapse in">
-							<div class="accordion-inner">
-								<dl class="dl-horizontal">
-									<dt>Time (secs)</dt>
-									<dd>1.06</dd>								
-									<dt>CPU usage</dt>
-									<dd>6.4%</dd>
-									<dt>Disk I/O (ms)</dt>
-									<dd>18</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
+				<h2 class="task-details">Outcome: Covered</h2>
+				<dl class="dl-horizontal">							
+					<dt>Covered by</dt>
+					<dd><a href="#">do_package attr_2.4.46-r4</a></dd>									
+				</dl>
+				<h2 class="task-details">Task type: Prebuilt</h2>
+				<dl class="dl-horizontal">
+					<dt>Task order</dt>
+					<dd><a href="#">266</a></dd>
+					<dt>
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="In order to support incremental builds, the build system detects changes in the 'inputs' to a given task by creating a 'task signature'. If the signature changes, the system assumes the inputs have changed and the task needs to be rerun."></i>
+						Task signature
+					</dt>
+					<dd>
+						6ef1b44fb0d9c59b6e7ec342199d3d10
+						<span class="muted">[DO WE SHOW THE TASK SIGNATURE IN COVERED TASKS?]</span>
+					</dd>
+					<dt>Task depends on</dt>
+					<dd><a href="#">do_fetch attr_2.4.46-r4</a></dd>						
+				</dl>
+				
             </div><!-- end right container -->
 
         </div>
@@ -232,7 +169,9 @@
             				jQuery(this).parents('tr').show();
             			}
         			});
-    			}  	 	
+    			} 
+    			//show help tooltip
+    			$('.get-help').tooltip({html:true, delay:{show:300},placement:'top',container: 'body'});	 	 	
         	 });
         </script>
         
