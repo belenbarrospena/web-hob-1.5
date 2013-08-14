@@ -343,5 +343,105 @@ $(document).ready(function() {
         }
         links.filter('[href="' + file + '"]').parent().addClass('active');
     });
+    
+    //Belen's additions
+    
+    //show help information   
+    $(".get-help").tooltip({ container: 'body', delay: {show: 500} });
+    
+    
+    //make help tooltip and popovers work on click, mutually exclusive and dismiss them when clicking outside their area
+    //from http://fuzzytolerance.info/blog/quick-hack-one-bootstarp-popover-at-a-time/
+    //one problem: clicking inside the tooltip or popover should not dismiss it, but it currently does
+    
+	// Global variables - cringe
+	var visiblePopover;
+	//var visibleTooltip;
+
+	// enable tooltips and popovers
+	//$(".get-help").tooltip({ trigger: 'click', container: 'body' });
+	$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover({html:true, container:'table', placement: 'left'});
+
+    /*   make sure on hover elements do not disappear while the pointer is inside them 
+    
+    
+         $('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover({
+                offset: 10,
+                trigger: 'manual',
+                animate: false,
+                html: true,
+                placement: 'left',
+                template: '<div class="popover" onmouseover="$(this).mouseleave(function() {$(this).hide(); });"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
+
+            }).click(function(e) {
+                e.preventDefault() ;
+            }).mouseenter(function(e) {
+                $(this).popover('show');
+            });
+    */
+
+	/*
+	// only allow 1 tooltip at a time
+	$('.get-help').on('click', function(e) {
+    	// don't fall through
+    	e.stopPropagation();
+    	var $this = $(this);
+    	// check if the one clicked is now shown
+    	if ($this.data('tooltip').tip().hasClass('in')) {
+        	// if another was showing, hide it
+        	visibleTooltip && visibleTooltip.tooltip('hide');
+        	// then store the current popover
+        	visibleTooltip = $this;
+    	} else {
+        	// if it was hidden, then nothing must be showing
+        	visibleToolitp = '';
+    	}
+	});*/
+	
+	// only allow 1 popover at a time
+	$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').on('click', function(e) {
+    	// don't fall through
+    	e.stopPropagation();
+    	var $this = $(this);
+    	// check if the one clicked is now shown
+    	if ($this.data('popover').tip().hasClass('in')) {
+        	// if another was showing, hide it
+        	visiblePopover && visiblePopover.popover('hide');
+        	// then store the current popover
+        	visiblePopover = $this;
+    	} else {
+        	// if it was hidden, then nothing must be showing
+        	visiblePopover = '';
+    	}
+	});
+	
+	/*
+	// hide all tooltips if any non-tooltip part of the body is clicked
+	// this does not work properly: clicking the tooltip will also dismiss the tootlip
+	$("body").on('click', function () {
+    	$(".get-help").tooltip('hide');
+    	visibleTootlip = '';
+	});*/
+	
+	// hide all popovers if any non-popover part of the body is clicked
+	// this does not work properly: clicking the popover will also dismiss the popover
+	$("body").on('click', function () {
+    	$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover('hide');
+    	visiblePopover = '';
+	});
+	
+	//linking directly to tabs
+	$(function(){
+  		var hash = window.location.hash;
+  		hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+  		$('.nav-tabs a').click(function (e) {
+    		$(this).tab('show');
+    		//var scrollmem = $('body').scrollTop();
+    		//window.location.hash = this.hash;
+    		//$('html,body').scrollTop(scrollmem);
+  		});
+	});
+	
 
 });

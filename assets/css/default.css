@@ -137,5 +137,10 @@ dd li {list-style-type:none;line-height:25px;}
 .sorted {color: #333333;}
 .sorted:hover {color: #000000;text-decoration: underline;}
 .icon-remove-sign:hover {color: #999999; cursor: pointer;}
-.task-details {margin-top:30px;}
+.details {margin-top:30px;}
 code {background-color:transparent;border:none;color: #333333;}
+.muted a {color:#999999;}
+.muted a:hover {color:#999999;}
+dd code {white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}
+dd p {line-height:20px;}
+.iscommit {white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}

@@ -121,8 +121,9 @@
 						</ul-->
 						<div class="navbar">
             				<div class="navbar-inner">
-            					<form class="navbar-search pull-left">
-									<input class="search-query input-xxlarge" type="text" placeholder="Find a package">
+            					<form class="navbar-search input-append pull-left">
+									<input class="input-xxlarge" type="text" placeholder="Search packages">
+									<button class="btn" type="button">Search</button>
     							</form>
     							<div class="pull-right">
     								<div class="btn-group">
@@ -326,7 +327,7 @@
                         		<th class="included">
                         			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Included</a>
-                        			<div id="filtered" class="btn-group pull-right" title="<p>Showing included packages</p><p><a class='btn btn-mini btn-info' href='#'>Show all</a></p>">
+                        			<div id="filtered" class="btn-group pull-right" title="<p>Showing included packages</p><p><a class='btn btn-mini btn-primary' href='#'>Show all</a></p>">
                         				<a class="btn btn-mini btn-primary">
                         					<i class="icon-filter"></i>
                         				</a>
@@ -474,8 +475,8 @@
                         <tbody>
                         	<tr>
                         		<td class="included">Yes</td>
-                        		<td class="package_name"><a href="#">base-files</a></td>
-                        		<td class="package_version">3.0.14-r73</td>
+                        		<td class="package_name"><a href="package-details-base-files.html">base-files</a></td>
+                        		<td class="package_version"><a href="package-details-base-files.html">3.0.14-r73</a></td>
                         		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/base-files/3.0.14-r73/</td>
                                 <td class="package_size">228 KB</td>
                         		<td class="size_over_total" style="display:none;">4%</td>
@@ -498,7 +499,7 @@
                             	</td>
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>
                            </tr>
-                            <tr>
+                        <tr>
                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">base-passwd</a></td>
                         		<td class="package_version">3.5.26-r2</td>
@@ -526,14 +527,14 @@
                            </tr>
                            <tr>
                         		<td class="included">Yes</td>
-                        		<td class="package_name"><a href="#">busybox</a></td>
-                        		<td class="package_version">1.20.2-r7</td>
+                        		<td class="package_name"><a href="package-details-busybox.html">busybox</a></td>
+                        		<td class="package_version"><a href="package-details-busybox.html">1.20.2-r7</a></td>
                         		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">568 KB</td>
                         		<td class="size_over_total" style="display:none;">2%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
                         		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>update-alternatives-cworth</a>">
+                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a></span> | <a href='#'>update-alternatives-cworth</a>">
                         				2
                         			</a>         			
                         		</td>
@@ -599,7 +600,7 @@
                         		</td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>busybox<a/>">
+                            		<a class="btn" href="#" data-content="<a href='package-details-busybox.html'>busybox<a/>">
                             			1
                             		</a>	
                             	</td>
@@ -625,7 +626,7 @@
                         		<td class="depends" style="display:none;"></td>
                             	<td class="recommends" style="display:none;"></td>
                             	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>busybox<a/>">
+                            		<a class="btn" href="#" data-content="<a href='package-details-busybox.html'>busybox</a>">
                             			1
                             		</a>	
                             	</td>
@@ -1398,7 +1399,7 @@
         			});
     			}  
     			//show popover with full commit SHA
-    			$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover({html:true, container:'table', placement: 'left'});	 
+    			//$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover({html:true, container:'table', placement: 'left'});	 
     			//show tooltip with applied filter
     			$('#filtered').tooltip({container:'table', placement:'bottom', delay:{hide:1500}, html:true});	
         	 });

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>acl_2.2.51-r3</title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/font-awesome.min.css" type='text/css'>
@@ -74,10 +74,10 @@
                     	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
                     		<span class="divider">&rarr;</span>
                     	</li>
-                    	<li><a href="all-tasks.html">Tasks</a> 
-                    		<span class="divider">&rarr;</span>
+                    	<li><a href="all-recipes.html">Recipes</a> 
+                    		<span class="divider">&rarr;</span></li>
                     	</li>
-                    	<li class="active">do_configure acl_2.2.51-r3</li>
+                    	<li class="active">acl_2.2.51-r3</li>
                 	</ul>
             	</div>
 			<div class="row-fluid">
@@ -96,74 +96,153 @@
         	</div>
 			<!-- end left sidebar container -->
 			<!-- Begin right container -->
-            <div class="span10">
+            <div class="row span10">
                 <div class="page-header">
-					<h1>do_configure <a href="#">acl_2.2.51-r3</a></h1>
+					<h1>acl_2.2.51-r3</h1>
 				</div>
-				<h2 class="details">Outcome: <span class="error">Failed</span></h2>
-				<dl class="dl-horizontal">							
-					<dt>Log file</dt>
-					<dd>
-						<ul>
-							<li><code>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_configure</code></li>
-							<li><code>/home/user/poky/path/to/config.log</code></li>
-						</ul>
-					</dd>
-				</dl>
-				<h3>Python stack trace</h3>	
-				<div>
-<pre style="min-height:160px;"><code>File: '&lt;code&gt;' , lineno: 7, function: '&lt;module&gt;'
-     0003:__anon_227__home_yocto_poky_meta_classes_package_bbclass(d)
-     0004:__anon_1132__home_yocto_poky_meta_classes_package_rpm_bbclass(d)
-     0005:__anon_921__home_yocto_poky_meta_classes_insane_bbclass(d)
-     0006:__anon_20__home_yocto_poky_meta_classes_debian_bbclass(d)
- *** 0007:__anon_27__home_yocto_poky_meta_classes_devshell_bbclass(d)
-     0008:__anon_76__home_yocto_poky_meta_classes_sstate_bbclass(d)
-     0009:__anon_202__home_yocto_poky_meta_classes_rootfs_rpm_bbclass(d) <a class="btn btn-mini" data-toggle="collapse" data-target="#fulltrace" id="full-trace-show">...</a>
-<div id="fulltrace" class="collapse" style="margin-top:-20px;">
-     0010:__anon_188__home_yocto_poky_meta_classes_toolchain_scripts_bbclass(d)
-     0011:__anon_156__home_yocto_poky_meta_classes_populate_sdk_rpm_bbclass(d)
-File: '__anon_27__home_yocto_poky_meta_classes_devshell_bbclass', lineno: 7, function: __anon_27__home_yocto_poky_meta_classes_devshell_bbclass
-     0003:       d.prependVar("DEVSHELL", "pseudo ")
-     0004:       fakeenv = d.getVar("FAKEROOTENV", True).split()
-     0005:       for f in fakeenv:
-     0006:            k = f.split("=")
- *** 0007:            d.setVar(k[0], k[1])
-     0008:            d.appendVar("OE_TERMINAL_EXPORTS", " " + k[0])
-     0009:       d.delVarFlag("do_devshell", "fakeroot")
-     0010:
-Exception: IndexError: list index out of range</code><br />
-<a class="btn btn-mini" data-toggle="collapse" data-target="#fulltrace" id="full-trace-hide" style="font-family:Helvetica Neue",Helvetica,Arial,sans-serif">Collapse stack trace <i class="icon-caret-up"></i></a></div></pre></div>			
-
-				<h2 class="details">Task type: Executed</h2>
-				<dl class="dl-horizontal">
-					<dt>Task order</dt>
-					<dd><a href="#">270</a></dd>
+			</div>
+			<div class="row span6">
+				<h2>Recipe information</h2>
+				<dl>
 					<dt>
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="In order to support incremental builds, the build system detects changes in the 'inputs' to a given task by creating a 'task signature'. If the signature changes, the system assumes the inputs have changed and the task needs to be rerun."></i>
-						Task signature</dt>
-					<dd>
-						6ef1b44fb0d9c59b6e7ec342199d3d10 <a href="#">(signature changed)</a>
-					</dd>																
-					<dt>Script type</dt>
-					<dd>Python</dd>
-					<dt>Script file</dt>
-					<dd><code>/path/to/script/file/</code></dd>
-					<dt>Task starts at line</dt>
-					<dd>666</dd>
-					<dt>Task depends on</dt>
-					<dd><a href="#">do_patch acl_2.2.51-r3</a></dd>
+						Recipe file
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="Location in disk of the recipe file"></i>
+					</dt>
+					<dd><code>home/user/poky/meta/recipes-support/attr/acl_2.2.51.bb</code></dd>
+					<dt>
+						Layer
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>
+					</dt>
+					<dd><a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/">openembedded-core</a></dd>
+					<dt>
+						Layer branch
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git branch of the layer providing the recipe"></i>
+					</dt>
+					<dd>master</dd>
+					<dt>
+						Layer commit
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git commit of the layer providing the recipe"></i>
+					</dt>
+					<dd class="iscommit">3e1dbabbf33a2e461abc92ff10cd970fe604ee38</dd>
+					<dt>
+						Layer directory
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="Location in disk of the layer providing the recipe"></i>
+					</dt>
+					<dd><code>home/user/poky/meta/</code></dd>
+					<dt>	
+						Work directory
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The pathname of the working directory in which the OpenEmbedded build system builds a recipe"></i>
+					</dt>
+					<dd><code>home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/</code></dd>
+					<dt>
+						License files
+						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The directory containing the COPYING license files with other licensing information"></i>
+					</dt>
+					<dd><code>home/user/poky/build/deploy/licenses/acl/</code></dd>
 				</dl>
-				<h2 class="details">Task performance</h2>
-				<dl class="dl-horizontal">
-					<dt>Time (secs)</dt>
-					<dd>61.45</dd>								
-					<dt>CPU usage</dt>
-					<dd>19.8%</dd>
-					<dt>Disk I/O (ms)</dt>
-					<dd>6739</dd>
-				</dl>
-			
+				<h2 class="details">Packages built</h2>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The packaged output resulting from building the recipe"></i>
+								Package
+							</th>
+							<th>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The package version"></i>
+								Version
+							</th>
+							<th>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The size of the package"></i>
+								Size
+							</th>
+							<th>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="If the package is installed in the root file system"></i>
+								Included
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="#">acl</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">76 KB</a></td>
+							<td><a href="#">Yes</a></td>
+						</tr>
+						<tr class="muted">
+							<td><a href="#">acl-dbg</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">712 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>
+						<tr class="muted">
+							<td><a href="#">acl-dev</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">0 B</a></td>
+							<td><a href="#">No</a></td>
+						</tr>	
+						<tr class="muted">
+							<td><a href="#">acl-doc</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">120 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>	
+						<tr class="muted">
+							<td><a href="#">acl-locale-de</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">36 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>
+						<tr class="muted">
+							<td><a href="#">acl-locale-es</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">36 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>
+						<tr class="muted">
+							<td><a href="#">acl-locale-fr</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">36 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>
+						<tr class="muted">
+							<td><a href="#">acl-locale-gl</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">36 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>	
+						<tr class="muted">
+							<td><a href="#">acl-locale-pl</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">36 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>	
+						<tr class="muted">
+							<td><a href="#">acl-locale-sv</a></td>
+							<td><a href="#">2.2.51-r3</a></td>
+							<td><a href="#">36 KB</a></td>
+							<td><a href="#">No</a></td>
+						</tr>									
+					</tbody>
+				</table>
+			</div>
+			<div class="row span3 offset1 well">
+					<h2>About acl</h2>
+					<dl>
+						<dt>Summary</dt>
+						<dd>Utilities for access control list</dd>
+						<dt>Homepage</dt>
+						<dd><a href="http://savannah.nongnu.org/projects/acl/">http://savannah.nongnu.org/projects/acl/</a></dd>
+						<dt>
+							Section
+							<i class="icon-question-sign get-help" data-toggle="tooltip" title="The section in which packages should be categorised. There are 5 sections: base, console, utils, devel and libs."></i>
+						</dt>
+						<dd>libs</dd>
+						<dt>License</dt>
+						<dd>LGPLv2.1+ & GPLv2+</dd>
+					</dl>
+				</div>
+
             </div><!-- end right container -->
 
         </div>
@@ -202,14 +281,6 @@ Exception: IndexError: list index out of range</code><br />
 				$('#full-error-hide').click(function(){
 					$('#full-error-show').show();
 				});
-				// hide full-trace-show on click
-				$('#full-trace-show').click(function(){
-					$(this).hide();
-				});
-				// show full-trace-show when clicking 'collapse trace'
-				$('#full-trace-hide').click(function(){
-					$('#full-trace-show').show();
-				});
 				//filter warnings and errors when requested by the URL
 				if (location.href.search('filter=') > -1) {
         			var filter = location.href.split('filter=')[1];
@@ -220,9 +291,11 @@ Exception: IndexError: list index out of range</code><br />
             				jQuery(this).parents('tr').show();
             			}
         			});
-    			}  
-	 	
-        	 });
+    			} 
+    			//show help tooltip
+    			//$('.get-help').tooltip({html:true, delay:{show:300},placement:'top',container: 'body'});
+    			
+			 });
         </script>
         
 
