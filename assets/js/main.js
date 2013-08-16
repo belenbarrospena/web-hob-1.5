@@ -331,7 +331,7 @@ $(document).ready(function() {
         });
     });
 
-    jQuery('#nav').each(function() {
+    /*jQuery('#nav').each(function() {
         var links = jQuery(this).find('a');
         var split = location.href.split('/');
         var file = split[split.length - 1].split('?')[0];
@@ -342,12 +342,12 @@ $(document).ready(function() {
             file = 'project-build-packages.html';
         }
         links.filter('[href="' + file + '"]').parent().addClass('active');
-    });
+    });*/
     
     //Belen's additions
     
     //show help information   
-    $(".get-help").tooltip({ container: 'body', delay: {show: 500} });
+    $(".get-help").tooltip({ container: 'body', html: true, delay: {show: 500} });
     
     
     //make help tooltip and popovers work on click, mutually exclusive and dismiss them when clicking outside their area

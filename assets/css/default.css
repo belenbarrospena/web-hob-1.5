@@ -144,3 +144,4 @@ code {background-color:transparent;border:none;color: #333333;}
 dd code {white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}
 dd p {line-height:20px;}
 .iscommit {white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}
+.wrap {word-break: break-all; word-wrap: break-word;}
