@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Build configuration</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/prettify.css" type='text/css'>
+        <link rel="stylesheet" href="assets/css/default.css" type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <!-- Be sure to leave the brand out there if you want it shown -->
+                    <a class="brand logo" href="index.html"><img src="assets/img/logo.png" class="" /></a>
+                    <a class="brand" href="index.html">Toaster</a>
+                    <!-- Everything you want hidden at 940px or less, place within here -->
+                    <div class="nav-collapse collapse">
+                        <!--div class="pull-right">                           
+                            <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Start a project
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
+                                    </li>
+                                    <li>
+                                        <a class="file-type" href="#import-project">Import project</a>
+                                        <form id="import-project" class="hidden" action="">
+                                            <input type="file" />
+                                            <input type="submit" />
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Username
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="muted" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            
+    	<!-- begin content -->
+    	<div class="row-fluid">
+        	<div class="span12">
+				<!-- Breadcrumbs -->
+            	<div class="section">
+                	<ul class="breadcrumb">
+                    	<li><a href="index.html">All builds</a> 
+                    		<span class="divider">&rarr;</span></li>
+                    	<!--li><a href="project.html">An Arbitrary Project Name</a> 
+                    		<span class="divider">&rarr;</span></li-->
+                    	<li><a href="build-dashboard.html">core-image-sato atom-pc (11/06/13 at 15:22)</a> 
+                    		<span class="divider">&rarr;</span>
+                    	</li>
+                    	<li class="active">Configuration</li>
+                	</ul>
+            	</div> <!-- end breadcrumbs -->
+				<div class="row-fluid">
+					<!-- begin left sidebar container -->
+					<div id="nav" class="span2">
+						<ul class="nav nav-tabs nav-stacked">
+							<li class="active"><a href="build-configuration.html">Configuration</a></li>
+							<li><a href="all-tasks.html">Tasks</a></li>
+							<li><a href="all-recipes.html">Recipes</a></li>
+							<li><a href="all-packages.html">Packages</a></li>
+							<li><a href="project-build-directorystructure.html">Directory structure</a></li>
+							<li><a href="build-time.html">Time</a></li>
+							<li><a href="build-cpu.html">CPU usage</a></li>
+							<li><a href="build-diskio.html">Disk I/O</a></li>
+						</ul>
+					</div>
+					<!-- end left sidebar container -->
+					<!-- Begin right container -->
+					<div class="span10">
+						<div class="page-header">
+							<h1>Configuration</h1>
+						</div>
+					</div>
+					<div class="row span10 tabbable">
+						<ul class="nav nav-pills">
+							<li class="active">
+								<a data-toggle="tab" href="#summary">Summary</a>
+							</li>
+							<li>
+								<a data-toggle="tab" href="#variables">BitBake variables</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div id="summary" class="tab-pane active">
+								<h3>Build configuration</h3>
+								<dl class="dl-horizontal">
+									<dt>Host distribution</dt>
+									<dd>Ubuntu-12.04</dd>
+									<dt>Build system</dt>
+									<dd>x86_64-linux</dd>
+									<dt>Target system</dt>
+									<dd>i586-poky-linux</dd>
+									<dt>Tune features</dt>
+									<dd>m32 i586</dd>
+									<dt>FPU method</dt>
+									<dd>&nbsp;</dd>
+									<dt>BitBake version</dt>
+									<dd>1.19.1</dd>
+									<dt>Distro</dt>
+									<dd>poky</dd>
+									<dt>Distro version</dt>
+									<dd>1.4+snapnshot-20130718</dd>
+									<dt>Machine</dt>
+									<dd>atom-pc</dd>
+									<dt>Target(s)</dt>
+									<dd>core-image-sato</dd>
+								</dl>							
+								<h3>Layers</h3>
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>Layer</th>
+											<th>Layer branch</th>
+											<th>Layer commit</th>
+											<th>Layer directory</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												openembedded-core
+												<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
+													<i class="icon-share get-info"></i>
+												</a>
+											</td>
+											<td>master</td>
+											<td class="layer_commit">
+												<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
+													3e1dbabbf3...
+												</a>
+											</td>
+											<td>/home/user/poky/meta/</td>
+										</tr>
+										<tr>
+											<td>
+												meta-yocto
+												<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
+													<i class="icon-share get-info"></i>
+												</a>
+											</td>
+											<td>master</td>
+											<td class="layer_commit">
+												<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
+													3e1dbabbf3...
+												</a>
+											</td>
+											<td>/home/user/poky/meta-yocto/</td>
+										</tr>
+										<tr>
+											<td>
+												meta-yocto-bsp
+												<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto-bsp/" target="_blank">
+													<i class="icon-share get-info"></i>
+												</a>	
+											</td>										
+											<td>master</td>
+											<td class="layer_commit">
+												<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
+													3e1dbabbf3...
+												</a>
+											</td>
+											<td>/home/user/poky/meta-yocto-bsp/</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tab-pane" id="variables">
+								<div class="navbar">
+									<div class="navbar-inner">
+										<form class="navbar-search input-append pull-left">
+											<input type="text" class="input-xxlarge" placeholder="Search BitBake variables" />
+											<button class="btn" type="button">Search</button>
+										</form>
+										<div class="pull-right">
+											<div class="btn-group">
+												<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
+													<span>Edit columns</span>
+													<i class="icon-caret-down"></i>
+												</a>
+												<ul class="dropdown-menu pull-right">
+													<li>
+														<label class="checkbox">
+															<input type="checkbox" checked="checked" value="file"/>
+															Configuration file
+														</label>
+													</li>	
+													<li>
+														<label class="checkbox">
+															<input type="checkbox" checked="checked" value="description" />
+															Description
+														</label>
+													</li>	
+													<li>
+														<label class="checkbox">
+															<input type="checkbox" checked="checked" value="variable_value" disabled />
+															Value
+														</label>
+													</li>																																																	
+													<li>
+														<label class="checkbox">
+															<input type="checkbox" checked="checked" value="variable" disabled />
+															Variable
+														</label>
+													</li>	   
+												</ul>
+											</div> <!-- end of btn-group -->
+											<span class="divider-vertical"></span>
+											<span class="help-inline" style="padding-top:5px;">Show rows:</span>
+											<select style="margin-top:5px;margin-bottom:0px;">
+												<option>10</option>
+												<option selected>25</option>
+												<option>50</option>
+												<option>100</option>
+												<option>150</option>
+											</select>	
+										</div> <!-- end of pull-right -->
+									</div> <!-- end of navbar-inner -->
+								</div> <!-- end of navbar -->				
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th class="variable span3">
+												<i class="icon-question-sign icon-white get-help"></i>
+												Variable
+												<i class="icon-caret-down"></i>
+											</th>                        	
+											<th class="variable_value span4">
+												<i class="icon-question-sign icon-white get-help"></i>
+												<a href="#" style="font-weight:normal;">Value</a>
+											</th>
+											<th class="file span4">
+												<i class="icon-question-sign icon-white get-help"></i>
+												<a href="#" style="font-weight:normal;">Configuration file</a>
+												<div class="btn-group pull-right">
+													<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-filter"></i>
+													</a>
+												</div>
+											</th>
+											<th class="description span5">
+												<i class="icon-question-sign icon-white get-help"></i>
+												<a href="#" style="font-weight:normal;">Description</a>
+											</th>                                                       		                       		                       		
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="variable">ABIEXTENSION</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>
+										<tr>
+											<td class="variable">ADOBE_MIRROR</td>
+											<td class="value">http://fpdownload.macromedia.com/get/flashplayer/current/</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>
+										<tr>
+											<td class="variable">all_proxy</td>
+											<td class="value"></td>
+											<td class="file"></td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ALL_QA</td>
+											<td class="value">textrel files-invalid incompatible-license xorg-driver-abi libdir dev-so debug-deps dev-deps debug-files arch pkgconfig la perms useless-rpaths rpaths staticdev ldflags pkgvarcheck already-stripped compile-host-path dep-cmp installed-vs-shipped install-host-path packages-list perm-config perm-line perm-link pkgv-undefined pn-overrides split-strip var-undefined</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ALLOW_EMPTY_${PN}-dbg</td>
+											<td class="value">1</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description">
+												Specifies if an output package should still be produced if it is empty.
+												<a href="http://www.yoctoproject.org/docs/1.4/ref-manual/ref-manual.html#var-ALLOW_EMPTY" target="_blank">
+													<i class="icon-share get-info"></i>
+												</a>
+											</td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ALLOW_EMPTY_${PN}-dev</td>
+											<td class="value">1</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description">
+												Specifies if an output package should still be produced if it is empty.
+												<a href="http://www.yoctoproject.org/docs/1.4/ref-manual/ref-manual.html#var-ALLOW_EMPTY" target="_blank">
+													<i class="icon-share get-info"></i>
+												</a>												
+											</td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ALLOWED_FLAGS</td>
+											<td class="value">-O -mcpu -march -pipe</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">APACHE_MIRROR</td>
+											<td class="value">http://www.apache.org/dist</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">AR</td>
+											<td class="value">i586-poky-linux-ar</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">AS</td>
+											<td class="value">i586-poky-linux-as</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED</td>
+											<td class="value">-Wl,--as-needed</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-console-tools</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-dialer</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-distcc</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-icu</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-minimo</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-openobex</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>
+										<tr>
+											<td class="variable">ASNEEDED_pn-pciutils</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-pulseaudio</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>		
+										<tr>
+											<td class="variable">ASNEEDED_pn-puzzles</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-rpm</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASNEEDED_pn-xserver-kdrive-xomap</td>
+											<td class="value"></td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description"></td>                        	                          	
+										</tr>		
+										<tr>
+											<td class="variable">ASSUME_PROVIDED</td>
+											<td class="value">bzip2-native chrpath-native git-native grep-native diffstat-native patch-native perl-native-runtime python-native-runtime tar-native virtual/libintl-native </td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description">List of recipes which are assumed to be implicitly available. These recipes won't be built by BitBake.</td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">ASSUME_SHLIBS</td>
+											<td class="value">None</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description">List of shlib:package[_version] mappings. Useful for lib packages in ASSUME_PROVIDED, for which automatic shlib dependency tracking doesn't work.</td>                        	                          	
+										</tr>	
+										<tr>
+											<td class="variable">AUTHOR</td>
+											<td class="value">None</td>
+											<td class="file">/path/to/config/file.conf</td>
+											<td class="description">
+												The email address used to contact the original author(s) in order to send patches and forward bugs.
+												<a href="http://www.yoctoproject.org/docs/1.4/ref-manual/ref-manual.html#var-AUTHOR" target="_blank">
+													<i class="icon-share get-info"></i>
+												</a>												
+											</td>                        	                          	
+										</tr>																																																																																																																																																																																																																																																																						
+									</tbody>
+								</table>
+								<div class="pagination pagination-centered">
+									<ul>
+										<li class="disabled"><a href="#">&larr; Previous</a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next &rarr;</a></li>
+									</ul>
+									<div class="pull-right">
+										<span class="help-inline">Show rows:</span>
+										<select style="margin-top:5px;margin-bottom:0px;">
+											<option>10</option>
+											<option selected>25</option>
+											<option>50</option>
+											<option>100</option>
+											<option>150</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end tab content -->
+						
+					</div>
+					<!-- end right container -->
+				</div> <!-- end row fluid -->
+			</div> <!-- end span12 -->
+    	</div>
+    	<!-- end content -->
+
+        </div> 
+        <!-- end container-fluid -->
+
+        <!-- Modals -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <form action="project-configuration-1.html">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h3 id="myModalLabel">Start a new project</h3>
+                </div>
+                <div class="modal-body">
+                    <label>Project name</label>
+                    <input type="text" />
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Create a project</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="layerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <form action="">
+                <div class="modal-header overflow-hidden">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <!--h3 id="myModalLabel">Image types</h3-->
+                </div>
+                <div class="modal-body">
+                    <p><strong>About meta-android</strong></p>
+                    <p>The OpenEmbedded layer for android specific software.</p>
+                    <p><a href="#">README file</a> | <a href="#">Usage information</a></p>
+                    <p><strong>Repository:</strong><br>
+                    git://github.com/shr-distribution/meta-smartphone.git</p>
+                    <p><strong>Web:</strong><br>
+                    http://github.com/shr-distribution/meta-smartphone</p>
+                    <p><strong>Subdirectory:</strong><br/>
+                    meta-android</p>
+                </div>
+                <!--div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Done</button>
+                </div-->
+            </form>
+        </div>
+
+        <div id="runModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <form action="project-building.html">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h3 id="myModalLabel">Run build</h3>
+                </div>
+                <div class="modal-body">
+                    <label>Build name</label>
+                    <input type="text" value="Release candiate v1.4" />
+                    <p>Select the image recipes you wish to build:</p>
+                    <ul class="unstyled">
+                        <li>
+                            <label class="checkbox">
+                                <input type="checkbox"> My own version of core-image-base <a href="#"><i class="icon-pencil"></i> Edit</a>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox">
+                                <input type="checkbox"> cohrhe:-mimage-l2sbb <a href="#"><i class="icon-pencil"></i> Customise</a>
+                            </label>
+                            <ul class="unstyled" style="margin-left: 20px">
+                                <li><p>My customised image recipe while editing recipes <a href="#"><i class="icon-pencil"></i> Edit recipes</a></p></li>
+                                <li><p>My customised image recipe while editing packages <a href="#"><i class="icon-pencil"></i> Edit packages</a></p></li>
+                                <li style="margin-bottom: 10px" class="alert alert-error">My customised image recipe when building failed <i class="icon-minus-sign error"></i> package build failed <strong>2 errors</strong></li>
+                                <li>
+                                    <p class="pull-left">My customised image recipe is building packages&nbsp;</p>
+                                    <div style="width: 300px" class="pull-left progress progress-striped">
+                                        <div class="bar" style="width: 20%;"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Build</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="customiseModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <form action="project-configuration-images-1.html">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h3 id="myModalLabel">Customise core-image-base</h3>
+                </div>
+                <div class="modal-body">
+                    <label>Name your customised image recipe</label>
+                    <input type="text" />
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="busyboxModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <form action="">
+                <div class="modal-header overflow-hidden">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h3 id="myModalLabel" class="pull-left">About Busybox</h3>
+                    <span style="margin: 2.5px 5px" class="pull-right">
+                        <a class="muted" href="#"><i class="icon-folder-close"></i> View package tasks</a>
+                        <a class="muted" href="#"><i class="icon-tasks"></i> View package sources</a>
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Tiny versions of many common UNIX utilities in a single small executable</strong></p><br>
+                    <p><strong>Recipe:</strong> <a href="#">busybox-1.20.2-r4</a></p>
+                    <p><strong>Brought in by:</strong> <a href="#">packagegroup-core-boot</a></p>
+                    <p><strong>Depends on:</strong> <a href="#">update-rc.d</a> | <a href="#">eglibc</a></p>
+                    <p><strong>Recommends:</strong> <a href="#">busybox-syslog</a> | <a href="#">busybox-udhcpd</a></p><br>
+                    <p><strong>Description:</strong><br>
+                    BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in GNU filNeaumtiels,BusyBox generally have fewer options than their full-featured bin 569.3 KB GNU cousins; however, the options that are included provide the expected functionality and behave very much like their GNU counter parts. BusyBox provides a fairly complete POSIX 8.2KB environment for any small or embedded system.</p>
+                    <p><a href="#">Busybox homepage</a> | <a href="#">Busybox bug tracker</a></p>
+                </div>
+                <!--div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Done</button>
+                </div-->
+            </form>
+        </div>
+
+        <div id="recipeModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <form action="">
+                <div class="modal-header overflow-hidden">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h3 id="myModalLabel">busybox</h3>
+                </div>
+                <div class="modal-body">
+                    <p>A deamon for delivering ACPI events</p>
+                    <p><a href="#">View recipe file</a></p>
+                    <p><strong>Version:</strong> 1.0.10</p>
+                    <p><strong>Revision:</strong> r0</p>
+                    <p><strong>Section:</strong> base</p>
+                    <p><strong>License:</strong> GPLv2+</p>
+                    <p><strong>Layer:</strong> <a href="#">openembedded-core</a></p>
+                    <p><strong>Homepage:</strong> <a href="#">http://sourceforge.net/projects/acpid/</a></p>
+                    <p><strong>Bugtracker:</strong> <a href="#">http://sourceforge.net/tracker/?group_id=33140&amp;atid=407341</a></p>
+                </div>
+                <!--div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Done</button>
+                </div-->
+            </form>
+        </div>
+
+        <script src="assets/js/jquery-1.9.1.min.js" type='text/javascript'></script>
+        <script src="assets/js/jquery.tablesorter.min.js" type='text/javascript'></script>
+        <script src="assets/js/bootstrap.min.js" type='text/javascript'></script>
+        <script src="assets/js/prettify.js" type='text/javascript'></script>
+        <script src="assets/js/jit.js" type='text/javascript'></script>
+        <script src="assets/js/main.js" type='text/javascript'></script>
+        <script>
+        	 $(document).ready(function() {	
+        	 	//edit columns functionality (show / hide table columns)
+        	 	$("input:checkbox").change();
+        	 		$("input:checkbox").change(function(){
+        	 			var selectedType = $(this).val();
+        	 				if($(this).is(":checked")){
+        	 					$("."+selectedType).show();
+        	 				}
+        	 				else{
+        	 					$("."+selectedType).hide();
+        	 				}
+        	 		});  	
+        	 	//turn edit columns dropdown into a multi-select menu
+        	 	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+    				e.stopPropagation();
+				});   
+				//filter warnings and errors when requested by the URL
+				if (location.href.search('filter=') > -1) {
+        			var filter = location.href.split('filter=')[1];
+        			var cells = jQuery('.' + filter);
+        			$("tbody > tr").hide();
+        			cells.each(function() {
+        				if($(this).is('a')) {
+            				jQuery(this).parents('tr').show();
+            			}
+        			});
+    			}  	
+        	 });
+        </script>
+        
+
+    </body>
+</html>

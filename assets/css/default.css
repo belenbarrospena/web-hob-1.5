@@ -145,3 +145,6 @@ dd code {white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}
 dd p {line-height:20px;}
 .iscommit {white-space: pre-wrap; word-break: break-all; word-wrap: break-word;}
 .wrap {word-break: break-all; word-wrap: break-word;}
+.divide {border-right: 1px solid #E5E5E5;}
+.get-info {color:#0088CC;}
+.get-info:hover {color:#005580;cursor:pointer;text-decoration:none;}

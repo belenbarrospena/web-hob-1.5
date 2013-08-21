@@ -84,7 +84,7 @@
 				<!-- begin left sidebar container -->
 				<div id="nav" class="span2">
     			<ul class="nav nav-tabs nav-stacked">
-        			<li><a href="project-build-configuration.html">Configuration</a></li>
+        			<li><a href="build-configuration.html">Configuration</a></li>
         			<li><a href="all-tasks.html">Tasks</a></li>
         			<li><a href="all-recipes.html">Recipes</a></li>
         			<li><a href="all-packages.html">Packages</a></li>
@@ -130,17 +130,23 @@
    									<i class="icon-question-sign get-help" data-toggle="tooltip" title="The size of the package"></i>
    									Size
    								</th>
+   								<th>
+   									<i class="icon-question-sign get-help" data-toggle="tooltip" title="If the package is installed in the root file system"></i>
+   									Included
+   								</th>
    							</thead>
 							<tbody>
 								<tr>
 									<td><a href="#"><a href="#">eglibc</a></td>
 									<td><a href="#"><a href="#">2.17-r3</a></td>
 									<td><a href="#"><a href="#">3.1 MB</a></td>
+									<td><a href="#"><a href="#">Yes</a></td>
 								</tr>
 								<tr>
 									<td><a href="#"><a href="#">update-alternatives-cworth</a></td>
 									<td><a href="#"><a href="#">0.1.8+svnr650-r13.0</a></td>
 									<td><a href="#"><a href="#">20 KB</a></td>
+									<td><a href="#"><a href="#">Yes</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -159,22 +165,29 @@
    									<i class="icon-question-sign get-help" data-toggle="tooltip" title="The size of the package"></i>
    									Size
    								</th>
+   								<th>
+   									<i class="icon-question-sign get-help" data-toggle="tooltip" title="If the package is installed in the root file system"></i>
+   									Included
+   								</th>   								
    							</thead>
 							<tbody>
 								<tr>
 									<td><a href="#"><a href="#">busybox-syslog</a></td>
 									<td><a href="#"><a href="#">1.21.1-r0</a></td>
 									<td><a href="#"><a href="#">20 KB</a></td>
+									<td><a href="#"><a href="#">Yes</a></td>
 								</tr>
 								<tr>
 									<td><a href="#"><a href="#">busybox-udhcpc</a></td>
 									<td><a href="#"><a href="#">1.21.1-r0</a></td>
 									<td><a href="#"><a href="#">32 KB</a></td>
+									<td><a href="#"><a href="#">Yes</a></td>
 								</tr>
 								<tr>
 									<td><a href="#"><a href="#">update-rc.d</a></td>
 									<td><a href="#"><a href="#">0.7-r5</a></td>
 									<td><a href="#"><a href="#">20 KB</a></td>
+									<td><a href="#"><a href="#">Yes</a></td>
 								</tr>
 							</tbody>
 						</table>									
@@ -290,7 +303,12 @@
 						Layer
 						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe that builds this package"></i>
 					</dt>
-					<dd><a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/">openembedded-core</a></dd>
+					<dd>
+						openembedded-core
+						<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
+							<i class="icon-share get-info"></i>
+						</a>   						
+					</dd>
 					<dt>
 						Layer branch
 						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git branch of the layer providing the recipe that builds this package"></i>
