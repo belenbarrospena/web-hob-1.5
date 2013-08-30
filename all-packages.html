@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Packages</title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" type='text/css'>
         <link rel="stylesheet" href="assets/css/font-awesome.min.css" type='text/css'>
@@ -13,49 +13,8 @@
     <body>
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container-fluid">
-                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <!-- Be sure to leave the brand out there if you want it shown -->
-                    <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
-                    <a class="brand" href="index.html">Toaster</a>
-                    <!-- Everything you want hidden at 940px or less, place within here -->
-                    <div class="nav-collapse collapse">
-                        <!--div class="pull-right">                           
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Start a project
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
-                                    </li>
-                                    <li>
-                                        <a class="file-type" href="#import-project">Import project</a>
-                                        <form id="import-project" class="hidden" action="">
-                                            <input type="file" />
-                                            <input type="submit" />
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Username
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="muted" href="#">Sign out</a></li>
-                                </ul>
-                            </div>
-                        </div-->
-                    </div>
-                </div>
+				<a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
+				<a class="brand" href="index.html">Toaster</a>
             </div>
         </div>
 
@@ -80,18 +39,21 @@
 			<div class="row-fluid">
 				<!-- begin left sidebar container -->
 				<div id="nav" class="span2">
-    			<ul class="nav nav-tabs nav-stacked">
-        			<li><a href="build-configuration.html">Configuration</a></li>
-        			<li><a href="all-tasks.html">Tasks</a></li>
-        			<li><a href="all-recipes.html">Recipes</a></li>
-        			<li class="active"><a href="all-packages.html">Packages</a></li>
-        			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
-        			<li><a href="build-time.html">Time</a></li>
-        			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li><a href="build-diskio.html">Disk I/O</a></li>
-        		</ul>
-        	</div>
-			<!-- end left sidebar container -->
+						<ul class="nav nav-list well">
+							<li class="nav-header">Images</li>
+							<li><a href="target.html">core-image-sato</a><li>
+							<li class="nav-header">Build</li>
+							<li><a href="build-configuration.html">Configuration</a></li>
+							<li><a href="all-tasks.html">Tasks</a></li>
+							<li><a href="all-recipes.html">Recipes</a></li>
+							<li class="active"><a href="all-packages.html">Packages</a></li>
+							<li class="nav-header">Performance</li>
+							<li><a href="build-time.html">Time</a></li>
+							<li><a href="build-cpu.html">CPU usage</a></li>
+							<li><a href="build-diskio.html">Disk I/O</a></li>
+						</ul>
+        		</div>
+				<!-- end left sidebar container -->
 				<!-- Begin right container -->
                 <div class="span10">
                 	<div class="page-header">
@@ -122,7 +84,7 @@
 						<div class="navbar">
             				<div class="navbar-inner">
             					<form class="navbar-search input-append pull-left">
-									<input class="input-xxlarge" type="text" placeholder="Search packages">
+									<input class="input-xxlarge" type="text" placeholder="Search packages built">
 									<button class="btn" type="button">Search</button>
     							</form>
     							<div class="pull-right">
@@ -131,25 +93,7 @@
             								<span>Edit columns</span>
             								<i class="icon-caret-down"></i>
         								</a>
-        								<ul class="dropdown-menu pull-right">
-                        					<li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" value="brought_in_by" />
-                        							Brought in by
-                        						</label>
-                        					</li>                        					
-                        					<li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" value="depends" />
-                        							Depends
-                        						</label>
-                        					</li>                        					                        					        								
-        									<li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" checked="checked" value="included" />
-                        							Included
-                        						</label>
-                        					</li>
+        								<ul class="dropdown-menu pull-right">                     					                     					                        					        								
                         					<li>
                         						<label class="checkbox">
                         							<input type="checkbox" value="layer_name" />
@@ -186,12 +130,12 @@
                         							Package
                         						</label>
                         					</li>    
-                        					<li>
+                        					<!--li>
                         						<label class="checkbox">
                         							<input type="checkbox" value="package_files" />
                         							Package files
                         						</label>
-                        					</li>                    					
+                        					</li-->                    					
                         					<li>
                         						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="package_version" disabled />
@@ -209,25 +153,13 @@
                         							<input type="checkbox" value="recipe_version" />
                         							Recipe version
                         						</label>
-                        					</li>                         					
-                        					<li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" value="recommends" />
-                        							Recommends
-                        						</label>
-                        					</li>                        					
+                        					</li>                         					                      					
                         					<li>
                         						<label class="checkbox">
                         							<input type="checkbox" checked="checked" value="package_size" />
                         							Size
                         						</label>
-                        					</li>
-                        					<li>
-                        						<label class="checkbox">
-                        							<input type="checkbox" value="size_over_total" />
-                        							Size over total (%)
-                        						</label>
-                        					</li>                      					                      					                       					   
+                        					</li>                     					                      					                       					   
                         				</ul>
                         			</div> <!-- end of btn-group -->
                         			<span class="divider-vertical"></span>
@@ -242,98 +174,10 @@
                         		</div> <!-- end of pull-right -->
                         	</div> <!-- end of navbar-inner -->
                         </div> <!-- end of navbar -->				
-                        <!--div class="pull-right">
-                            <div class="btn-group">
-        						<a class="btn column-button dropdown-toggle" data-toggle="dropdown">
-            						<i class="icon-columns"></i>
-            						<i class="icon-caret-down"></i>
-        						</a>
-        						<ul class="dropdown-menu pull-right">
-        							<li>
-                        				<label class="checkbox">
-                        					<input type="checkbox" checked="checked" />Status
-                        				</label>
-                        			</li>
-                        			<li>
-                        			<label class="checkbox">
-                        				<input type="checkbox" checked="checked" />Recipe
-                        			</label>
-                        		</li>
-                        			<li>
-                        			<label class="checkbox">
-                        				<input type="checkbox" checked="checked" />Task name
-                        			</label>
-                    			</li>
-                    				<li>
-                        			<label class="checkbox">
-                        				<input type="checkbox" checked="checked" />Issues
-                        			</label>
-                        		</li>
-                        			<li>
-                        			<label class="checkbox">
-                        				<input type="checkbox" checked="checked" />Log file
-                        			</label>
-                        		</li>
-                        		</ul>
-    					</div>
-
-                        </div-->
                     </div>
                     <table class="table table-bordered table-hover">
                         <thead>
-                        	<!--tr>
-                        		<td>
-                        			<div class="combobox">
-                        				<input type="text" class="filter" data-filter="status" />
-                        				<button class="btn">
-                        					<i class="icon-caret-down"></i>
-                        				</button>
-                        			</div>
-                        		</td>
-                        		<td>
-                        			<div class="combobox">
-                        				<input type="text" class="filter" data-filter="recipe" />
-                        				<button class="btn">
-                        					<i class="icon-caret-down"></i>
-                        				</button>
-                        			</div>
-                        		</td>
-                        		<td>
-                        			<div class="combobox">
-                        				<input type="text" class="filter" data-filter="task-name" />
-                        				<button class="btn">
-                        					<i class="icon-caret-down"></i>
-                        				</button>
-                        			</div>
-                        		</td>
-                        		<td>
-                        			<div class="combobox">
-                        				<input type="text" class="filter" data-filter="issues" />
-                        				<button class="btn">
-                        					<i class="icon-caret-down"></i>
-                        				</button>
-                        			</div>
-                        		</td>
-                        		<td>
-                        			<div class="combobox">
-                        				<input type="text" class="filter" data-filter="log-file" />
-                        				<button class="btn">
-                        					<i class="icon-caret-down"></i>
-                        				</button>
-                        			</div>
-                        		</td>
-                        	</tr-->
-                        	<tr>
-                        		<th class="included">
-                        			<i class="icon-question-sign icon-white get-help"></i>
-                        			<a href="#" style="font-weight:normal;">Included</a>
-                        			<div id="filtered" class="btn-group pull-right" title="<p>Showing included packages</p><p><a class='btn btn-mini btn-primary' href='#'>Show all</a></p>">
-                        				<a class="btn btn-mini btn-primary">
-                        					<i class="icon-filter"></i>
-                        				</a>
-                        			</div>
-                        			<!--a href="#" class="pull-right" style="margin-right:.5em;"><span class="label label-info">Clear filter</span></a-->                        			
-                        		</th>  
+                        	<tr> 
                         		<th class="package_name">
                         			<i class="icon-question-sign icon-white get-help"></i>
                         			Package
@@ -353,7 +197,7 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th class="package_files" style="display:none;">
+                        		<!--th class="package_files" style="display:none;">
                         			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Package files</a>
                         			<div class="btn-group pull-right">
@@ -361,7 +205,7 @@
                         					<i class="icon-filter"></i>
                         				</a>
                         			</div>
-                        		</th>
+                        		</th-->
                         		<th class="package_size">
                         			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Size</a>
@@ -371,15 +215,6 @@
                         				</a>
                         			</div>
                         		</th>
-                        		<th class="size_over_total" style="display:none">
-                        			<i class="icon-question-sign icon-white get-help"></i>
-                        			<a href="#" style="font-weight:normal;">Size over total (%)</a>
-                        			<div class="btn-group pull-right">
-                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        					<i class="icon-filter"></i>
-                        				</a>
-                        			</div>
-                        		</th>  
                         		<th class="license" style="display:none">
                         			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">License</a>
@@ -388,34 +223,7 @@
                         					<i class="icon-filter"></i>
                         				</a>
                         			</div>
-                        		</th> 
-                        		<th class="depends" style="display:none">
-                        			<i class="icon-question-sign icon-white get-help"></i>
-                        			<a href="#" style="font-weight:normal;">Depends</a>
-                        			<div class="btn-group pull-right">
-                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        					<i class="icon-filter"></i>
-                        				</a>
-                        			</div>
-                        		</th> 
-                        		<th class="recommends" style="display:none">
-                        			<i class="icon-question-sign icon-white get-help"></i>
-                        			<a href="#" style="font-weight:normal;">Recommends</a>
-                        			<div class="btn-group pull-right">
-                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        					<i class="icon-filter"></i>
-                        				</a>
-                        			</div>
-                        		</th> 
-                        		<th class="brought_in_by">
-                        			<i class="icon-question-sign icon-white get-help"></i>
-                        			<a href="#" style="font-weight:normal;">Brought in by</a>
-                        			<div class="btn-group pull-right">
-                        				<a class="btn btn-mini column-button dropdown-toggle" data-toggle="dropdown">
-                        					<i class="icon-filter"></i>
-                        				</a>
-                        			</div>
-                        		</th>                                 
+                        		</th>                                    
                         		<th class="recipe_name">
                         			<i class="icon-question-sign icon-white get-help"></i>
                         			<a href="#" style="font-weight:normal;">Recipe</a>
@@ -474,22 +282,12 @@
                         </thead>
                         <tbody>
                         	<tr>
-                        		<td class="included">Yes</td>
-                        		<td class="package_name"><a href="package-details-base-files.html">base-files</a></td>
-                        		<td class="package_version"><a href="package-details-base-files.html">3.0.14-r73</a></td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/base-files/3.0.14-r73/</td>
+                        		<td class="package_name"><a href="package-built-details-included(base-files).html">base-files</a></td>
+                        		<td class="package_version"><a href="package-built-details-included(base-files).html">3.0.14-r73</a></td>
                                 <td class="package_size">228 KB</td>
-                        		<td class="size_over_total" style="display:none;">4%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot</a>">
-                            			1
-                            		</a>	
-                            	</td>
-                            	<td class="recipe_name"><a href="#">base-files</a></td>
-                            	<td class="recipe_version" style="display:none">3.0.14-r73</td>
+                            	<td class="recipe_name"><a href="recipe-details-base-files.html">base-files</a></td>
+                            	<td class="recipe_version" style="display:none"><a href="#"><a href="recipe-details-base-files.html">3.0.14-r73</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -504,23 +302,13 @@
                             	</td>
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>
                            </tr>
-                        <tr>
-                        		<td class="included">Yes</td>
+                           <tr>
                         		<td class="package_name"><a href="#">base-passwd</a></td>
                         		<td class="package_version">3.5.26-r2</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/base-passwd/3.5.26-r2/</td>
                                 <td class="package_size">0 KB</td>
-                        		<td class="size_over_total" style="display:none;">0%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>
-                            	</td>
                             	<td class="recipe_name"><a href="#">base-passwd</a></td>
-                            	<td class="recipe_version" style="display:none">3.5.26-r2</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.5.26-r2</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -536,30 +324,33 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>         	
                            </tr>
                            <tr>
-                        		<td class="included">Yes</td>
-                        		<td class="package_name"><a href="package-details-busybox.html">busybox</a></td>
-                        		<td class="package_version"><a href="package-details-busybox.html">1.20.2-r7</a></td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
-                                <td class="package_size">568 KB</td>
-                        		<td class="size_over_total" style="display:none;">2%</td>
+                        		<td class="package_name"><a href="package-built-details-not-included(base-passwd-doc).html">base-passwd-doc</a></td>
+                        		<td class="package_version"><a href="package-built-details-not-included(base-files-doc).html">3.5.26-r2</a></td>
+                                <td class="package_size">64 KB</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a></span> | <a href='#'>update-alternatives-cworth</a>">
-                        				2
-                        			</a>         			
+                            	<td class="recipe_name"><a href="recipe-details-base-files.html">base-passwd</a></td>
+                            	<td class="recipe_version" style="display:none"><a href="#"><a href="recipe-details-base-files.html">3.5.26-r2</a></td>
+                        		<td class="layer_name" style="display:none;">
+                        			openembedded-core
+									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
+										<i class="icon-share get-info"></i>
+									</a>                        			
                         		</td>
-                            	<td class="recommends" style="display:none;">
-                            		<a class="btn" href="#" data-content="<a href='#'>busybox-syslog</a> | <a href='#'>busybox-udhcpc</a> | <a href='#'>update-rc.d</a>">
-                            			3
+                            	<td class="layer_branch" style="display:none;">master</td>
+                            	<td class="layer_commit" style="display:none;">
+                            		<a class="btn" href="#" data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38">
+                            			3e1dbabbf3...
                             		</a>
                             	</td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>	
-                            	</td>
+                            	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>
+                           </tr>                           
+                           <tr>
+                        		<td class="package_name"><a href="#">busybox</a></td>
+                        		<td class="package_version"><a href="#">1.20.2-r7</a></td>
+                                <td class="package_size">568 KB</td>
+                        		<td class="license" style="display:none;">GPLv2</td>
                             	<td class="recipe_name"><a href="#">busybox</a></td>
-                            	<td class="recipe_version" style="display:none">1.20.2-r7</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.20.2-r7</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -575,22 +366,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>               	
                            </tr>
                            <tr>
-                         		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox-hwclock</a></td>
                         		<td class="package_version">1.20.2-r7</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">16 KB</td>
-                        		<td class="size_over_total" style="display:none;">0.9%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">busybox</a></td>
-                            	<td class="recipe_version" style="display:none">1.20.2-r7</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.20.2-r7</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -606,26 +387,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                        	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox-syslog</a></td>
                         		<td class="package_version">1.20.2-r7</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">20 KB</td>
-                        		<td class="size_over_total" style="display:none;">0.4%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>update-alternatives-cworth</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='package-details-busybox.html'>busybox<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">busybox</a></td>
-                            	<td class="recipe_version" style="display:none">1.20.2-r7</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.20.2-r7</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -641,22 +408,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                           	
                             </tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">busybox-udhcpc</a></td>
                         		<td class="package_version">1.20.2-r7</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/busybox/1.20.2-r7/</td>
                                 <td class="package_size">32 KB</td>
-                        		<td class="size_over_total" style="display:none;">0.6%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='package-details-busybox.html'>busybox</a>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">busybox</a></td>
-                            	<td class="recipe_version" style="display:none">1.20.2-r7</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.20.2-r7</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -672,22 +429,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                 	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">eglibc</a></td>
                         		<td class="package_version">2.17-r3</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/eglibc/2.17-r3/</td>
                                 <td class="package_size">3.1 MB</td>
-                        		<td class="size_over_total" style="display:none;">42%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>tinylogin<a/> | <a href='#'>util-linux-libuuid<a/> | <a href='#'>util-linux-libblkid<a/> | <a href='#'>udev<a/> | <a href='#'>libkmod<a/> | <a href='#'>udev-utils<a/> | <a href='#'>sysvinit-pidof<a/> | <a href='#'>sysvinit<a/> | <a href='#'>busybox<a/> | <a href='#'>v86d<a/>">
-                            			10
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">eglibc</a></td>
-                            	<td class="recipe_version" style="display:none">2.17-r3</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">2.17-r3</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -703,30 +450,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                     	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">init-ifupdown</a></td>
                         		<td class="package_version">1.0-r0</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/1.0-r0/</td>
                                 <td class="package_size">44 KB</td>
-                        		<td class="size_over_total" style="display:none;">3%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>netbase</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;">
-                            		<a class="btn" href="#" data-content="<a href='#'>update-rc.d</a>">
-                            			1
-                            		</a>
-                            	</td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">init-ifupdown</a></td>
-                            	<td class="recipe_version" style="display:none">1.0-r0</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.0-r0</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -742,26 +471,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                         	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">initscripts</a></td>
                         		<td class="package_version">1.0-r140</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/initscripts/1.0-r140/</td>
                                 <td class="package_size">164 KB</td>
-                        		<td class="size_over_total" style="display:none;">5%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>update-alternatives-cworth</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">initscripts</a></td>
-                            	<td class="recipe_version" style="display:none">1.0-r140</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.0-r140</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -777,22 +492,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>   
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-base</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">32 KB</td>
-                        		<td class="size_over_total" style="display:none;">3%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>kernel-module-cfbcopyarea<a/> | <a href='#'>kernel-module-uvesafb<a/> | <a href='#'>kernel-module-cfbfillrect<a/> | <a href='#'>kernel-module-cfbimgblt<a/>">
-                            			4
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">linux-yocto</a></td>
-                            	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</a></td>
                         		<td class="layer_name" style="display:none">
                         			meta-yocto
 									<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
@@ -808,26 +513,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta-yocto/</td>                	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-cfbcopyarea</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">36 KB</td>
-                        		<td class="size_over_total" style="display:none;">3%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>kernel-module-uvesafb<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">linux-yocto</a></td>
-                            	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</a></td>
                         		<td class="layer_name" style="display:none">meta-yocto-core</td>
                             	<td class="layer_branch" style="display:none;">master</td>
                             	<td class="layer_commit" style="display:none;">
@@ -838,26 +529,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta-yocto/</td>             	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-cfbfillrect</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">36 KB</td>
-                        		<td class="size_over_total" style="display:none;">2%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>kernel-module-uvesafb</a>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">linux-yocto</a></td>
-                            	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</a></td>
                         		<td class="layer_name" style="display:none">
                         			meta-yocto
 									<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
@@ -873,26 +550,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta-yocto/</td>                      	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-cfbimgblt</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">32 KB</td>
-                        		<td class="size_over_total" style="display:none;">2%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>kernel-module-uvesafb<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">linux-yocto</a></td>
-                            	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</a></td>
                         		<td class="layer_name" style="display:none">
                         			meta-yocto
 									<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
@@ -908,26 +571,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta-yocto/</td>                  	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">kernel-module-uvesafb</a></td>
                         		<td class="package_version">3.8.11+git8482dcdf68_0+dd089cb5ba</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1/</td>
                                 <td class="package_size">64 KB</td>
-                        		<td class="size_over_total" style="display:none;">5%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>kernel-3.8.11-yocto-standard</a> | <a href='#'>kernel-module-cfbcopyarea</a> | <a href='#'>kernel-module-cfbfillrect</a> | <a href='#'>kernel-module-cfbimgblt</a>">
-                        				4
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>v86d<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">linux-yocto</a></td>
-                            	<td class="recipe_version" style="display:none">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.8.11+git8482dcdf68_AUTOINC+dd089cb5ba-r4.1</a></td>
                         		<td class="layer_name" style="display:none">
                         			meta-yocto
 									<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
@@ -943,26 +592,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta-yocto/</td>                         	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">libkmod</a></td>
                         		<td class="package_version">9-r0.0</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/kmod/9-r0.0/</td>
                                 <td class="package_size">104 KB</td>
-                        		<td class="size_over_total" style="display:none;">6.4%</td>
                         		<td class="license" style="display:none;">LGPL_v2.1+</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a>">
-                        				1
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>udev<a/> | <a href='#'>udev-utils</a>">
-                            			2
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">kmod</a></td>
-                            	<td class="recipe_version" style="display:none">9-r0.0</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">9-r0.0</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -978,26 +613,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>     
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">modutils-iniscripts</a></td>
                         		<td class="package_version">1.0-r6</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/modutils-initscripts/1.0-r6/</td>
                                 <td class="package_size">16 KB</td>
-                        		<td class="size_over_total" style="display:none;">1.7%</td>
                         		<td class="license" style="display:none;">PD</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;">
-                            		<a class="btn" href="#" data-content="<a href='#'>update-rc.d</a>">
-                            			1
-                            		</a>
-                            	</td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">modutils-iniscripts</a></td>
-                            	<td class="recipe_version" style="display:none">1.0-r6</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.0-r6</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1013,22 +634,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">netbase</a></td>
                         		<td class="package_version">5.1-r0</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/netbase/1_5.1-r0/</td>
                                 <td class="package_size">40 KB</td>
-                        		<td class="size_over_total" style="display:none;">3%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>init-ifupdown</a> | <a href='#'>packagegroup-core-boot<a/>">
-                            			2
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">netbase</a></td>
-                            	<td class="recipe_version" style="display:none">5.1-r0</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">5.1-r0</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1044,22 +655,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                       	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name">packagegroup-core-boot</td>
                         		<td class="package_version">1.0-r11</td>
-                                <td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/packagegroup-core-boot/1.0-r11/</td>
                                 <td class="package_size">0 B</td>
-                        		<td class="size_over_total" style="display:none;">0%</td>
                         		<td class="license" style="display:none;">MIT</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>base-files</a> | <a href='#'>base-passwd</a> | <a href='#'>busybox</a> | <a href='#'>busybox-hwclock</a> | <a href='#'>init-ifupdown</a> | <a href='#'>initscripts</a> | <a href='#'>modutils-initscripts</a> | <a href='#'>netbase</a> | <a href='#'>sysvinit</a> | <a href='#'>tinylogin</a> | <a href='#'>udev</a> | <a href='#'>update-alternatives-cworth</a> | <a href='#'>v86d</a>">
-                        				13
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by"></td>
                             	<td class="recipe_name"><a href="#">packagegroup-core-boot</a></td>
-                            	<td class="recipe_version" style="display:none">1.0-r11</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.0-r11</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1075,22 +676,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                            	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">pciutils-ids</a></td>
                         		<td class="package_version">3.2.0-r0</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/pciutils/3.2.0-r0/</td>
                                 <td class="package_size">212 KB</td>
-                        		<td class="size_over_total" style="display:none;">4%</td>
                         		<td class="license" style="display:none;">GPLv2+</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>udev<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">pciutils</a></td>
-                            	<td class="recipe_version" style="display:none">3.2.0-r0</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">3.2.0-r0</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1106,18 +697,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                   	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">rpm-postinsts</a></td>
                         		<td class="package_version">1.0-r0</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/all-poky-linux/rpm-postinsts/1.0-r0/</td>
                                 <td class="package_size">0 B</td>
-                        		<td class="size_over_total" style="display:none;">0%</td>
                         		<td class="license" style="display:none;">LGPLv2.1</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by"></td>
                             	<td class="recipe_name"><a href="#">rpm-postinsts</a></td>
-                            	<td class="recipe_version" style="display:none">1.0-r0</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.0-r0</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1133,25 +718,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                        	
                             </tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">sysvinit</a></td>
                         		<td class="package_version">2.88dsf-r11</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/sysvinit/2.88dsf-r11/</td>
                                 <td class="package_size">220 KB</td>
-                        		<td class="size_over_total" style="display:none;">4%</td>
                         		<td class="license" style="display:none;">GPLv2+</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>sysvinit-inittab</a> | <a href'#'>sysvinit-pidof</a> | <a href='#'>update-alternatives-cworth</a>">
-                        				4
-                        			</a>         			
-                        		<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot</a>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">sysvinit</a></td>
-                            	<td class="recipe_version" style="display:none">2.88dsf-r11</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">2.88dsf-r11</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1167,22 +739,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>  
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">sysvinit-inittab</a></td>
                         		<td class="package_version">2.88dsf-r9</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/qemux86-poky-linux/sysvinit-inittab/2.88dsf-r9/</td>
                                 <td class="package_size">12 KB</td>
-                        		<td class="size_over_total" style="display:none;">0.7%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;"></td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>sysvinit<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">sysvinit-inittab</a></td>
-                            	<td class="recipe_version" style="display:none">2.88dsf-r9</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">2.88dsf-r9</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1198,26 +760,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                  	
                            	</tr>
                            	<tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">sysvinit-pidof</a></td>
                         		<td class="package_version">2.88dsf-r11</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/sysvinit/2.88dsf-r11/</td>
                                 <td class="package_size">28 KB</td>
-                        		<td class="size_over_total" style="display:none;">1.3%</td>
                         		<td class="license" style="display:none;">GPLv2+</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>update-alternatives-cworth</a>">
-                        				2
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>sysvinit<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">sysvinit</a></td>
-                            	<td class="recipe_version" style="display:none">2.88dsf-r11</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">2.88dsf-r11</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1233,26 +781,12 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>                  	
                            	</tr>
                            	<tr>
-                           	 	<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">tinylogin</a></td>
                         		<td class="package_version">1.4-r9</td>
-                        		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/tinylogin/1.4-r9/</td>
                                 <td class="package_size">64 KB</td>
-                        		<td class="size_over_total" style="display:none;">3%</td>
                         		<td class="license" style="display:none;">GPLv2</td>
-                        		<td class="depends" style="display:none;">
-                        			<a class="btn" href="#" data-content="<a href='#'>eglibc</a> <span class='muted'>(2.17 or higher)</a> | <a href='#'>update-alternatives-cworth</a>">
-                        				2
-                        			</a>         			
-                        		</td>
-                            	<td class="recommends" style="display:none;"></td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>	
-                            	</td>
                             	<td class="recipe_name"><a href="#">tinylogin</a></td>
-                            	<td class="recipe_version" style="display:none">1.4-r9</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">1.4-r9</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
@@ -1268,30 +802,13 @@
                             	<td class="layer_directory" style="display:none;">home/user/poky/meta/</td>  
                             </tr>
                             <tr>
-                        		<td class="included">Yes</td>
                         		<td class="package_name"><a href="#">udev</a></td>
                         		<td class="package_version">182-r7</td>
                         		<td class="package_files" style="display:none;">/home/user/poky/build/tmp/work/i586-poky-linux/udev/182-r7/</td>
                                 <td class="package_size">744 KB</td>
-                        		<td class="size_over_total" style="display:none;">7%</td>
                         		<td class="license" style="display:none;">GPLv2.0+</td>
-                        		<td class="depends" style="display:none;">
-                            		<a class="btn" href="#" data-content="<a href='#'>eglib</a> <span class='muted'>(2.17 or higher)</span> | <a href='#'>libkmod</a> <span class='muted'>(9 or higher)</span> | <a href='#'>util-linux-libblkid</a> <span class='muted'>(2.23 or higher)</span>">
-                            			3
-                            		</a>                        		                    		
-                        		</td>
-                            	<td class="recommends" style="display:none;">
-                            		<a class="btn" href="#" data-content="<a href='#'>pciutils-ids</a> | <a href='#'>udev-utils<a/> | <a href'#'>update-rc.d</a> | <a href='#'>usbutils-ids<a/>">
-                            			4
-                            		</a>                             	
-                            	</td>
-                            	<td class="brought_in_by">
-                            		<a class="btn" href="#" data-content="<a href='#'>packagegroup-core-boot<a/>">
-                            			1
-                            		</a>
-                            	</td>
                             	<td class="recipe_name"><a href="#">udev</a></td>
-                            	<td class="recipe_version" style="display:none">182-r7</td>
+                            	<td class="recipe_version" style="display:none"><a href="#">182-r7</a></td>
                         		<td class="layer_name" style="display:none;">
                         			openembedded-core
 									<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">

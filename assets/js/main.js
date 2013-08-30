@@ -360,7 +360,7 @@ $(document).ready(function() {
 
 	// enable tooltips and popovers
 	//$(".get-help").tooltip({ trigger: 'click', container: 'body' });
-	$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover({html:true, container:'table', placement: 'left'});
+	$('.depends > a , .brought_in_by > a, .recommends > a, .layer_commit > a').popover({html:true, container:'body', placement: 'left'});
 
     /*   make sure on hover elements do not disappear while the pointer is inside them 
     

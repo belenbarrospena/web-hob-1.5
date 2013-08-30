@@ -13,49 +13,8 @@
     <body>
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container-fluid">
-                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <!-- Be sure to leave the brand out there if you want it shown -->
-                    <a class="brand logo" href="project.html"><img src="assets/img/logo.png" class="" /></a>
-                    <a class="brand" href="index.html">Toaster</a>
-                    <!-- Everything you want hidden at 940px or less, place within here -->
-                    <div class="nav-collapse collapse">
-                        <!--div class="pull-right">                           
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Start a project
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
-                                    </li>
-                                    <li>
-                                        <a class="file-type" href="#import-project">Import project</a>
-                                        <form id="import-project" class="hidden" action="">
-                                            <input type="file" />
-                                            <input type="submit" />
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Username
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="muted" href="#">Sign out</a></li>
-                                </ul>
-                            </div>
-                        </div-->
-                    </div>
-                </div>
+				<a class="brand logo" href="index.html"><img src="assets/img/logo.png" class="" /></a>
+				<a class="brand" href="index.html">Toaster</a>
             </div>
         </div>
 
@@ -80,158 +39,321 @@
                     	<li class="active">acl_2.2.51-r3</li>
                 	</ul>
             	</div>
-			<div class="row-fluid">
-				<!-- begin left sidebar container -->
-				<div id="nav" class="span2">
-    			<ul class="nav nav-tabs nav-stacked">
-        			<li><a href="build-configuration.html">Configuration</a></li>
-        			<li><a href="all-tasks.html">Tasks</a></li>
-        			<li><a href="all-recipes.html">Recipes</a></li>
-        			<li><a href="all-packages.html">Packages</a></li>
-        			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
-        			<li><a href="build-time.html">Time</a></li>
-        			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li><a href="build-diskio.html">Disk I/O</a></li>
-        		</ul>
-        	</div>
-			<!-- end left sidebar container -->
+
 			<!-- Begin right container -->
-            <div class="row span10">
+            <div class="row span11">
                 <div class="page-header">
 					<h1>acl_2.2.51-r3</h1>
 				</div>
 			</div>
-			<div class="row span6">
-				<h2>Recipe information</h2>
-				<dl>
-					<dt>
-						Recipe file
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="Location in disk of the recipe file"></i>
-					</dt>
-					<dd><code>home/user/poky/meta/recipes-support/attr/acl_2.2.51.bb</code></dd>
-					<dt>
-						Layer
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>
-					</dt>
-					<dd>
-						openembedded-core
-						<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
-							<i class="icon-share get-info"></i>
+			<div class="row span7 tabbable">
+				<ul class="nav nav-pills">
+					<li class="active">
+						<a href="#information" data-toggle="tab">
+							<i class="icon-question-sign get-help" data-toggle="tooltip" title="Build-related information about the recipe"></i>						
+							Recipe information
 						</a>
-					</dd>
-					<dt>
-						Layer branch
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git branch of the layer providing the recipe"></i>
-					</dt>
-					<dd>master</dd>
-					<dt>
-						Layer commit
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git commit of the layer providing the recipe"></i>
-					</dt>
-					<dd class="iscommit">3e1dbabbf33a2e461abc92ff10cd970fe604ee38</dd>
-					<dt>
-						Layer directory
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="Location in disk of the layer providing the recipe"></i>
-					</dt>
-					<dd><code>home/user/poky/meta/</code></dd>
-					<dt>	
-						Work directory
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The pathname of the working directory in which the OpenEmbedded build system builds a recipe"></i>
-					</dt>
-					<dd><code>home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/</code></dd>
-					<dt>
-						License files
-						<i class="icon-question-sign get-help" data-toggle="tooltip" title="The directory containing the COPYING license files with other licensing information"></i>
-					</dt>
-					<dd><code>home/user/poky/build/deploy/licenses/acl/</code></dd>
-				</dl>
-				<h2 class="details">Packages built</h2>
-				<table class="table table-bordered table-hover">
-					<thead>
-						<tr>
-							<th>
-								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The packaged output resulting from building the recipe"></i>
-								Package
-							</th>
-							<th>
-								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The package version"></i>
-								Version
-							</th>
-							<th>
-								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The size of the package"></i>
-								Size
-							</th>
-							<th>
-								<i class="icon-question-sign get-help" data-toggle="tooltip" title="If the package is installed in the root file system"></i>
-								Included
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="#">acl</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">76 KB</a></td>
-							<td><a href="#">Yes</a></td>
-						</tr>
-						<tr class="muted">
-							<td><a href="#">acl-dbg</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">712 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>
-						<tr class="muted">
-							<td><a href="#">acl-dev</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">0 B</a></td>
-							<td><a href="#">No</a></td>
-						</tr>	
-						<tr class="muted">
-							<td><a href="#">acl-doc</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">120 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>	
-						<tr class="muted">
-							<td><a href="#">acl-locale-de</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">36 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>
-						<tr class="muted">
-							<td><a href="#">acl-locale-es</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">36 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>
-						<tr class="muted">
-							<td><a href="#">acl-locale-fr</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">36 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>
-						<tr class="muted">
-							<td><a href="#">acl-locale-gl</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">36 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>	
-						<tr class="muted">
-							<td><a href="#">acl-locale-pl</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">36 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>	
-						<tr class="muted">
-							<td><a href="#">acl-locale-sv</a></td>
-							<td><a href="#">2.2.51-r3</a></td>
-							<td><a href="#">36 KB</a></td>
-							<td><a href="#">No</a></td>
-						</tr>									
-					</tbody>
-				</table>
+					</li>
+					<li>
+						<a href="#packages-built" data-toggle="tab">
+							<i class="icon-question-sign get-help" data-toggle="tooltip" title="The packaged output resulting from building the recipe"></i>						
+							Packages built (10)
+						</a>
+					</li>
+					<li>
+						<a href="#dependencies" data-toggle="tab">
+							<i class="icon-question-sign get-help" data-toggle="tooltip" title="The recipe build-time dependencies (other recipes)"></i>						
+							Dependencies (1)
+						</a> 
+					</li>
+					<li>
+						<a href="#brought-in-by" data-toggle="tab">
+							<i class="icon-question-sign get-help" data-toggle="tooltip" title="The recipe build-time reverse dependencies (i.e. which other recipes depend on this recipe)"></i>						
+							Brought in by (2)
+						</a>
+					</li>					
+				</ul>
+				<div class="tab-content">
+   					<div class="tab-pane active" id="information" name="information">
+						<dl class="dl-horizontal">
+							<dt>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" data-position="right" title="Location in disk of the recipe .bb file"></i>							
+								Recipe file
+							</dt>
+							<dd><code>home/user/poky/meta/recipes-support/attr/acl_2.2.51.bb</code></dd>
+							<dt>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>							
+								Layer
+							</dt>
+							<dd>
+								openembedded-core
+								<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
+									<i class="icon-share get-info"></i>
+								</a>
+							</dd>
+							<dt>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git branch of the layer providing the recipe"></i>							
+								Layer branch
+							</dt>
+							<dd>master</dd>
+							<dt>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The Git commit of the layer providing the recipe"></i>							
+								Layer commit
+							</dt>
+							<dd class="iscommit">3e1dbabbf33a2e461abc92ff10cd970fe604ee38</dd>
+							<dt>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="Location in disk of the layer providing the recipe"></i>							
+								Layer directory
+							</dt>
+							<dd><code>home/user/poky/meta/</code></dd>
+							<dt>	
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The pathname of the working directory in which the OpenEmbedded build system builds a recipe"></i>							
+								Work directory
+							</dt>
+							<dd><code>home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/</code></dd>
+							<dt>
+								<i class="icon-question-sign get-help" data-toggle="tooltip" title="The directory containing the COPYING license files with other licensing information"></i>							
+								License files
+							</dt>
+							<dd><code>home/user/poky/build/deploy/licenses/acl/</code></dd>
+						</dl>  
+						<h2>Tasks</h2> 	
+						<table class="table table-bordered table-hover">
+							<thead>
+								<th>
+									<i class="icon-question-sign get-help" data-toggle="tooltip" data-placement="top" data-container="table" title="The running sequence of each task in the build"></i>								
+									Order
+								</th>
+								<th>
+                        			<i class="icon-question-sign get-help" data-toggle="tooltip" data-placement="top" data-container="table" title="The name of the task"></i>
+									Task
+								</th>
+								<th>
+                        			<i class="icon-question-sign get-help" data-toggle="tooltip" data-placement="top" data-container="table" title="There are 2 types of tasks: executed and prebuilt. Executed tasks are those that need to be run in order to generate the task output. Prebuilt tasks are those that don't need to be run because the task output is already provided by some other means, which is specified by the 'Outcome' column"></i>
+									Task type
+								</th>
+								<th>
+                        			<i class="icon-question-sign get-help" data-toggle="tooltip" data-placement="top" data-container="table" title="Executed tasks have 2 possible outcomes: 'Succeeded', when the task execution completes; and 'Failed', when the task execution does not complete. Prebuilt tasks have 3 possible outcomes: sstate, covered and existing. Sstate tasks are prebuilt tasks that don't need to execute because they reuse existing output from another build. Covered tasks are prebuilt tasks that don't need to execute because they are brought in by an sstate task. Existing tasks are prebuilt tasks that don't need to execute because they are reused from a previous build"></i>								
+									Outcome
+								</th>
+								<th class="span5">
+                        			<i class="icon-question-sign get-help" data-toggle="tooltip" data-placement="top" data-container="table" title="The location in disk of the task log file"></i>
+									Log
+								</th>
+							</thead>
+							<tbody>
+								<tr class="muted">
+									<td><a href="#">765</a></td>
+									<td><a href="#">do_fetch</a></td>
+									<td><a href="#">Prebuilt</a></td>
+									<td><a href="#">Existing</a></td>
+									<td></td>
+								</tr>
+								<tr class="muted">
+									<td><a href="#">766</a></td>
+									<td><a href="#">do_unpack</a></td>
+									<td><a href="#">Prebuilt</a></td>
+									<td><a href="#">Existing</a></td>
+									<td></td>
+								</tr>	
+								<tr class="muted">
+									<td><a href="#">767</a></td>
+									<td><a href="#">do_patch</a></td>
+									<td><a href="#">Prebuilt</a></td>
+									<td><a href="#">Existing</a></td>
+									<td></td>
+								</tr>	
+								<tr>
+									<td><a href="#">777</a></td>
+									<td><a href="#">do_configure</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_configure.29756</td>
+								</tr>	
+								<tr>
+									<td><a href="#">829</a></td>
+									<td><a href="#">do_compile</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_compile.4270</td>
+								</tr>		
+								<tr>
+									<td><a href="#">835</a></td>
+									<td><a href="#">do_install</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_install.4778</td>
+								</tr>	
+								<tr>
+									<td><a href="#">849</a></td>
+									<td><a href="#">do_package</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_package.12084</td>
+								</tr>	
+								<tr>
+									<td><a href="#">958</a></td>
+									<td><a href="#">do_packagedata</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_packagedata.21763</td>
+								</tr>	
+								<tr>
+									<td><a href="#">1013</a></td>
+									<td><a href="#">do_populate_sysroot</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_populate_sysroot.12330</td>
+								</tr>	
+								<tr>
+									<td><a href="#">1404</a></td>
+									<td><a href="#">do_package_write_rpm</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td>/home/user/poky/build/tmp/work/i586-poky-linux/acl/2.2.51-r3/temp/log.do_package_write_rpm.19172</td>
+								</tr>	
+								<tr>
+									<td><a href="#">1492</a></td>
+									<td><a href="#">do_package_write</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td></td>
+								</tr>	
+								<tr class="muted">
+									<td><a href="#">1801</a></td>
+									<td><a href="#">do_populate_lic</a></td>
+									<td><a href="#">Prebuilt</a></td>
+									<td><a href="#">Covered</a></td>
+									<td></td>
+								</tr>	
+								<tr>
+									<td><a href="#">1802</a></td>
+									<td><a href="#">do_build</a></td>
+									<td><a href="#">Executed</a></td>
+									<td><a href="#" class="success">Succeeded</a></td>
+									<td></td>
+								</tr>																																																																																									
+							</tbody>
+						</table>				
+   					</div>
+   					<div class="tab-pane" id="packages-built" name="packages-built">
+						<table class="table table-bordered table-hover" style="margin-top:10px;">
+							<thead>
+								<tr>
+									<th>
+										Package
+									</th>
+									<th>
+										Version
+									</th>
+									<th>
+										Size
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">acl</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">76 KB</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">acl-dbg</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">712 KB</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">acl-dev</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">0 B</a></td>
+								</tr>	
+								<tr>
+									<td><a href="#">acl-doc</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">120 KB</a></td>
+								</tr>	
+								<tr>
+									<td><a href="#">acl-locale-de</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">36 KB</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">acl-locale-es</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">36 KB</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">acl-locale-fr</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">36 KB</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">acl-locale-gl</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">36 KB</a></td>
+								</tr>	
+								<tr>
+									<td><a href="#">acl-locale-pl</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">36 KB</a></td>
+								</tr>	
+								<tr>
+									<td><a href="#">acl-locale-sv</a></td>
+									<td><a href="#">2.2.51-r3</a></td>
+									<td><a href="#">36 KB</a></td>
+								</tr>									
+							</tbody>
+						</table>   				
+   					</div>
+   					<div class="tab-pane" id="dependencies" name="dependencies">
+						<h3>acl_2.2.51-r3 depends on</h3>
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>
+										Recipe
+									</th>
+									<th>	
+										Recipe version
+									</th>   								
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">attr</a></td>
+									<td><a href="#">2.4.46-r4</a></td>
+								</tr> 								
+							</tbody>
+						</table>					
+   					</div>  
+   					<div class="tab-pane" id="brought-in-by" name="brought-in-by">
+						<h3>acl_2.2.51-r3 is brought in by</h3>
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>
+										Recipe
+									</th>
+									<th>
+										Recipe version
+									</th>   								
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">udev</a></td>
+									<td><a href="#">182-r7</a></td>
+								</tr> 
+								<tr>
+									<td><a href="#">rpm</a></td>
+									<td><a href="#">5.4.9-r63</a></td>
+								</tr> 	   																
+							</tbody>
+						</table>  			
+   					</div>  
+   				</div> 					   									
 			</div>
-			<div class="row span3 offset1 well">
+			<div class="row span4 well">
 					<h2>About acl</h2>
 					<dl>
 						<dt>Summary</dt>
@@ -248,7 +370,7 @@
 					</dl>
 				</div>
 
-            </div><!-- end right container -->
+            <!--/div--><!-- end right container -->
 
         </div>
     </div><!-- end content -->

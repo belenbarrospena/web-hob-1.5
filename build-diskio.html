@@ -13,49 +13,8 @@
     <body>
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container-fluid">
-                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <!-- Be sure to leave the brand out there if you want it shown -->
-                    <a class="brand logo" href="index.html"><img src="assets/img/logo.png" class="" /></a>
-                    <a class="brand" href="index.html">Toaster</a>
-                    <!-- Everything you want hidden at 940px or less, place within here -->
-                    <div class="nav-collapse collapse">
-                        <!--div class="pull-right">                           
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Start a project
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
-                                    </li>
-                                    <li>
-                                        <a class="file-type" href="#import-project">Import project</a>
-                                        <form id="import-project" class="hidden" action="">
-                                            <input type="file" />
-                                            <input type="submit" />
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Username
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="muted" href="#">Sign out</a></li>
-                                </ul>
-                            </div>
-                        </div-->
-                    </div>
-                </div>
+				<a class="brand logo" href="index.html"><img src="assets/img/logo.png" class="" /></a>
+				<a class="brand" href="index.html">Toaster</a>
             </div>
         </div>
 
@@ -80,18 +39,21 @@
 			<div class="row-fluid">
 				<!-- begin left sidebar container -->
 				<div id="nav" class="span2">
-    			<ul class="nav nav-tabs nav-stacked">
-        			<li><a href="build-configuration.html">Configuration</a></li>
-        			<li><a href="all-tasks.html">Tasks</a></li>
-        			<li><a href="all-recipes.html">Recipes</a></li>
-        			<li><a href="all-packages.html">Packages</a></li>
-        			<li><a href="project-build-directorystructure.html">Directory structure</a></li>
-        			<li><a href="build-time.html">Time</a></li>
-        			<li><a href="build-cpu.html">CPU usage</a></li>
-        			<li class="active"><a href="build-diskio.html">Disk I/O</a></li>
-        		</ul>
-        	</div>
-			<!-- end left sidebar container -->
+					<ul class="nav nav-list well">
+						<li class="nav-header">Images</li>
+						<li><a href="target.html">core-image-sato</a><li>
+						<li class="nav-header">Build</li>
+						<li><a href="build-configuration.html">Configuration</a></li>
+						<li><a href="all-tasks.html">Tasks</a></li>
+						<li><a href="all-recipes.html">Recipes</a></li>
+						<li><a href="all-packages.html">Packages</a></li>
+						<li class="nav-header">Performance</li>
+						<li><a href="build-time.html">Time</a></li>
+						<li><a href="build-cpu.html">CPU usage</a></li>
+						<li class="active"><a href="build-diskio.html">Disk I/O</a></li>
+					</ul>
+        		</div>
+				<!-- end left sidebar container -->
 				<!-- Begin right container -->
                 <div class="span10">
                 	<div class="page-header">

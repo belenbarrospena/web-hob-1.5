@@ -13,49 +13,8 @@
     <body>
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container-fluid">
-                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <!-- Be sure to leave the brand out there if you want it shown -->
-                    <a class="brand logo" href="index.html"><img src="assets/img/logo.png" class="" /></a>
-                    <a class="brand" href="index.html">Toaster</a>
-                    <!-- Everything you want hidden at 940px or less, place within here -->
-                    <div class="nav-collapse collapse">
-                        <!--div class="pull-right">                           
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Start a project
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#myModal" role="button" data-toggle="modal">New project</a>
-                                    </li>
-                                    <li>
-                                        <a class="file-type" href="#import-project">Import project</a>
-                                        <form id="import-project" class="hidden" action="">
-                                            <input type="file" />
-                                            <input type="submit" />
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    Username
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="muted" href="#">Sign out</a></li>
-                                </ul>
-                            </div>
-                        </div-->
-                    </div>
-                </div>
+				<a class="brand logo" href="index.html"><img src="assets/img/logo.png" class="" /></a>
+				<a class="brand" href="index.html">Toaster</a>
             </div>
         </div>
 
@@ -80,12 +39,15 @@
 				<div class="row-fluid">
 					<!-- begin left sidebar container -->
 					<div id="nav" class="span2">
-						<ul class="nav nav-tabs nav-stacked">
+						<ul class="nav nav-list well">
+							<li class="nav-header">Images</li>
+							<li><a href="target.html">core-image-sato</a><li>
+							<li class="nav-header">Build</li>
 							<li class="active"><a href="build-configuration.html">Configuration</a></li>
 							<li><a href="all-tasks.html">Tasks</a></li>
 							<li><a href="all-recipes.html">Recipes</a></li>
 							<li><a href="all-packages.html">Packages</a></li>
-							<li><a href="project-build-directorystructure.html">Directory structure</a></li>
+							<li class="nav-header">Performance</li>
 							<li><a href="build-time.html">Time</a></li>
 							<li><a href="build-cpu.html">CPU usage</a></li>
 							<li><a href="build-diskio.html">Disk I/O</a></li>
@@ -111,85 +73,117 @@
 							<div id="summary" class="tab-pane active">
 								<h3>Build configuration</h3>
 								<dl class="dl-horizontal">
-									<dt>Host distribution</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>
+										Host distribution
+									</dt>
 									<dd>Ubuntu-12.04</dd>
-									<dt>Build system</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Build system
+									</dt>
 									<dd>x86_64-linux</dd>
-									<dt>Target system</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Target system
+									</dt>
 									<dd>i586-poky-linux</dd>
-									<dt>Tune features</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Tune features
+									</dt>
 									<dd>m32 i586</dd>
-									<dt>FPU method</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										FPU method
+									</dt>
 									<dd>&nbsp;</dd>
-									<dt>BitBake version</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										BitBake version
+									</dt>
 									<dd>1.19.1</dd>
-									<dt>Distro</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Distro
+									</dt>
 									<dd>poky</dd>
-									<dt>Distro version</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Distro version
+									</dt>
 									<dd>1.4+snapnshot-20130718</dd>
-									<dt>Machine</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Machine
+									</dt>
 									<dd>atom-pc</dd>
-									<dt>Target(s)</dt>
+									<dt>
+										<i class="icon-question-sign get-help" data-toggle="tooltip" title="The name of the layer providing the recipe"></i>									
+										Target(s)
+									</dt>
 									<dd>core-image-sato</dd>
 								</dl>							
 								<h3>Layers</h3>
-								<table class="table table-bordered table-hover">
-									<thead>
-										<tr>
-											<th>Layer</th>
-											<th>Layer branch</th>
-											<th>Layer commit</th>
-											<th>Layer directory</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												openembedded-core
-												<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
-													<i class="icon-share get-info"></i>
-												</a>
-											</td>
-											<td>master</td>
-											<td class="layer_commit">
-												<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
-													3e1dbabbf3...
-												</a>
-											</td>
-											<td>/home/user/poky/meta/</td>
-										</tr>
-										<tr>
-											<td>
-												meta-yocto
-												<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
-													<i class="icon-share get-info"></i>
-												</a>
-											</td>
-											<td>master</td>
-											<td class="layer_commit">
-												<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
-													3e1dbabbf3...
-												</a>
-											</td>
-											<td>/home/user/poky/meta-yocto/</td>
-										</tr>
-										<tr>
-											<td>
-												meta-yocto-bsp
-												<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto-bsp/" target="_blank">
-													<i class="icon-share get-info"></i>
-												</a>	
-											</td>										
-											<td>master</td>
-											<td class="layer_commit">
-												<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
-													3e1dbabbf3...
-												</a>
-											</td>
-											<td>/home/user/poky/meta-yocto-bsp/</td>
-										</tr>
-									</tbody>
-								</table>
+								<div class="span9" style="margin-left:0px;">
+									<table class="table table-bordered table-hover">
+										<thead>
+											<tr>
+												<th>Layer</th>
+												<th>Layer branch</th>
+												<th>Layer commit</th>
+												<th>Layer directory</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													openembedded-core
+													<a href="http://layers.openembedded.org/layerindex/layer/openembedded-core/" target="_blank">
+														<i class="icon-share get-info"></i>
+													</a>
+												</td>
+												<td>master</td>
+												<td class="layer_commit">
+													<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
+														3e1dbabbf3...
+													</a>
+												</td>
+												<td>/home/user/poky/meta/</td>
+											</tr>
+											<tr>
+												<td>
+													meta-yocto
+													<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto/" target="_blank">
+														<i class="icon-share get-info"></i>
+													</a>
+												</td>
+												<td>master</td>
+												<td class="layer_commit">
+													<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
+														3e1dbabbf3...
+													</a>
+												</td>
+												<td>/home/user/poky/meta-yocto/</td>
+											</tr>
+											<tr>
+												<td>
+													meta-yocto-bsp
+													<a href="http://layers.openembedded.org/layerindex/layer/meta-yocto-bsp/" target="_blank">
+														<i class="icon-share get-info"></i>
+													</a>	
+												</td>										
+												<td>master</td>
+												<td class="layer_commit">
+													<a data-content="3e1dbabbf33a2e461abc92ff10cd970fe604ee38" title="" href="#" class="btn" data-original-title="">
+														3e1dbabbf3...
+													</a>
+												</td>
+												<td>/home/user/poky/meta-yocto-bsp/</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 							<div class="tab-pane" id="variables">
 								<div class="navbar">
@@ -242,7 +236,7 @@
 											</select>	
 										</div> <!-- end of pull-right -->
 									</div> <!-- end of navbar-inner -->
-								</div> <!-- end of navbar -->				
+								</div> <!-- end of navbar -->			
 								<table class="table table-bordered table-hover">
 									<thead>
 										<tr>
